@@ -194,7 +194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913ea0aa8d716584eb90340157003897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 10
+  groundDrag: 3
+  playerHeignt: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
   orientation: {fileID: 1209306067}
 --- !u!1 &705507993
 GameObject:
@@ -658,7 +663,7 @@ GameObject:
   - component: {fileID: 1942370612}
   - component: {fileID: 1942370611}
   - component: {fileID: 1942370610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
