@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class ShelfForFairy : MonoBehaviour, IInteractable
 {
-    public FlyAway cubeToActivate; // Reference to Cube B (the flying cube)
+    public FlyAway[] cubesToActivate; // Array to hold multiple cubes to activate
 
     public void Interact()
     {
-        if (cubeToActivate != null)
+        foreach (FlyAway cube in cubesToActivate)
         {
-            cubeToActivate.StartFlying();
-            Debug.Log("Activated Cube B to start flying.");
+            if (cube != null)
+            {
+                cube.StartFlying();
+                Debug.Log("Activated a cube to start flying.");
+            }
         }
     }
 }
