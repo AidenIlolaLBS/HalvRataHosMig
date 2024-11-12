@@ -13,7 +13,7 @@ public class PlayerCam : MonoBehaviour
     float yRotation;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
