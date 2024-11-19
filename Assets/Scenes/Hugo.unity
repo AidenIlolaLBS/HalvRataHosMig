@@ -368,6 +368,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  groundDrag: 0
+  playerHeignt: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
   orientation: {fileID: 1033976373}
 --- !u!54 &567136739
 Rigidbody:
@@ -782,7 +787,6 @@ GameObject:
   - component: {fileID: 1329463873}
   - component: {fileID: 1329463872}
   - component: {fileID: 1329463871}
-  - component: {fileID: 1329463870}
   - component: {fileID: 1329463874}
   - component: {fileID: 1329463875}
   m_Layer: 0
@@ -809,21 +813,6 @@ Transform:
   - {fileID: 36889173}
   m_Father: {fileID: 2071652351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1329463870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329463868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32dbf32701314f94f90b432378d70be7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
-  orientation: {fileID: 1033976373}
 --- !u!114 &1329463871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,11 +912,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1329463868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8db3600f78cba740b4e22a1eeabd7e0, type: 3}
+  m_Script: {fileID: 11500000, guid: c433f681658ad41468189689df016449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InteractorSource: {fileID: 1329463869}
-  InteractRange: 5
+  InteractRange: 10
 --- !u!1 &1548173450
 GameObject:
   m_ObjectHideFlags: 0
