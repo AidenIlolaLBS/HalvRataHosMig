@@ -6,7 +6,6 @@ public class PickUpScript : MonoBehaviour
 {
     public GameObject Player;
     public Transform holdPos;
-    //if you copy from below this point, you are legally required to like the video
     public float throwForce = 500f; //force at which the object is thrown at
     public float pickUpRange = 5f; //how far the player can pickup the object from
     private GameObject heldObj; //object which we pick up
@@ -71,6 +70,13 @@ public class PickUpScript : MonoBehaviour
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
             //make sure object doesnt collide with player, it can cause weird bugs
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), Player.GetComponent<Collider>(), true);
+
+            IPickupable pickupable = heldObj.GetComponent<IPickupable>();
+            if (pickupable != null)
+            {
+                pickupable.OnPickup();
+                Debug.Log("OnPickup called on picked-up object.");
+            }
         }
     }
     void DropObject()
