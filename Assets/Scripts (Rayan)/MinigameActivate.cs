@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class MinigameActivate : MonoBehaviour, IInteractable
 {
-    public GameObject panel;
-    public GameObject player;
-    public GameObject Camera;
+    [SerializeField] GameObject panel;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject Camera;
+    [SerializeField] GameObject crosshair;
 
     public void Interact()
     {
         panel.SetActive(true);
+        crosshair.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 

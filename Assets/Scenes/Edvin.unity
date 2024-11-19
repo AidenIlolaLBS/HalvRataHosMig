@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 2129421772}
   - component: {fileID: 2129421771}
   - component: {fileID: 2129421775}
+  - component: {fileID: 2129421776}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -496,8 +497,26 @@ MonoBehaviour:
   playingArea: {fileID: 2129421771}
   prefabPlayerMarker: {fileID: 4915114291281615501, guid: 5acc6a52480252049968d49c25382c9d, type: 3}
   prefabBotMarker: {fileID: 527306078863900121, guid: 88537c3e4bbe7c24f830bfca6f38de84, type: 3}
+  WinObj: {fileID: 2129421776}
+  LoseObj: {fileID: 2129421776}
+  TieObj: {fileID: 2129421776}
   robotMoveDelay: 0
-  botDifficulty: 0
+  botDifficulty: 2
+--- !u!114 &2129421776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129421770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62da75514aa6c764fa359e42f3e6298a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 963194225}
+  Prefab: {fileID: 4384468600313433972, guid: c8b9aced8f92f46458a32d93a0707bb8, type: 3}
+  spawnDistance: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

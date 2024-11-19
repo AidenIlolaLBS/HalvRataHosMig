@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ReturnMove : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject Camera;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject Camera;
 
     public void Start()
     {

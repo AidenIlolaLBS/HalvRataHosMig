@@ -11,6 +11,12 @@ public class TocTacToe3DV2 : MonoBehaviour
     [SerializeField] private GameObject prefabPlayerMarker;
     [SerializeField] private GameObject prefabBotMarker;
 
+    // To spawn obj when you win/lose/tie
+    [Header("Objects")]
+    [SerializeField] SpawnObject WinObj;
+    [SerializeField] SpawnObject LoseObj;
+    [SerializeField] SpawnObject TieObj;
+
     [Header("Bot Settings")]
     [SerializeField] float robotMoveDelay;
     [SerializeField] private BotLevel botDifficulty;
@@ -62,6 +68,9 @@ public class TocTacToe3DV2 : MonoBehaviour
         if (CheckForWinner())
         {
             Debug.Log("Player Won");
+            
+            // Obj spawns
+            WinObj.SpawnPrefab();
             return;
         }
 
@@ -92,6 +101,10 @@ public class TocTacToe3DV2 : MonoBehaviour
                 Debug.Log(VARIABLE.name+", ");
             }*/
             Debug.Log("Vinnare: Bot");
+
+            // Obj spawns
+            LoseObj.SpawnPrefab();
+
             ResetGame();
         }
         else if (totalMarkersPlaced == 9)
@@ -322,6 +335,10 @@ public class TocTacToe3DV2 : MonoBehaviour
     void DrawEnding()
     {
         Debug.Log("Det är oavgjort!");
+        
+        // Obj spawns
+        TieObj.SpawnPrefab();
+        
         ResetGame();
     }
     bool CheckForWinner()
