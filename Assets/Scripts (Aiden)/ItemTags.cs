@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemTags : MonoBehaviour
 {
-    public List<Dictionary<string, bool>> tags = new List<Dictionary<string, bool>>() {   
-                                                        
-                                                    };
+    public string test1;
+    public string test2;
 }

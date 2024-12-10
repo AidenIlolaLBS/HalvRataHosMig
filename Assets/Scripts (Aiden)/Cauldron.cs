@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cauldron : MonoBehaviour
 {
-    private ItemTags containingTags;
+    private ItemTags containingTags = new ItemTags();
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +29,9 @@ public class Cauldron : MonoBehaviour
             //    }
             //}
 
-            foreach (var item in containingTags.tags)
+            foreach (var item in containingTags.GetType().GetProperties())
             {
-                Debug.Log(item);
+                Debug.Log(item.Name);
             }
 
             Destroy(collision.gameObject);
