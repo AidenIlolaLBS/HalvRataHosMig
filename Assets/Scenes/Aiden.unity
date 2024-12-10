@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 315827617}
   - component: {fileID: 315827622}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Tempitem
   m_TagString: canPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -548,7 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wing: 0
 --- !u!1 &657210783
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +879,7 @@ GameObject:
   - component: {fileID: 1573955537}
   m_Layer: 0
   m_Name: kittel
-  m_TagString: Untagged
+  m_TagString: Cauldron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -900,7 +899,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1031,7 +1030,7 @@ GameObject:
   - component: {fileID: 1897049427}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -69,6 +69,7 @@ public class PickUpScript : MonoBehaviour
             heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
             //make sure object doesnt collide with player, it can cause weird bugs
+            pickUpObj.GetComponent<Collider>().enabled = false;
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), Player.GetComponent<Collider>(), true);
 
             IPickupable pickupable = heldObj.GetComponent<IPickupable>();
@@ -86,6 +87,7 @@ public class PickUpScript : MonoBehaviour
         heldObj.layer = 0; //object assigned back to default layer
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null; //unparent object
+        heldObj.GetComponent<Collider>().enabled = true;
         heldObj = null; //undefine game object
     }
     void MoveObject()
@@ -102,6 +104,7 @@ public class PickUpScript : MonoBehaviour
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null;
         heldObjRb.AddForce(transform.forward * throwForce);
+        heldObj.GetComponent<Collider>().enabled = true;
         heldObj = null;
     }
     void StopClipping() //function only called when dropping/throwing
@@ -115,7 +118,11 @@ public class PickUpScript : MonoBehaviour
         if (hits.Length > 1)
         {
             //change object position to camera position 
-            heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
+            Debug.Log(hits[0].collider.tag);
+            if (hits[0].collider.tag != "Cauldron")
+            {
+                heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
+            }
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
     }

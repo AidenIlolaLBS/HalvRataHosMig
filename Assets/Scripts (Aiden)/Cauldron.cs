@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cauldron : MonoBehaviour
 {
-    private ItemTags itemTags;
+    private ItemTags containingTags;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,25 @@ public class Cauldron : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "canPickUp")
+        if (collision.gameObject.tag == "canPickUp")
         {
-            Debug.Log("inne");
+            //List<TagInfo> collisionObjectTags = (collision.gameObject.GetComponent<ItemTags>()).tags;
+            //for (int i = 0; i < containingTags.tags.Count; i++)
+            //{
+            //    if (collisionObjectTags[i].active)
+            //    {
+            //        containingTags.tags[i].active = true;
+            //    }
+            //}
+
+            foreach (var item in containingTags.tags)
+            {
+                Debug.Log(item);
+            }
+
+            Destroy(collision.gameObject);
         }
     }
 }

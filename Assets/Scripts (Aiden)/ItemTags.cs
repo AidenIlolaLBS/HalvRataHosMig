@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class ItemTags : MonoBehaviour
 {
-    public bool wing = false; 
+    public List<Dictionary<string, bool>> tags = new List<Dictionary<string, bool>>() {   
+                                                        
+                                                    };
 }
