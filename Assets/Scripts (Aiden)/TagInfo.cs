@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class TagInfo : MonoBehaviour
 {
-    public string tagName { get; set; }
-    public bool active { get; set; }
+    public string TagName { get; set; }
+    public bool Active { get; set; }
 
     public TagInfo(string tagName, bool active)
     {
-        this.tagName = tagName;
-        this.active = active;
+        TagName = tagName;
+        Active = active;
     }
 
     public override string ToString()
     {
-        return tagName + " " + active.ToString();
+        return TagName + " " + Active.ToString();
     }
 }
