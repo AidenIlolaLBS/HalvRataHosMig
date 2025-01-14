@@ -1250,7 +1250,7 @@ Transform:
   m_GameObject: {fileID: 928544255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.42, y: -0.83, z: -4.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2637,6 +2637,8 @@ GameObject:
   - component: {fileID: 1876155184}
   - component: {fileID: 1876155183}
   - component: {fileID: 1876155187}
+  - component: {fileID: 1876155189}
+  - component: {fileID: 1876155188}
   m_Layer: 0
   m_Name: Pheonix
   m_TagString: canPickUp
@@ -2671,8 +2673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00abfcc30279a814ab70198a266d1783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  moveRange: 870
+  window1: {fileID: 256758087}
+  window2: {fileID: 1270930034}
+  speed: 100
+  waitTime: 0
 --- !u!135 &1876155184
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2773,6 +2777,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1876155188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876155181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c433f681658ad41468189689df016449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractorSource: {fileID: 1876155182}
+  InteractRange: 1000000
+--- !u!114 &1876155189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876155181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75fc9f55c48dce49955a033c290388e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1859548297}
+  holdPos: {fileID: 1281296066}
+  throwForce: 500
+  pickUpRange: 100000
 --- !u!1 &1889925111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8400084405334439710, guid: b6a99b3bec8d964478704444a676f688, type: 3}
