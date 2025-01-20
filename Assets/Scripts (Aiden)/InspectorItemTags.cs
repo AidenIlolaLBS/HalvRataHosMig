@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemTags : MonoBehaviour
+public class InspectorItemTags : MonoBehaviour
 {
     [HideInInspector]
     public List<TagInfo> tags = new();
@@ -28,7 +28,7 @@ public class ItemTags : MonoBehaviour
     public bool DeadBerry = false;
     public bool IceCream = false;
 
-    public ItemTags()
+    public InspectorItemTags()
     {
         AddTags();
     }

@@ -12,7 +12,7 @@ public class Cauldron : MonoBehaviour
     {
         GameObject newGameObject = new();
         newGameObject.transform.position = spawnLocation.transform.position;
-        newGameObject.AddComponent<ItemTags>();
+        newGameObject.AddComponent<InspectorItemTags>();
     }
 
     private string GetMealName()
@@ -56,7 +56,7 @@ public class Cauldron : MonoBehaviour
         if (collision.gameObject.tag == "canPickUp")
         {
             bool dontDestroy = false;
-            List<TagInfo> newTags = collision.gameObject.GetComponent<ItemTags>().tags;
+            List<TagInfo> newTags = collision.gameObject.GetComponent<InspectorItemTags>().tags;
 
             foreach (var item in newTags)
             {
