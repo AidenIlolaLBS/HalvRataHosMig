@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Assets.Scripts__Aiden_
+public class InGameItemTags : MonoBehaviour
 {
-    internal class InGameItemTags
+    private List<TagInfo> _tags = new();
+
+    public bool fullMeal = false;
+    public List<TagInfo> Tags 
     {
+        get { return _tags; }
+    }
+    
+    public void AddTags(List<TagInfo> newTags)
+    {
+        _tags = newTags;
     }
 }
+

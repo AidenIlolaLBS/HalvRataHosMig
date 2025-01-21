@@ -7,7 +7,10 @@ public class InspectorItemTags : MonoBehaviour
     [HideInInspector]
     public List<TagInfo> tags = new();
 
-   //Kom ihåg att lägga till dessa tags i tags listan genom att lägga till de i AddTags()
+    public bool fullMeal = false;
+
+   //Kom ihåg att lägga till dessa tags i tags listan genom att lägga till de i AddTags().
+   //Dem behövs även läggas till i allTags
     public bool Bread = false;
     public bool Seaweed = false;
     public bool ChoppedSeaweed = false;
@@ -27,7 +30,6 @@ public class InspectorItemTags : MonoBehaviour
     public bool StinkFruit = false;
     public bool DeadBerry = false;
     public bool IceCream = false;
-
     public InspectorItemTags()
     {
         AddTags();
@@ -36,6 +38,10 @@ public class InspectorItemTags : MonoBehaviour
     public void Start()
     {
         AddTags();
+        this.gameObject.AddComponent<InGameItemTags>();
+        this.gameObject.GetComponent<InGameItemTags>().AddTags(tags);
+        this.gameObject.GetComponent<InGameItemTags>().fullMeal = fullMeal;
+        this.gameObject.GetComponent<InspectorItemTags>().enabled = false;
     }
 
     public void AddTags()

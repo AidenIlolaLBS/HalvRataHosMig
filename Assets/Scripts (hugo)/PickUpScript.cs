@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,6 +38,10 @@ public class PickUpScript : MonoBehaviour
                         //pass in object hit into the PickUpObject function
                         PickUpObject(hit.transform.gameObject);
                     }
+                    else if (hit.transform.gameObject.tag == "Cauldron")
+                    {
+                        PickUpNewObject(hit.transform.gameObject.GetComponent<Cauldron>());
+                    }
                 }
             }
             else
@@ -56,9 +61,35 @@ public class PickUpScript : MonoBehaviour
                 StopClipping();
                 ThrowObject();
             }
-
         }
     }
+
+    private void PickUpNewObject(Cauldron cauldron)
+    {
+        GameObject gameObject = cauldron.GetNewMeal();
+        if (gameObject == null)
+        {
+            Debug.Log(gameObject.tag);
+            heldObj = gameObject;
+            heldObjRb = gameObject.GetComponent<Rigidbody>();
+            heldObjRb.isKinematic = true;
+            heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
+            heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+            //make sure object doesnt collide with player, it can cause weird bugs
+            gameObject.GetComponent<Collider>().enabled = false;
+            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), Player.GetComponent<Collider>(), true);
+
+            gameObject.transform.position = Player.transform.position;
+
+            IPickupable pickupable = heldObj.GetComponent<IPickupable>();
+            if (pickupable != null)
+            {
+                pickupable.OnPickup();
+                Debug.Log("OnPickup called on picked-up object.");
+            }
+        }
+    }
+
     void PickUpObject(GameObject pickUpObj)
     {
         if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody

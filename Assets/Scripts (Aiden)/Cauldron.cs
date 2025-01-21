@@ -6,17 +6,48 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     private List<string> containingTags = new();
+    private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
+
     public GameObject spawnLocation;
 
-    public void TakeOutMeal()
+    //public void TakeOutMeal()
+    //{
+    //    GameObject newGameObject = new();
+    //    newGameObject.transform.position = spawnLocation.transform.position;
+    //    newGameObject.AddComponent<InspectorItemTags>();
+    //}
+
+    public GameObject GetNewMeal()
     {
-        GameObject newGameObject = new();
-        newGameObject.transform.position = spawnLocation.transform.position;
-        newGameObject.AddComponent<InspectorItemTags>();
+        if (containingTags.Count > 3)
+        {
+            GameObject newObject = new();
+            newObject.AddComponent<InGameItemTags>();
+            
+            List<TagInfo> newTags = new();
+            string mealName = GetMealName();
+            if (mealName != "Random")
+            {
+                newObject.GetComponent<InGameItemTags>().fullMeal = true;
+                newTags.Add(new TagInfo(mealName, true));
+            }
+            foreach (var item in containingTags)
+            {
+                newTags.Add(new TagInfo(item, true));
+            }
+            newObject.GetComponent<InGameItemTags>().AddTags(newTags);
+
+            newObject.AddComponent<Rigidbody>();
+            newObject.AddComponent<BoxCollider>();
+
+            return newObject;
+        }
+        return null;
     }
 
     private string GetMealName()
     {
+        //Lägg till namnen också i variabeln meals
         if (containingTags.Contains("Bread") && containingTags.Contains("ChoppedSeaweed")) //Toast skagish
         {
             return "ToastSkagish";
@@ -47,7 +78,7 @@ public class Cauldron : MonoBehaviour
         }
         else
         {
-            return "nothing";
+            return "Random";
         }
     }
 
@@ -56,28 +87,31 @@ public class Cauldron : MonoBehaviour
         if (collision.gameObject.tag == "canPickUp")
         {
             bool dontDestroy = false;
-            List<TagInfo> newTags = collision.gameObject.GetComponent<InspectorItemTags>().tags;
+            List<TagInfo> newTags = collision.gameObject.GetComponent<InGameItemTags>().Tags;
 
-            foreach (var item in newTags)
+            if (!collision.gameObject.GetComponent<InGameItemTags>().fullMeal)
             {
-                if (item.Active)
+                foreach (var item in newTags)
                 {
-                    if (!containingTags.Contains(item.TagName))
+                    if (item.Active)
                     {
-                        containingTags.Add(item.TagName);
-                        dontDestroy = true;
+                        if (!containingTags.Contains(item.TagName))
+                        {
+                            containingTags.Add(item.TagName);
+                            dontDestroy = true;
+                        }
+                        else if (!dontDestroy)
+                        {
+                            dontDestroy = false;
+                        }
                     }
-                    else if (!dontDestroy)
-                    {
-                        dontDestroy = false;
-                    }
-                }                
-            }
+                }
 
-            if (!dontDestroy)
-            {
-                Destroy(collision.gameObject);
-            }           
+                if (!dontDestroy)
+                {
+                    Destroy(collision.gameObject);
+                }
+            }        
         }
     }
 }
