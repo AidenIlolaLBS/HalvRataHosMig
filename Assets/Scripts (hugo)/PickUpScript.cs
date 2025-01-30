@@ -20,7 +20,6 @@ public class PickUpScript : MonoBehaviour
     void Start()
     {
         LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
-
     }
     void Update()
     {
@@ -67,9 +66,8 @@ public class PickUpScript : MonoBehaviour
     private void PickUpNewObject(Cauldron cauldron)
     {
         GameObject gameObject = cauldron.GetNewMeal();
-        if (gameObject == null)
+        if (gameObject != null)
         {
-            Debug.Log(gameObject.tag);
             heldObj = gameObject;
             heldObjRb = gameObject.GetComponent<Rigidbody>();
             heldObjRb.isKinematic = true;

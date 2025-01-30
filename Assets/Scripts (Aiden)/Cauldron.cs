@@ -7,6 +7,7 @@ public class Cauldron : MonoBehaviour
 {
     private List<string> containingTags = new();
     private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
+    private List<GameObject> prefabMeals = new();
 
     public GameObject spawnLocation;
 
@@ -17,30 +18,40 @@ public class Cauldron : MonoBehaviour
     //    newGameObject.AddComponent<InspectorItemTags>();
     //}
 
+    private void Start()
+    {
+        prefabMeals = Resources.LoadAll<GameObject>("MealPrefabs").ToList();
+    }
+
     public GameObject GetNewMeal()
     {
-        if (containingTags.Count > 3)
+        if (containingTags.Count > 2)
         {
-            GameObject newObject = new();
-            newObject.AddComponent<InGameItemTags>();
-            
             List<TagInfo> newTags = new();
             string mealName = GetMealName();
-            if (mealName != "Random")
-            {
-                newObject.GetComponent<InGameItemTags>().fullMeal = true;
-                newTags.Add(new TagInfo(mealName, true));
-            }
-            foreach (var item in containingTags)
-            {
-                newTags.Add(new TagInfo(item, true));
-            }
-            newObject.GetComponent<InGameItemTags>().AddTags(newTags);
 
-            newObject.AddComponent<Rigidbody>();
-            newObject.AddComponent<BoxCollider>();
-
-            return newObject;
+            
+            for (int i = 0; i < prefabMeals.Count; i++)
+            {
+                GameObject temp = Instantiate(prefabMeals[i], new Vector3(0, 5, 0), Quaternion.identity);
+                temp.GetComponent<InspectorItemTags>().Start();
+                for (int j = 0; j < temp.GetComponent<InGameItemTags>().Tags.Count; j++)
+                {
+                    if (mealName == temp.GetComponent<InGameItemTags>().Tags[j].TagName)
+                    {
+                        foreach (var item in containingTags)
+                        {
+                            if (item != mealName)
+                            {
+                                temp.GetComponent<InGameItemTags>().Tags.Add(new TagInfo(item,true));
+                            }
+                        }
+                        containingTags.Clear();
+                        return temp;
+                    }
+                }
+                Destroy(temp);
+            }
         }
         return null;
     }
@@ -86,7 +97,7 @@ public class Cauldron : MonoBehaviour
     {
         if (collision.gameObject.tag == "canPickUp")
         {
-            bool dontDestroy = false;
+            bool shouldDestroy = false;
             List<TagInfo> newTags = collision.gameObject.GetComponent<InGameItemTags>().Tags;
 
             if (!collision.gameObject.GetComponent<InGameItemTags>().fullMeal)
@@ -98,16 +109,12 @@ public class Cauldron : MonoBehaviour
                         if (!containingTags.Contains(item.TagName))
                         {
                             containingTags.Add(item.TagName);
-                            dontDestroy = true;
-                        }
-                        else if (!dontDestroy)
-                        {
-                            dontDestroy = false;
+                            shouldDestroy = true;
                         }
                     }
                 }
-
-                if (!dontDestroy)
+                Debug.Log(shouldDestroy);
+                if (shouldDestroy)
                 {
                     Destroy(collision.gameObject);
                 }

@@ -17,7 +17,13 @@ public class InGameItemTags : MonoBehaviour
     
     public void AddTags(List<TagInfo> newTags)
     {
-        _tags = newTags;
+        foreach (var item in newTags)
+        {
+            if (item.Active)
+            {
+                _tags.Add(item);
+            }
+        }
     }
 }
 
