@@ -7,6 +7,7 @@ public class SImonButton : MonoBehaviour
     public int buttonIndex;
     private Simon simonGame;
 
+    [System.Obsolete]
     private void Start()
     {
         simonGame = FindObjectOfType<Simon>();
