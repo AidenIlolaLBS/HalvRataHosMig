@@ -23,7 +23,7 @@ public class PickUpScript : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) //change E to whichever key you want to press to pick up
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
             {
