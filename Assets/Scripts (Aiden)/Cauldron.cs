@@ -11,13 +11,6 @@ public class Cauldron : MonoBehaviour
 
     public GameObject spawnLocation;
 
-    //public void TakeOutMeal()
-    //{
-    //    GameObject newGameObject = new();
-    //    newGameObject.transform.position = spawnLocation.transform.position;
-    //    newGameObject.AddComponent<InspectorItemTags>();
-    //}
-
     private void Start()
     {
         prefabMeals = Resources.LoadAll<GameObject>("MealPrefabs").ToList();
@@ -27,9 +20,7 @@ public class Cauldron : MonoBehaviour
     {
         if (containingTags.Count > 2)
         {
-            List<TagInfo> newTags = new();
             string mealName = GetMealName();
-
             
             for (int i = 0; i < prefabMeals.Count; i++)
             {
@@ -113,7 +104,6 @@ public class Cauldron : MonoBehaviour
                         }
                     }
                 }
-                Debug.Log(shouldDestroy);
                 if (shouldDestroy)
                 {
                     Destroy(collision.gameObject);
