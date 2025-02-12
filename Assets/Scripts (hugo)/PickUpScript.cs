@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PickUpScript : MonoBehaviour
 {
@@ -37,18 +38,22 @@ public class PickUpScript : MonoBehaviour
                         //pass in object hit into the PickUpObject function
                         PickUpObject(hit.transform.gameObject);
                     }
-                    else if (hit.transform.gameObject.tag == "Cauldron")
-                    {
-                        PickUpNewObject(hit.transform.gameObject.GetComponent<Cauldron>());
-                    }
                 }
             }
             else
             {
                 if (canDrop == true)
                 {
-                    StopClipping(); //prevents object from clipping through walls
-                    DropObject();
+                    Debug.Log("drop");
+                    GameObject cauldron = StopClipping();
+                    if (cauldron == null)//prevents object from clipping through walls
+                    {
+                        DropObject();
+                    }
+                    else
+                    {
+                        PickUpMeal(cauldron.transform.gameObject.GetComponent<Cauldron>());
+                    }
                 }
             }
         }
@@ -63,7 +68,7 @@ public class PickUpScript : MonoBehaviour
         }
     }
 
-    private void PickUpNewObject(Cauldron cauldron)
+    private void PickUpMeal(Cauldron cauldron)
     {
         GameObject gameObject = cauldron.GetNewMeal();
         if (gameObject != null)
@@ -136,7 +141,7 @@ public class PickUpScript : MonoBehaviour
         heldObj.GetComponent<Collider>().enabled = true;
         heldObj = null;
     }
-    void StopClipping() //function only called when dropping/throwing
+    GameObject StopClipping() //function only called when dropping/throwing
     {
         var clipRange = Vector3.Distance(heldObj.transform.position, transform.position); //distance from holdPos to the camera
         //have to use RaycastAll as object blocks raycast in center screen
@@ -147,12 +152,27 @@ public class PickUpScript : MonoBehaviour
         if (hits.Length > 1)
         {
             //change object position to camera position 
-            Debug.Log(hits[0].collider.tag);
-            if (hits[0].collider.tag != "Cauldron")
+            if (hits[0].collider.tag == "Cauldron")
             {
-                heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
+                Debug.Log(heldObj.name);
+                if (heldObj.gameObject.TryGetComponent(out InGameItemTags tags))
+                {
+                    Debug.Log("Component found");
+                    foreach (var item in tags.Tags)
+                    {
+                        Debug.Log("trying");
+                        if (item.TagName == "Plate")
+                        {
+                            Debug.Log("Plate");
+                            return hits[0].collider.gameObject;
+                        }
+                    }
+                }
             }
+            heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
+
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
+        return null;
     }
 }

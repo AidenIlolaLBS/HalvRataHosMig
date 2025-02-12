@@ -97,6 +97,11 @@ public class Cauldron : MonoBehaviour
                 {
                     if (item.Active)
                     {
+                        if (item.TagName == "Plate")
+                        {
+                            shouldDestroy = false;
+                            break;
+                        }
                         if (!containingTags.Contains(item.TagName))
                         {
                             containingTags.Add(item.TagName);
