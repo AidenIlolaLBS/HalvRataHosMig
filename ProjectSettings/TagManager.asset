@@ -6,6 +6,10 @@ TagManager:
   tags:
   - canPickUp
   - Cauldron
+  - SpawnLocation
+  - PlayableArea1
+  - PlayableArea2
+  - Door
   layers:
   - Default
   - TransparentFX

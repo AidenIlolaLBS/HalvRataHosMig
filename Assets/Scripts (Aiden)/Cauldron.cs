@@ -9,8 +9,6 @@ public class Cauldron : MonoBehaviour
     private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
     private List<GameObject> prefabMeals = new();
 
-    public GameObject spawnLocation;
-
     private void Start()
     {
         prefabMeals = Resources.LoadAll<GameObject>("MealPrefabs").ToList();

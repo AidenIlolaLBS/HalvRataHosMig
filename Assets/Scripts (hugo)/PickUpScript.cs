@@ -38,6 +38,10 @@ public class PickUpScript : MonoBehaviour
                         //pass in object hit into the PickUpObject function
                         PickUpObject(hit.transform.gameObject);
                     }
+                    else if (hit.transform.gameObject.tag == "Door")
+                    {
+                        hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                    }
                 }
             }
             else
@@ -69,10 +73,11 @@ public class PickUpScript : MonoBehaviour
     }
 
     private void PickUpMeal(Cauldron cauldron)
-    {
+    {       
         GameObject gameObject = cauldron.GetNewMeal();
         if (gameObject != null)
         {
+            Destroy(heldObj);
             heldObj = gameObject;
             heldObjRb = gameObject.GetComponent<Rigidbody>();
             heldObjRb.isKinematic = true;
@@ -90,6 +95,10 @@ public class PickUpScript : MonoBehaviour
                 pickupable.OnPickup();
                 Debug.Log("OnPickup called on picked-up object.");
             }
+        }
+        else
+        {
+            DropObject();
         }
     }
 
@@ -146,15 +155,16 @@ public class PickUpScript : MonoBehaviour
         var clipRange = Vector3.Distance(heldObj.transform.position, transform.position); //distance from holdPos to the camera
         //have to use RaycastAll as object blocks raycast in center screen
         //RaycastAll returns array of all colliders hit within the cliprange
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
-        //if the array length is greater than 1, meaning it has hit more than just the object we are carrying
-        if (hits.Length > 1)
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
+        Debug.Log(hits.Length);
+        //if the array length is greater than 0, it has hit an obstical
+        if (hits.Length > 0)
         {
             //change object position to camera position 
+            Debug.Log(hits[0].collider.gameObject.tag);
             if (hits[0].collider.tag == "Cauldron")
             {
-                Debug.Log(heldObj.name);
+               
                 if (heldObj.gameObject.TryGetComponent(out InGameItemTags tags))
                 {
                     Debug.Log("Component found");
