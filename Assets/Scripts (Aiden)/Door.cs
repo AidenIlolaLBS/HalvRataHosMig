@@ -5,6 +5,10 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     bool open = false;
+    public bool Open
+    {
+        get { return open; }
+    }
     public float doorAngle = 90;
     public void InteractDoor()
     {
