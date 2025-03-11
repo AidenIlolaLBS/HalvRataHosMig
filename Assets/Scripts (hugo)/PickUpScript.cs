@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PickUpScript : MonoBehaviour
 {
@@ -19,7 +21,6 @@ public class PickUpScript : MonoBehaviour
     void Start()
     {
         LayerNumber = LayerMask.NameToLayer("holdLayer"); //if your holdLayer is named differently make sure to change this ""
-
     }
     void Update()
     {
@@ -37,14 +38,26 @@ public class PickUpScript : MonoBehaviour
                         //pass in object hit into the PickUpObject function
                         PickUpObject(hit.transform.gameObject);
                     }
+                    else if (hit.transform.gameObject.tag == "Door")
+                    {
+                        hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                    }
                 }
             }
             else
             {
                 if (canDrop == true)
                 {
-                    StopClipping(); //prevents object from clipping through walls
-                    DropObject();
+                    Debug.Log("drop");
+                    GameObject cauldron = StopClipping();
+                    if (cauldron == null)//prevents object from clipping through walls
+                    {
+                        DropObject();
+                    }
+                    else
+                    {
+                        PickUpMeal(cauldron.transform.gameObject.GetComponent<Cauldron>());
+                    }
                 }
             }
         }
@@ -56,9 +69,39 @@ public class PickUpScript : MonoBehaviour
                 StopClipping();
                 ThrowObject();
             }
-
         }
     }
+
+    private void PickUpMeal(Cauldron cauldron)
+    {       
+        GameObject gameObject = cauldron.GetNewMeal();
+        if (gameObject != null)
+        {
+            Destroy(heldObj);
+            heldObj = gameObject;
+            heldObjRb = gameObject.GetComponent<Rigidbody>();
+            heldObjRb.isKinematic = true;
+            heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
+            heldObj.layer = LayerNumber; //change the object layer to the holdLayer
+            //make sure object doesnt collide with player, it can cause weird bugs
+            gameObject.GetComponent<Collider>().enabled = false;
+            Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), Player.GetComponent<Collider>(), true);
+
+            gameObject.transform.position = Player.transform.position;
+
+            IPickupable pickupable = heldObj.GetComponent<IPickupable>();
+            if (pickupable != null)
+            {
+                pickupable.OnPickup();
+                Debug.Log("OnPickup called on picked-up object.");
+            }
+        }
+        else
+        {
+            DropObject();
+        }
+    }
+
     void PickUpObject(GameObject pickUpObj)
     {
         if (pickUpObj.GetComponent<Rigidbody>()) //make sure the object has a RigidBody
@@ -69,6 +112,7 @@ public class PickUpScript : MonoBehaviour
             heldObjRb.transform.parent = holdPos.transform; //parent object to holdposition
             heldObj.layer = LayerNumber; //change the object layer to the holdLayer
             //make sure object doesnt collide with player, it can cause weird bugs
+            pickUpObj.GetComponent<Collider>().enabled = false;
             Physics.IgnoreCollision(heldObj.GetComponent<Collider>(), Player.GetComponent<Collider>(), true);
 
             IPickupable pickupable = heldObj.GetComponent<IPickupable>();
@@ -86,6 +130,7 @@ public class PickUpScript : MonoBehaviour
         heldObj.layer = 0; //object assigned back to default layer
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null; //unparent object
+        heldObj.GetComponent<Collider>().enabled = true;
         heldObj = null; //undefine game object
     }
     void MoveObject()
@@ -102,21 +147,42 @@ public class PickUpScript : MonoBehaviour
         heldObjRb.isKinematic = false;
         heldObj.transform.parent = null;
         heldObjRb.AddForce(transform.forward * throwForce);
+        heldObj.GetComponent<Collider>().enabled = true;
         heldObj = null;
     }
-    void StopClipping() //function only called when dropping/throwing
+    GameObject StopClipping() //function only called when dropping/throwing
     {
         var clipRange = Vector3.Distance(heldObj.transform.position, transform.position); //distance from holdPos to the camera
         //have to use RaycastAll as object blocks raycast in center screen
         //RaycastAll returns array of all colliders hit within the cliprange
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
-        //if the array length is greater than 1, meaning it has hit more than just the object we are carrying
-        if (hits.Length > 1)
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
+        Debug.Log(hits.Length);
+        //if the array length is greater than 0, it has hit an obstical
+        if (hits.Length > 0)
         {
             //change object position to camera position 
+            Debug.Log(hits[0].collider.gameObject.tag);
+            if (hits[0].collider.tag == "Cauldron")
+            {
+               
+                if (heldObj.gameObject.TryGetComponent(out InGameItemTags tags))
+                {
+                    Debug.Log("Component found");
+                    foreach (var item in tags.Tags)
+                    {
+                        Debug.Log("trying");
+                        if (item.TagName == "Plate")
+                        {
+                            Debug.Log("Plate");
+                            return hits[0].collider.gameObject;
+                        }
+                    }
+                }
+            }
             heldObj.transform.position = transform.position + new Vector3(0f, -0.5f, 0f); //offset slightly downward to stop object dropping above player 
+
             //if your player is small, change the -0.5f to a smaller number (in magnitude) ie: -0.1f
         }
+        return null;
     }
 }

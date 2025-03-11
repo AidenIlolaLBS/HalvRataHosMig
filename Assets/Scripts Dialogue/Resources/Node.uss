@@ -1,0 +1,15 @@
+.my-node {
+    background-color: rgb(70, 70, 70); 
+}
+
+.my-node .title {
+    background-color: rgb(70, 70, 70);
+}
+
+.my-node .mainContainer {
+    background-color: rgb(70, 70, 70);
+}
+
+.my-node .input-container {
+    background-color: rgb(70, 70, 70);
+}
