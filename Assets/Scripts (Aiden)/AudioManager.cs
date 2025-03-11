@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine.Networking;
 
 public class AudioManager : MonoBehaviour
 {
-    bool inGame = false;
+    public bool inGame = false;
 
     [SerializeField, Range(0, 1)]
     double masterVolume;
@@ -55,6 +56,8 @@ public class AudioManager : MonoBehaviour
         get { return dialogueVolume; }
     }
 
+    private string[] availibleAudioTypes = new string[] { ".mp3", ".wav"};
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -63,7 +66,6 @@ public class AudioManager : MonoBehaviour
         dialogueSource.loop = false;
         ambianceSource.loop = false;
         UpdateAllVolumeValues(masterVolume, musicVolume, sfxVolume, ambianceVolume, dialogueVolume);
-        StartMusic("MainMenu");
     }
     private void Update()
     {
@@ -103,8 +105,9 @@ public class AudioManager : MonoBehaviour
         StopMusic();
         shouldPlayMusic = true;
         System.Random rnd = new();
-        string[] audioFiles = Directory.GetFiles(Application.streamingAssetsPath + "/Audio" + "/MusicAudio" + "/" + musicType, "*.wav");
-        StartCoroutine(LoadAudioClip(audioFiles[rnd.Next(0, audioFiles.Length)], (clip) =>
+        List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/MusicAudio" + "/" + musicType);
+        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
+        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
             musicSource.clip = clip;
             musicSource.Play();
@@ -119,8 +122,9 @@ public class AudioManager : MonoBehaviour
     public void StartSFX(string sfxType)
     {
         System.Random rnd = new();
-        string[] audioFiles = Directory.GetFiles(Application.streamingAssetsPath + "/Audio" + "/SFXAudio" + "/" + sfxType, "*.wav");
-        StartCoroutine(LoadAudioClip(audioFiles[rnd.Next(0, audioFiles.Length - 1)], (clip) =>
+        List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/SFXAudio" + "/" + sfxType);
+        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
+        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
             sfxSource.clip = clip;
             sfxSource.Play();
@@ -131,14 +135,14 @@ public class AudioManager : MonoBehaviour
         sfxSource.Stop();
     }
 
-    public void StartDialogue(string clipPath)
+    public void StartDialogue(string clipPath, string audioType)
     {
         if (clipPath == "")
         {
             return;
         }
         StopDialogue();
-        StartCoroutine(LoadAudioClip(clipPath, (clip) =>
+        StartCoroutine(LoadAudioClip(clipPath, audioType, (clip) =>
         {
             dialogueSource.clip = clip;
             dialogueSource.Play();
@@ -153,8 +157,9 @@ public class AudioManager : MonoBehaviour
     {
         StopAmbiance();
         System.Random rnd = new();
-        string[] audioFiles = Directory.GetFiles(Application.streamingAssetsPath + "/Audio" + "/AmbianceAudio", "*.wav");
-        StartCoroutine(LoadAudioClip(audioFiles[rnd.Next(0, audioFiles.Length)], (clip) =>
+        List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/AmbianceAudio");
+        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
+        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
             ambianceSource.clip = clip;
             ambianceSource.Play();
@@ -165,9 +170,31 @@ public class AudioManager : MonoBehaviour
         ambianceSource.Stop();
     }
 
-    IEnumerator LoadAudioClip(string filePath, System.Action<AudioClip> callback)
+    private List<string[]> GetAudioFiles(string path)
     {
-        UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(filePath, AudioType.WAV);
+        List<string[]> files = new();
+        foreach (var audioType in availibleAudioTypes)
+        {
+            files.Add(Directory.GetFiles(path, "*" + audioType));
+        }
+        return files;
+    }
+
+    IEnumerator LoadAudioClip(string filePath, string audioType, System.Action<AudioClip> callback)
+    {
+        UnityWebRequest www = new();
+        switch (audioType)
+        {
+            case ".wav":
+                www = UnityWebRequestMultimedia.GetAudioClip(filePath, AudioType.WAV);
+                break;
+            case ".mp3":
+                www = UnityWebRequestMultimedia.GetAudioClip(filePath, AudioType.MPEG);
+                break;
+            default:
+                break;
+        }
+         
         yield return www.SendWebRequest();
 
         if (www.result == UnityWebRequest.Result.Success)

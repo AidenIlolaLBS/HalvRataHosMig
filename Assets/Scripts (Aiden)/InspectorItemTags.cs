@@ -32,6 +32,7 @@ public class InspectorItemTags : MonoBehaviour
     public bool IceCream = false;
     public bool Random = false;
     public bool Plate = false;
+    public bool Lime = false;
     public InspectorItemTags()
     {
         AddTags();
@@ -71,5 +72,6 @@ public class InspectorItemTags : MonoBehaviour
         tags.Add(new TagInfo(nameof(IceCream), IceCream));
         tags.Add(new TagInfo(nameof(Random), Random));
         tags.Add(new TagInfo(nameof(Plate), Plate));
+        tags.Add(new TagInfo(nameof(Lime), Lime));
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UIElements;
 
 public class PickUpScript : MonoBehaviour
@@ -15,6 +16,8 @@ public class PickUpScript : MonoBehaviour
     private bool canDrop = true; //this is needed so we don't throw/drop object when rotating the object
     private int LayerNumber; //layer index
 
+    public TMP_Text text;
+
     //Reference to script which includes mouse movement of player (looking around)
     //we want to disable the player looking around when rotating the object
     //example below 
@@ -24,6 +27,7 @@ public class PickUpScript : MonoBehaviour
     }
     void Update()
     {
+        text.text = "";
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
@@ -58,6 +62,32 @@ public class PickUpScript : MonoBehaviour
                     {
                         PickUpMeal(cauldron.transform.gameObject.GetComponent<Cauldron>());
                     }
+                }
+            }
+        }
+        else
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+            {
+                if (hit.transform.gameObject.tag == "canPickUp" && heldObj == null)
+                {
+                    text.text = "Pick up";
+                }
+                else if (hit.transform.gameObject.tag == "Door")
+                {
+                    if (hit.transform.parent.GetComponent<Door>().Open)
+                    {
+                        text.text = "Close";
+                    }
+                    else
+                    {
+                        text.text = "Open";
+                    }                  
+                }
+                else if (heldObj.gameObject.tag == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                {
+                    text.text = "Pick up meal";
                 }
             }
         }
