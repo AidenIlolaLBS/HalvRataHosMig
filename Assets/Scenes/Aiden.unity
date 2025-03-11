@@ -870,6 +870,7 @@ MonoBehaviour:
   IceCream: 0
   Random: 0
   Plate: 0
+  Lime: 0
 --- !u!114 &315827623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1091,7 @@ MonoBehaviour:
   IceCream: 0
   Random: 0
   Plate: 0
+  Lime: 0
 --- !u!54 &568816460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1242,7 +1244,7 @@ Transform:
   m_GameObject: {fileID: 617297349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.12, y: 8.67, z: 18.01}
+  m_LocalPosition: {x: -14.12, y: 3.1, z: 18.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1795,6 +1797,7 @@ MonoBehaviour:
   IceCream: 0
   Random: 0
   Plate: 0
+  Lime: 0
 --- !u!54 &1025981219
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3163,6 +3166,7 @@ MonoBehaviour:
   IceCream: 0
   Random: 0
   Plate: 1
+  Lime: 0
 --- !u!54 &1835030197
 Rigidbody:
   m_ObjectHideFlags: 0
