@@ -87,7 +87,7 @@ public class PickUpScript : MonoBehaviour
                 }
                 else if(heldObj != null)
                 {
-                    if (heldObj.gameObject.tag == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                    if (heldObj.gameObject.GetComponent<InGameItemTags>().Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
                     {
                         text.text = "Pick up meal";
                     }
