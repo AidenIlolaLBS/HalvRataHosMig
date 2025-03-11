@@ -85,9 +85,12 @@ public class PickUpScript : MonoBehaviour
                         text.text = "Open";
                     }                  
                 }
-                else if (heldObj.gameObject.tag == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                else if(heldObj != null)
                 {
-                    text.text = "Pick up meal";
+                    if (heldObj.gameObject.tag == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                    {
+                        text.text = "Pick up meal";
+                    }
                 }
             }
         }
