@@ -14169,7 +14169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c663b94b06fbb249be0af834e212af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 606797593}
+  player: {fileID: 1536784646}
   Camera: {fileID: 662083106}
 --- !u!1001 &1541505508
 PrefabInstance:

@@ -13,7 +13,7 @@ public class InfoNode : BaseNode
 
     public string emotion; 
 
-    public DefaultAsset soundFolder;
+    public string soundPath;
 
     public List<InfoVariables> variables = new List<InfoVariables>();
 }

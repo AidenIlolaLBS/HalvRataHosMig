@@ -1,15 +1,10 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Subtegral.DialogueSystem.Runtime
 {
@@ -98,9 +93,9 @@ namespace Subtegral.DialogueSystem.Runtime
                 InfoNodeData infoNodeData = (InfoNodeData)nodeContainer.baseNodeData.Find(x => x.Guid == tempNarrativeDataguid);
                 title = infoNodeData.personName;
 
-                if (infoNodeData.soundFolder != null)
+                if (infoNodeData.soundPath != null)
                 {
-                    string[] guids = AssetDatabase.FindAssets("", new[] { AssetDatabase.GetAssetPath(infoNodeData.soundFolder) });
+                    string[] guids = Directory.GetFiles(Path.Combine(Application.streamingAssetsPath, infoNodeData.soundPath));
                     if (guids.Length != 0)
                     {
                         System.Random random = new System.Random();

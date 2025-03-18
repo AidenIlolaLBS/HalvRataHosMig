@@ -1,10 +1,7 @@
-using Ionic.Zlib;
 using Subtegral.DialogueSystem.Editor;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -185,7 +182,7 @@ public class DialogueGraphView : GraphView
         return dialogueNode;
     }
 
-    public InfoNode CreateInfoNode(Vector2 position = new Vector2(), string nodeEmotion = "Deafult", string personName = "Person name", DefaultAsset soundFolder = null, string nodeTitle = "Info")
+    public InfoNode CreateInfoNode(Vector2 position = new Vector2(), string nodeEmotion = "Deafult", string personName = "Person name", string soundPath = null, string nodeTitle = "Info")
     {
         var infoNode = new InfoNode
         {
@@ -193,7 +190,7 @@ public class DialogueGraphView : GraphView
             personName = personName,
             emotion = nodeEmotion,
             GUID = Guid.NewGuid().ToString(),
-            soundFolder = soundFolder
+            soundPath = soundPath
         };
         
         infoNode.AddToClassList("my-node");
@@ -232,23 +229,22 @@ public class DialogueGraphView : GraphView
         objectField.RegisterValueChangedCallback(evt =>
         {
             var selectedObject = evt.newValue as DefaultAsset;
-
             if (selectedObject != null)
             {
                 string path = AssetDatabase.GetAssetPath(selectedObject);
                 if (AssetDatabase.IsValidFolder(path))
                 {
                     Debug.Log("Folder selected: " + path);
-                    infoNode.soundFolder = selectedObject;
+                    infoNode.soundPath = path;
                 }
                 else
                 {
                     objectField.SetValueWithoutNotify(null);
-                    infoNode.soundFolder = null;
+                    infoNode.soundPath = null;
                 }
             }
         });
-        objectField.SetValueWithoutNotify(infoNode.soundFolder);
+        objectField.SetValueWithoutNotify(AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(infoNode.soundPath));
         infoNode.mainContainer.Add(objectField);
 
         infoNode.RefreshExpandedState();

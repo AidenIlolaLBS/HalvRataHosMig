@@ -37,14 +37,19 @@ public class PickUpScript : MonoBehaviour
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
                 {
                     //make sure pickup tag is attached
-                    if (hit.transform.gameObject.tag == "canPickUp")
+                    switch (hit.transform.gameObject.tag)
                     {
-                        //pass in object hit into the PickUpObject function
-                        PickUpObject(hit.transform.gameObject);
-                    }
-                    else if (hit.transform.gameObject.tag == "Door")
-                    {
-                        hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                        case "canPickUp":
+                            PickUpObject(hit.transform.gameObject);
+                            break;
+                        case "Door":
+                            hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                            break;
+                        case "Person":
+                            hit.transform.gameObject.GetComponent<Person>().Talk();
+                            break;
+                        default:
+                            break;
                     }
                 }
             }
@@ -70,27 +75,39 @@ public class PickUpScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
             {
-                if (hit.transform.gameObject.tag == "canPickUp" && heldObj == null)
+                switch (hit.transform.gameObject.tag)
                 {
-                    text.text = "Pick up";
-                }
-                else if (hit.transform.gameObject.tag == "Door")
-                {
-                    if (hit.transform.parent.GetComponent<Door>().Open)
-                    {
-                        text.text = "Close";
-                    }
-                    else
-                    {
-                        text.text = "Open";
-                    }                  
-                }
-                else if(heldObj != null)
-                {
-                    if (heldObj.gameObject.GetComponent<InGameItemTags>().Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
-                    {
-                        text.text = "Pick up meal";
-                    }
+                    case "canPickUp":
+                        if (heldObj == null)
+                        {
+                            text.text = "Pick up";
+                        }
+                        break;
+                    case "Door":
+                        if (hit.transform.parent.GetComponent<Door>().Open)
+                        {
+                            text.text = "Close";
+                        }
+                        else
+                        {
+                            text.text = "Open";
+                        }
+                        break;
+                    case "Person":
+                        text.text = "Talk";
+                        break;
+                    default:
+                        if (heldObj != null)
+                        {
+                            if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
+                            {
+                                if (test.Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                                {
+                                    text.text = "Pick up meal";
+                                }
+                            }
+                        }
+                        break;
                 }
             }
         }
