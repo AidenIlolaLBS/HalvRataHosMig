@@ -456,6 +456,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2001234208}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2001234213}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2001234212}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &125277576
 PrefabInstance:
@@ -535,6 +541,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 135115094}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 135115099}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 135115098}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &135115092 stripped
 GameObject:
@@ -594,6 +606,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &135115098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135115092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &135115099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135115092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &140622822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1038,6 +1120,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1180370717}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180370721}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180370720}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &202589894
 GameObject:
@@ -1157,6 +1245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1625814093}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1625814096}
   m_SourcePrefab: {fileID: 100100000, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
 --- !u!1001 &213862826
 PrefabInstance:
@@ -1425,6 +1516,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &227566400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227566389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &231598530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1506,6 +1609,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c9b09cb15adac048927fb19d63384e1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1303184139}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c9b09cb15adac048927fb19d63384e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1303184142}
   m_SourcePrefab: {fileID: 100100000, guid: 7c9b09cb15adac048927fb19d63384e1, type: 3}
 --- !u!1001 &232254346
 PrefabInstance:
@@ -1987,6 +2093,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea0151e4232c6d34982ee1e1615de386, type: 3}
       insertIndex: -1
       addedObject: {fileID: 965049917}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ea0151e4232c6d34982ee1e1615de386, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 965049920}
   m_SourcePrefab: {fileID: 100100000, guid: ea0151e4232c6d34982ee1e1615de386, type: 3}
 --- !u!1 &302997974 stripped
 GameObject:
@@ -2395,6 +2504,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2095433270}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2095433273}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1 &341879847 stripped
 GameObject:
@@ -2454,6 +2566,76 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 40.978195, y: 2.8876152, z: 40.978203}
   m_Center: {x: 0.0000019073486, y: 1.4359193, z: -0.0000019073486}
+--- !u!114 &341879856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341879847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &341879857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341879847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &345502552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2942,6 +3124,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 423756511}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 423756516}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 423756515}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &423756509 stripped
 Transform:
@@ -3001,6 +3189,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &423756515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423756510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &423756516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423756510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &425522589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3195,6 +3453,76 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 40.978195, y: 2.8876152, z: 40.978203}
   m_Center: {x: 0.0000019073486, y: 1.4359193, z: -0.0000019073486}
+--- !u!114 &427732605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427732596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &427732606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427732596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &429953736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3541,6 +3869,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e4622210d675c447b3d512b11035130, type: 3}
       insertIndex: -1
       addedObject: {fileID: 621423441}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e4622210d675c447b3d512b11035130, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 621423444}
   m_SourcePrefab: {fileID: 100100000, guid: 5e4622210d675c447b3d512b11035130, type: 3}
 --- !u!1001 &473837444
 PrefabInstance:
@@ -3620,6 +3951,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 658224083}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658224088}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658224087}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &497548424
 PrefabInstance:
@@ -3699,6 +4036,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1189523649}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1189523654}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1189523653}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &498258608
 GameObject:
@@ -3885,6 +4228,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 515348491}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 515348496}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 515348495}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &515348489 stripped
 Transform:
@@ -3944,6 +4293,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &515348495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515348490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &515348496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515348490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &525499269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4025,6 +4444,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 717440541}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717440544}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &527054726
 PrefabInstance:
@@ -4247,6 +4669,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &538936493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538936484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &541524723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4472,6 +4906,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1344092927}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344092930}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &546778354
 PrefabInstance:
@@ -4551,6 +4988,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 546778357}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 546778362}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 546778361}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &546778355 stripped
 Transform:
@@ -4610,6 +5053,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &546778361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546778356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &546778362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546778356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &553799423 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
@@ -4843,6 +5356,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 817401738}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817401741}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1 &606797593
 GameObject:
@@ -5159,6 +5675,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &616825278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616825267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &621423435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e4622210d675c447b3d512b11035130, type: 3}
@@ -5276,6 +5804,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &621423444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621423435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &633618571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5868,6 +6408,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &656551462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656551446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658224081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
@@ -5926,6 +6478,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &658224087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658224081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &658224088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658224081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &659385010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 965c6ecd96d01e94eaaef09aa26fa130, type: 3}
@@ -6016,6 +6638,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &660957301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660957295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &660957302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660957295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662083106
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,6 +6928,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1567526782}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1567526787}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1567526786}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &685218378 stripped
 GameObject:
@@ -6352,6 +7050,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &685218389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685218378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &688561087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6787,6 +7497,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &717440544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717440533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &721875021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
@@ -6845,6 +7567,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &721875027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721875021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &721875028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721875021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &725598805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7078,6 +7870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1358188094}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1358188097}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1 &787407693
 GameObject:
@@ -7566,6 +8361,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &817401741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817401730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &818751705
 GameObject:
   m_ObjectHideFlags: 0
@@ -8083,6 +8890,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 869814255}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 869814258}
   m_SourcePrefab: {fileID: 100100000, guid: 3ebca6fbeb8059c4791313522d293aa0, type: 3}
 --- !u!1 &869814249 stripped
 GameObject:
@@ -8199,6 +9009,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &869814258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869814249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &885936248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4160968689560632057, guid: f63569dfb016ed547996967474877645, type: 3}
@@ -8556,6 +9378,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 341879853}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341879857}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341879856}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &927535242
 GameObject:
@@ -8653,6 +9481,10 @@ PrefabInstance:
       value: food_flour
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4a8cb78bfe2499f42b0f46bd16adfb90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4a8cb78bfe2499f42b0f46bd16adfb90, type: 3}
       propertyPath: m_TagString
       value: canPickUp
       objectReference: {fileID: 0}
@@ -8669,6 +9501,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a8cb78bfe2499f42b0f46bd16adfb90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1879654610}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a8cb78bfe2499f42b0f46bd16adfb90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1879654613}
   m_SourcePrefab: {fileID: 100100000, guid: 4a8cb78bfe2499f42b0f46bd16adfb90, type: 3}
 --- !u!1 &962833493 stripped
 GameObject:
@@ -8857,6 +9692,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 1
+--- !u!114 &965049920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965049911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &972207732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9219,6 +10066,76 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 40.978195, y: 2.8876152, z: 40.978203}
   m_Center: {x: 0.0000019073486, y: 1.4359193, z: -0.0000019073486}
+--- !u!114 &998302606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998302597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &998302607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998302597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003819720
 GameObject:
   m_ObjectHideFlags: 0
@@ -9385,6 +10302,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1007107096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007107090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1007107097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007107090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1015147110
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,7 +10499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1020895737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9757,6 +10744,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1381626806}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1381626809}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &1106224885
 PrefabInstance:
@@ -10190,6 +11180,76 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 40.978195, y: 2.8876152, z: 40.978203}
   m_Center: {x: 0.0000019073486, y: 1.4359193, z: -0.0000019073486}
+--- !u!114 &1180370720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180370711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1180370721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180370711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1189523647 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
@@ -10248,6 +11308,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1189523653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189523647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1189523654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189523647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1226490778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10589,6 +11719,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1303184142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303184133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1333150761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11008,6 +12150,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1344092930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344092919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1345111845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
@@ -11066,6 +12220,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1345111851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345111845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1345111852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345111845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1358188086 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
@@ -11181,6 +12405,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1358188097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358188086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1368036167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11254,6 +12490,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a7853b35628ca249bf65a5f174ae10f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 538936490}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a7853b35628ca249bf65a5f174ae10f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 538936493}
   m_SourcePrefab: {fileID: 100100000, guid: 7a7853b35628ca249bf65a5f174ae10f, type: 3}
 --- !u!1 &1381626798 stripped
 GameObject:
@@ -11370,6 +12609,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1381626809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381626798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1381995543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11908,6 +13159,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1427149726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427149715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1433043345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11992,6 +13255,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40b682be19abc2f4a800ce7016fcf25f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1903047008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40b682be19abc2f4a800ce7016fcf25f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1903047011}
   m_SourcePrefab: {fileID: 100100000, guid: 40b682be19abc2f4a800ce7016fcf25f, type: 3}
 --- !u!1 &1465446149 stripped
 GameObject:
@@ -12121,6 +13387,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1472079820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472079814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1472079821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472079814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1473735306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b15147e0ccf4c7c4eac0f9711977692d, type: 3}
@@ -12313,6 +13649,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1345111847}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345111852}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1345111851}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &1492080771
 GameObject:
@@ -12426,6 +13768,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 685218386}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685218389}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &1504984206
 PrefabInstance:
@@ -12632,6 +13977,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1526638395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526638389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1526638396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526638389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1535534588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 233239263241259186, guid: aca96fce1fe6bb745adba0e3110b095c, type: 3}
@@ -12934,6 +14349,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1544981212}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1544981217}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1544981216}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &1544981210 stripped
 Transform:
@@ -12993,6 +14414,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1544981216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544981211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1544981217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544981211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553937485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d122b4699780a34a83a1ffc036ff096, type: 3}
@@ -13083,6 +14574,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1567526786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567526780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1567526787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567526780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1576674612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13164,6 +14725,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 616825275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616825278}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1 &1599042457
 GameObject:
@@ -13354,6 +14918,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 823b1483aa61bfa4aa858d794ecfd2bd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 656551459}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 823b1483aa61bfa4aa858d794ecfd2bd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 656551462}
   m_SourcePrefab: {fileID: 100100000, guid: 823b1483aa61bfa4aa858d794ecfd2bd, type: 3}
 --- !u!1 &1614391404 stripped
 GameObject:
@@ -13460,6 +15027,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 721875023}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 721875028}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 721875027}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &1625814087 stripped
 GameObject:
@@ -13576,6 +15149,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1625814096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625814087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1625871899
 GameObject:
   m_ObjectHideFlags: 0
@@ -13868,6 +15453,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 427732602}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 427732606}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 427732605}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &1720826834
 PrefabInstance:
@@ -14191,6 +15782,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1749400216}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749400221}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1749400220}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &1749400214 stripped
 Transform:
@@ -14250,6 +15847,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1749400220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749400215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1749400221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749400215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749534722
 GameObject:
   m_ObjectHideFlags: 0
@@ -14395,6 +16062,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 227566397}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 227566400}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &1784206664
 PrefabInstance:
@@ -14474,6 +16144,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1926377958}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1926377963}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1926377962}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &1798488707
 PrefabInstance:
@@ -14553,6 +16229,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 998302603}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998302607}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 998302606}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &1810337198
 PrefabInstance:
@@ -14784,6 +16466,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1007107092}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1007107097}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1007107096}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &1832958847
 PrefabInstance:
@@ -15504,6 +17192,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1870823417}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870823422}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1870823421}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &1870823415 stripped
 Transform:
@@ -15563,6 +17257,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1870823421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870823416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1870823422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870823416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1876155181
 GameObject:
   m_ObjectHideFlags: 0
@@ -15907,6 +17671,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1879654613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879654604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1882508101
 GameObject:
   m_ObjectHideFlags: 0
@@ -15923,7 +17699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1882508102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16229,6 +18005,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &1903047011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903046997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1910031293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1239367699659366887, guid: f63569dfb016ed547996967474877645, type: 3}
@@ -16339,6 +18127,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1472079816}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1472079821}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1472079820}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &1921312005
 PrefabInstance:
@@ -16418,6 +18212,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1921312008}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1921312013}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1921312012}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &1921312006 stripped
 Transform:
@@ -16477,6 +18277,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1921312012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921312007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1921312013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921312007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926377956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
@@ -16535,6 +18405,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1926377962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926377956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1926377963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926377956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1945902586
 GameObject:
   m_ObjectHideFlags: 0
@@ -16834,6 +18774,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1427149723}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1427149726}
   m_SourcePrefab: {fileID: 100100000, guid: 182c1c3d622bf404e8b14b190fe0d467, type: 3}
 --- !u!1001 &1978549127
 PrefabInstance:
@@ -16913,6 +18856,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1978549130}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1978549135}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1978549134}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!4 &1978549128 stripped
 Transform:
@@ -16972,6 +18921,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1978549134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978549129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &1978549135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978549129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1993657387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
@@ -17100,6 +19119,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2001234212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001234206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2cde429cfd2cd4cba86af4c953ccd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tags:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullMeal: 0
+  Bread: 0
+  Seaweed: 0
+  ChoppedSeaweed: 0
+  ToastSkagish: 0
+  DragonEgg: 0
+  LizardHeart: 0
+  Eggsallad: 0
+  Fairy: 0
+  Flour: 0
+  Gratin: 0
+  Water: 0
+  BatWing: 0
+  Soup: 0
+  FlyAgaric: 0
+  Spaghetti: 0
+  Pie: 0
+  StinkFruit: 0
+  DeadBerry: 0
+  IceCream: 0
+  Random: 0
+  Plate: 1
+  Lime: 0
+--- !u!114 &2001234213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001234206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2010752611
 GameObject:
   m_ObjectHideFlags: 0
@@ -17619,6 +19708,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 660957297}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 660957302}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 660957301}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1001 &2078919917
 PrefabInstance:
@@ -17991,6 +20086,18 @@ MonoBehaviour:
   Random: 0
   Plate: 0
   Lime: 0
+--- !u!114 &2095433273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095433262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421c62928ce25bb498124c3bb79d3bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2112894138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18069,6 +20176,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1526638391}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526638396}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526638395}
   m_SourcePrefab: {fileID: 100100000, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
 --- !u!1 &2123978693
 GameObject:
