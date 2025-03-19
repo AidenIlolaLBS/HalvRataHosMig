@@ -135,14 +135,17 @@ public class AudioManager : MonoBehaviour
         sfxSource.Stop();
     }
 
-    public void StartDialogue(string clipPath, string audioType)
+    public void StartDialogue(string clipPath)
     {
         if (clipPath == "")
         {
             return;
         }
         StopDialogue();
-        StartCoroutine(LoadAudioClip(clipPath, audioType, (clip) =>
+        System.Random rnd = new();
+        List<string[]> audioFiles = GetAudioFiles(clipPath);
+        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
+        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
             dialogueSource.clip = clip;
             dialogueSource.Play();
