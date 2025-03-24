@@ -96,17 +96,34 @@ public class PickUpScript : MonoBehaviour
                     case "Person":
                         text.text = "Talk";
                         break;
-                    default:
+                    case "Cauldron":
                         if (heldObj != null)
                         {
                             if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
                             {
                                 if (test.Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
                                 {
-                                    text.text = "Pick up meal";
+                                    if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                    {
+                                        text.text = "Pick up meal";
+                                    }
+                                    else
+                                    {
+                                        text.text = "More ingredients needed";
+                                    }
                                 }
                             }
                         }
+                        else
+                        {
+                            if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                            {
+                                text.text = "Plate required";
+                            }
+                        }
+                        break;
+                    default:
+                        
                         break;
                 }
             }

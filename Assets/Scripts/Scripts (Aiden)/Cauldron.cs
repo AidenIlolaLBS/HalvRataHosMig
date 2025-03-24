@@ -14,6 +14,15 @@ public class Cauldron : MonoBehaviour
         prefabMeals = Resources.LoadAll<GameObject>("MealPrefabs").ToList();
     }
 
+    public bool CanGetMeal()
+    {
+        if (containingTags.Count > 2)
+        {
+            return true;
+        }
+        return false;
+    }
+
     public GameObject GetNewMeal()
     {
         if (containingTags.Count > 2)
