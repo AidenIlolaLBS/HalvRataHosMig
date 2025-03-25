@@ -6,8 +6,9 @@ using UnityEngine;
 public class Cauldron : MonoBehaviour
 {
     private List<string> containingTags = new();
-    private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
+    //private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
     private List<GameObject> prefabMeals = new();
+    int minIngredients = 2;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class Cauldron : MonoBehaviour
 
     public bool CanGetMeal()
     {
-        if (containingTags.Count > 2)
+        if (containingTags.Count > minIngredients)
         {
             return true;
         }
@@ -25,7 +26,7 @@ public class Cauldron : MonoBehaviour
 
     public GameObject GetNewMeal()
     {
-        if (containingTags.Count > 2)
+        if (containingTags.Count > minIngredients)
         {
             string mealName = GetMealName();
             
@@ -37,6 +38,7 @@ public class Cauldron : MonoBehaviour
                 {
                     if (mealName == temp.GetComponent<InGameItemTags>().Tags[j].TagName)
                     {
+                        Debug.Log(mealName);
                         foreach (var item in containingTags)
                         {
                             if (item != mealName)
@@ -44,6 +46,8 @@ public class Cauldron : MonoBehaviour
                                 temp.GetComponent<InGameItemTags>().Tags.Add(new TagInfo(item,true));
                             }
                         }
+                        temp.GetComponent<InGameItemTags>().fullMeal = true;
+                        temp.GetComponent<InGameItemTags>().fullMealName = mealName;
                         containingTags.Clear();
                         return temp;
                     }

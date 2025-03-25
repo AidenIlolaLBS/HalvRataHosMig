@@ -78,9 +78,26 @@ public class PickUpScript : MonoBehaviour
                 switch (hit.transform.gameObject.tag)
                 {
                     case "canPickUp":
+                        string additionalText = "";
                         if (heldObj == null)
                         {
-                            text.text = "Pick up";
+                            if (hit.transform.TryGetComponent(out InGameItemTags inGameItemTags))
+                            {
+                                if (inGameItemTags.fullMeal)
+                                {
+                                    Debug.Log("test");
+                                    additionalText = inGameItemTags.fullMealName.ToLower();
+                                    if (additionalText == "random")
+                                    {
+                                        additionalText = "meal";
+                                    }
+                                }
+                                else
+                                {
+                                    additionalText = inGameItemTags.Tags[0].TagName.ToLower();
+                                }                                
+                            }
+                            text.text = "Pick up " + additionalText;                            
                         }
                         break;
                     case "Door":
@@ -119,6 +136,10 @@ public class PickUpScript : MonoBehaviour
                             if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
                             {
                                 text.text = "Plate required";
+                            }
+                            else
+                            {
+                                text.text = "More ingredients needed";
                             }
                         }
                         break;
