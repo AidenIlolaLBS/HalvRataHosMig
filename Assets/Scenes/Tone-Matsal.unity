@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (3)
@@ -337,6 +341,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ee632a2a470b2824aacdfd16d80c83cf, type: 2}
     - target: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
       propertyPath: m_Name
       value: dinning_glas (2)
@@ -406,6 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (1)
@@ -480,6 +492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (1)
@@ -549,6 +565,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (4)
@@ -618,6 +638,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (5)
@@ -707,6 +731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife
@@ -797,6 +825,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (4)
@@ -866,6 +898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 72c7b1bcd287b8244a1d45e87a1b6552, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_Name
       value: dinning_deapplate
@@ -949,6 +985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (6)
@@ -1012,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.98157
+      value: 96.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1050,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e12a17378f91304da9b45923a8357ee, type: 2}
     - target: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_Name
       value: dinning_plate (3)
@@ -1133,7 +1177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158.86862
+      value: 170.62794
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1171,6 +1215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 436317ade6cc5a742be170e82863af44, type: 2}
     - target: {fileID: 919132149155446097, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_Name
       value: dinning_chair_pillow (1)
@@ -1272,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (7)
@@ -1492,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 157.64069
+      value: 169.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1530,6 +1582,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 436317ade6cc5a742be170e82863af44, type: 2}
     - target: {fileID: 919132149155446097, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_Name
       value: dinning_chair_pillow (3)
@@ -1587,6 +1643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork
@@ -1960,6 +2020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3691d024e1d76e44b9e0fd1e3f2e5ece, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
       propertyPath: m_Name
       value: dinning_chair (1)
@@ -2025,7 +2089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85.03889
+      value: 97.357315
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2033,7 +2097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.90627325
+      value: -5.2616844
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2063,6 +2127,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e12a17378f91304da9b45923a8357ee, type: 2}
     - target: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_Name
       value: dinning_plate (2)
@@ -2132,6 +2200,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ee632a2a470b2824aacdfd16d80c83cf, type: 2}
     - target: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
       propertyPath: m_Name
       value: dinning_glas
@@ -2192,6 +2264,7 @@ MonoBehaviour:
   holdPos: {fileID: 1739512414}
   throwForce: 500
   pickUpRange: 5
+  text: {fileID: 0}
 --- !u!114 &798505106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,6 +2434,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (4)
@@ -2435,6 +2512,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ee632a2a470b2824aacdfd16d80c83cf, type: 2}
     - target: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
       propertyPath: m_Name
       value: dinning_glas (1)
@@ -2458,7 +2539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.389
+      value: 1.394
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2492,6 +2573,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon
@@ -2517,6 +2602,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       insertIndex: -1
       addedObject: {fileID: 667762686}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1119393050}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
 --- !u!1 &901171887
@@ -2668,6 +2756,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 436317ade6cc5a742be170e82863af44, type: 2}
     - target: {fileID: 919132149155446097, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_Name
       value: dinning_chair_pillow
@@ -2756,6 +2848,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (6)
@@ -2787,7 +2883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 157.64069
+      value: 169.40001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2825,6 +2921,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 436317ade6cc5a742be170e82863af44, type: 2}
     - target: {fileID: 919132149155446097, guid: 877ab96e8d9aa8d4e8a829d1c76a3914, type: 3}
       propertyPath: m_Name
       value: dinning_chair_pillow (2)
@@ -2936,6 +3036,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (5)
@@ -3010,6 +3114,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3691d024e1d76e44b9e0fd1e3f2e5ece, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
       propertyPath: m_Name
       value: dinning_chair (4)
@@ -3080,6 +3188,7 @@ MonoBehaviour:
   holdPos: {fileID: 1536789057}
   throwForce: 500
   pickUpRange: 100000
+  text: {fileID: 0}
 --- !u!54 &1091738756
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3278,7 +3387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 86.02068
+      value: 98.33911
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3316,6 +3425,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e12a17378f91304da9b45923a8357ee, type: 2}
     - target: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_Name
       value: dinning_plate (1)
@@ -3331,27 +3444,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 293716450}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0013280375
+      value: 0.7604
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0013311811
+      value: 0.7622
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8551
+      value: 199.88573
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.389
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5830001
+      value: 285.14197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3359,7 +3476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3367,7 +3484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3381,6 +3498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (1)
@@ -3390,6 +3511,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+--- !u!4 &1119393050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+  m_PrefabInstance: {fileID: 1119393049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1142063402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
@@ -3455,6 +3581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e12a17378f91304da9b45923a8357ee, type: 2}
     - target: {fileID: 919132149155446097, guid: cc5692b6ac01f4f4dbcad8dd192201e7, type: 3}
       propertyPath: m_Name
       value: dinning_plate
@@ -3533,6 +3663,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (5)
@@ -3612,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ee632a2a470b2824aacdfd16d80c83cf, type: 2}
     - target: {fileID: 919132149155446097, guid: ae03f1807ea0ca34fa44fbbfb508a084, type: 3}
       propertyPath: m_Name
       value: dinning_glas (3)
@@ -3784,6 +3922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -979198765395689765, guid: d95c221927cfffb488e4f9f77bff26e4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ee632a2a470b2824aacdfd16d80c83cf, type: 2}
     - target: {fileID: 919132149155446097, guid: d95c221927cfffb488e4f9f77bff26e4, type: 3}
       propertyPath: m_Name
       value: Kanna
@@ -3881,6 +4023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (3)
@@ -4162,6 +4308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (7)
@@ -4193,7 +4343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 95.186295
+      value: 108.84125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4231,6 +4381,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 72c7b1bcd287b8244a1d45e87a1b6552, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_Name
       value: dinning_deapplate (1)
@@ -4300,6 +4454,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 965c6ecd96d01e94eaaef09aa26fa130, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c46d3420b75b2c64896f1bba5e7e2048, type: 2}
     - target: {fileID: 919132149155446097, guid: 965c6ecd96d01e94eaaef09aa26fa130, type: 3}
       propertyPath: m_Name
       value: dinning_table
@@ -4435,6 +4593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3691d024e1d76e44b9e0fd1e3f2e5ece, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
       propertyPath: m_Name
       value: dinning_chair
@@ -4583,6 +4745,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3691d024e1d76e44b9e0fd1e3f2e5ece, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d0234e8cec883744870a49963c52f87, type: 3}
       propertyPath: m_Name
       value: dinning_chair (2)
@@ -4617,7 +4783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.59105
+      value: 106.246
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4655,6 +4821,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 72c7b1bcd287b8244a1d45e87a1b6552, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_Name
       value: dinning_deapplate (3)
@@ -4724,6 +4894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (7)
@@ -4895,6 +5069,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bad88686d23ce95448b5cd872f601fd0, type: 2}
     - target: {fileID: 919132149155446097, guid: 32f9c761a6fa74a4fa05c331b3581457, type: 3}
       propertyPath: m_Name
       value: dinning_fork (2)
@@ -5034,7 +5212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.42824
+      value: 107.08319
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5042,7 +5220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.1720335
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5072,6 +5250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 72c7b1bcd287b8244a1d45e87a1b6552, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d1d5d732f2be044d98552f6146ccac2, type: 3}
       propertyPath: m_Name
       value: dinning_deapplate (2)
@@ -5295,6 +5477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (6)
@@ -5364,6 +5550,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b799f1f3a097ec44b20e9c804b7951d, type: 2}
     - target: {fileID: 919132149155446097, guid: 2b18cab7b89cee14891227e79a308c40, type: 3}
       propertyPath: m_Name
       value: dinning_spoon (2)
@@ -5465,6 +5655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (3)
@@ -5539,6 +5733,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a2d41f4c0529204f9daddde4b3faacf, type: 2}
     - target: {fileID: 919132149155446097, guid: c135151528eeaa44bb5e4dc5a1221cae, type: 3}
       propertyPath: m_Name
       value: dinning_knife (2)
@@ -5585,4 +5783,3 @@ SceneRoots:
   - {fileID: 501222894}
   - {fileID: 189276790}
   - {fileID: 887478561}
-  - {fileID: 1119393049}
