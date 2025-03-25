@@ -6,15 +6,17 @@ public class Sink : MonoBehaviour
 {
     public GameObject water;
     private bool waterActive = false;
+
     private void Start()
     {
         water.SetActive(waterActive);
-    }
+    } 
+
     public void Interact()
     {
         if (waterActive)
         {
-            waterActive = false;            
+            waterActive = false;
         }
         else
         {
