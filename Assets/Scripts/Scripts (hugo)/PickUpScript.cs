@@ -48,6 +48,9 @@ public class PickUpScript : MonoBehaviour
                         case "Person":
                             hit.transform.gameObject.GetComponent<Person>().Talk();
                             break;
+                        case "Sink":
+                            hit.transform.gameObject.GetComponent<Sink>().Interact();
+                            break;
                         default:
                             break;
                     }
@@ -141,6 +144,16 @@ public class PickUpScript : MonoBehaviour
                             {
                                 text.text = "More ingredients needed";
                             }
+                        }
+                        break;
+                    case "Sink":
+                        if (hit.transform.GetComponent<Sink>().GetWaterStatus())
+                        {
+                            text.text = "Turn off water";
+                        }
+                        else
+                        {
+                            text.text = "Turn on water";
                         }
                         break;
                     default:

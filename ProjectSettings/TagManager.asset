@@ -10,6 +10,7 @@ TagManager:
   - PlayableArea1
   - PlayableArea2
   - Door
+  - ChopBlock
   layers:
   - Default
   - TransparentFX
