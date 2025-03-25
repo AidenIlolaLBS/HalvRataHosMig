@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Aiden.unity
     guid: d079656d10b631941a21c9a0d99a4818
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rayan.unity
     guid: f188c38ac75bb83488bef3a5d86fcd21
   - enabled: 1

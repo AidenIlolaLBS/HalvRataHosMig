@@ -10,6 +10,7 @@ public class InGameItemTags : MonoBehaviour
     private List<TagInfo> _tags = new();
 
     public bool fullMeal = false;
+    public string fullMealName = "";
     public List<TagInfo> Tags 
     {
         get { return _tags; }

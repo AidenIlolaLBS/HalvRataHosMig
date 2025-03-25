@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: New Narrative
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 4401086918623232061
+  baseNodeData:
+  - rid: 4401086918623232062
+  references:
+    version: 2
+    RefIds:
+    - rid: 4401086918623232061
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 29400a16-550f-4b68-b7b3-4d68f5abdb94
+        PortName: Next
+        TargetNodeGUID: 14df88fe-cd59-4e92-bf52-27ab5aa5c9a9
+    - rid: 4401086918623232062
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 14df88fe-cd59-4e92-bf52-27ab5aa5c9a9
+        Position: {x: 198, y: 180}
+        nodeTitle: 
+        personName: Person name
+        emotion: Deafult
+        soundPath: Assets/Scripts (hugo)
+        variables: []

@@ -1,7 +1,4 @@
-﻿using Codice.CM.WorkspaceServer.DataStore.Merge;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -83,7 +80,7 @@ public class GraphSaveUtility
                     personName = infoNode.personName,
                     emotion = infoNode.emotion,
                     Position = infoNode.GetPosition().position,
-                    soundFolder = infoNode.soundFolder
+                    soundPath = infoNode.soundPath
                 };
                 nodeContainer.baseNodeData.Add(data);
             }
@@ -184,7 +181,7 @@ public class GraphSaveUtility
             }
             else if (nodeData is InfoNodeData infoNodeData)
             {
-                tempNode = _targetGraphView.CreateInfoNode(infoNodeData.Position, infoNodeData.emotion, infoNodeData.personName, infoNodeData.soundFolder);
+                tempNode = _targetGraphView.CreateInfoNode(infoNodeData.Position, infoNodeData.emotion, infoNodeData.personName, infoNodeData.soundPath);
             }
             else if (nodeData is EndNodeData endNodeData)
             {

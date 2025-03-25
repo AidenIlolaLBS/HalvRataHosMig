@@ -37,14 +37,22 @@ public class PickUpScript : MonoBehaviour
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
                 {
                     //make sure pickup tag is attached
-                    if (hit.transform.gameObject.tag == "canPickUp")
+                    switch (hit.transform.gameObject.tag)
                     {
-                        //pass in object hit into the PickUpObject function
-                        PickUpObject(hit.transform.gameObject);
-                    }
-                    else if (hit.transform.gameObject.tag == "Door")
-                    {
-                        hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                        case "canPickUp":
+                            PickUpObject(hit.transform.gameObject);
+                            break;
+                        case "Door":
+                            hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                            break;
+                        case "Person":
+                            hit.transform.gameObject.GetComponent<Person>().Talk();
+                            break;
+                        case "Sink":
+                            hit.transform.gameObject.GetComponent<Sink>().Interact();
+                            break;
+                        default:
+                            break;
                     }
                 }
             }
@@ -70,27 +78,87 @@ public class PickUpScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
             {
-                if (hit.transform.gameObject.tag == "canPickUp" && heldObj == null)
+                switch (hit.transform.gameObject.tag)
                 {
-                    text.text = "Pick up";
-                }
-                else if (hit.transform.gameObject.tag == "Door")
-                {
-                    if (hit.transform.parent.GetComponent<Door>().Open)
-                    {
-                        text.text = "Close";
-                    }
-                    else
-                    {
-                        text.text = "Open";
-                    }                  
-                }
-                else if(heldObj != null)
-                {
-                    if (heldObj.gameObject.tag == "Plate" && hit.transform.gameObject.tag == "Cauldron")
-                    {
-                        text.text = "Pick up meal";
-                    }
+                    case "canPickUp":
+                        string additionalText = "";
+                        if (heldObj == null)
+                        {
+                            if (hit.transform.TryGetComponent(out InGameItemTags inGameItemTags))
+                            {
+                                if (inGameItemTags.fullMeal)
+                                {
+                                    Debug.Log("test");
+                                    additionalText = inGameItemTags.fullMealName.ToLower();
+                                    if (additionalText == "random")
+                                    {
+                                        additionalText = "meal";
+                                    }
+                                }
+                                else
+                                {
+                                    additionalText = inGameItemTags.Tags[0].TagName.ToLower();
+                                }                                
+                            }
+                            text.text = "Pick up " + additionalText;                            
+                        }
+                        break;
+                    case "Door":
+                        if (hit.transform.parent.GetComponent<Door>().Open)
+                        {
+                            text.text = "Close";
+                        }
+                        else
+                        {
+                            text.text = "Open";
+                        }
+                        break;
+                    case "Person":
+                        text.text = "Talk";
+                        break;
+                    case "Cauldron":
+                        if (heldObj != null)
+                        {
+                            if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
+                            {
+                                if (test.Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                                {
+                                    if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                    {
+                                        text.text = "Pick up meal";
+                                    }
+                                    else
+                                    {
+                                        text.text = "More ingredients needed";
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                            {
+                                text.text = "Plate required";
+                            }
+                            else
+                            {
+                                text.text = "More ingredients needed";
+                            }
+                        }
+                        break;
+                    case "Sink":
+                        if (hit.transform.GetComponent<Sink>().GetWaterStatus())
+                        {
+                            text.text = "Turn off water";
+                        }
+                        else
+                        {
+                            text.text = "Turn on water";
+                        }
+                        break;
+                    default:
+                        
+                        break;
                 }
             }
         }
