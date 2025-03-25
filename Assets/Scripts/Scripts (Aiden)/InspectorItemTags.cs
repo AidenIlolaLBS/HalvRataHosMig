@@ -34,6 +34,9 @@ public class InspectorItemTags : MonoBehaviour
     public bool Plate = false;
     public bool Lime = false;
     public bool Choppable = false;
+    public bool Glass = false;
+    public bool HalfLemon = false;
+    public bool Goblin = false;
     public InspectorItemTags()
     {
         AddTags();
@@ -75,5 +78,8 @@ public class InspectorItemTags : MonoBehaviour
         tags.Add(new TagInfo(nameof(Plate), Plate));
         tags.Add(new TagInfo(nameof(Lime), Lime));
         tags.Add(new TagInfo(nameof(Choppable), Choppable));
+        tags.Add(new TagInfo(nameof(Glass), Glass));
+        tags.Add(new TagInfo(nameof(HalfLemon), HalfLemon));
+        tags.Add(new TagInfo(nameof(Goblin), Goblin));
     }
 }

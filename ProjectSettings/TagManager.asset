@@ -11,6 +11,8 @@ TagManager:
   - PlayableArea2
   - Door
   - ChopBlock
+  - Sink
+  - Water
   layers:
   - Default
   - TransparentFX

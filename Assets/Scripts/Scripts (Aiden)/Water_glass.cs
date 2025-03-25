@@ -5,15 +5,13 @@ using UnityEngine;
 public class Water_glass : MonoBehaviour
 {
     public GameObject water;
-    // Start is called before the first frame update
     void Start()
     {
-        
+        water.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void FillWater()
     {
-        
+        water.SetActive(true);
     }
 }

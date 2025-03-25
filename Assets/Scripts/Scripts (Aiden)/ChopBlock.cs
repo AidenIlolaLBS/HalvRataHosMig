@@ -34,6 +34,7 @@ public class ChopBlock : MonoBehaviour
                         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                         other.transform.rotation = new Quaternion();
                         ingredient = other.gameObject;
+                        return;
                     }
                 }
             }
