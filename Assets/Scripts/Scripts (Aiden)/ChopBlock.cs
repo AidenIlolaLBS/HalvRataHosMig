@@ -27,12 +27,13 @@ public class ChopBlock : MonoBehaviour
                 {
                     if (item.TagName == "Choppable")
                     {
-                        Debug.Log(other.gameObject.GetComponent<MeshRenderer>().bounds.size);
-                        Vector3 spawnVector = new(spawnLocation.transform.position.x, spawnLocation.transform.position.y + (other.gameObject.GetComponent<Collider>().bounds.size.y / 2), spawnLocation.transform.position.z);
+                        other.transform.rotation = new Quaternion();
+                        float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y/2 + other.gameObject.GetComponent<Renderer>().bounds.size.y / 2;
+                        Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
                         other.transform.position = spawnVector;
                         other.gameObject.GetComponent<Rigidbody>().velocity = new Vector3();
                         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        other.transform.rotation = new Quaternion();
+                        other.gameObject.tag = "Chop";
                         ingredient = other.gameObject;
                         return;
                     }

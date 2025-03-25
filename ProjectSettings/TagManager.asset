@@ -13,6 +13,7 @@ TagManager:
   - ChopBlock
   - Sink
   - Water
+  - Chop
   layers:
   - Default
   - TransparentFX
