@@ -8,7 +8,7 @@ public class Sink : MonoBehaviour
     public GameObject handle;
     private bool waterActive = false;
     Quaternion targetRotaionZ = new();
-    public const float rotationSpeed = 1;
+    const float rotationSpeed = 180;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class Sink : MonoBehaviour
 
     private void Update()
     {
-        handle.transform.rotation = Quaternion.Lerp(handle.transform.rotation, targetRotaionZ, Time.deltaTime * rotationSpeed);
+        handle.transform.rotation = Quaternion.RotateTowards(handle.transform.rotation, targetRotaionZ, Time.deltaTime * rotationSpeed);
     }
 
     public void Interact()
@@ -26,12 +26,12 @@ public class Sink : MonoBehaviour
         if (waterActive)
         {
             waterActive = false;
-            targetRotaionZ = new Quaternion(handle.transform.rotation.x, handle.transform.rotation.y, -90,0);
+            targetRotaionZ = Quaternion.Euler(handle.transform.rotation.x, handle.transform.rotation.y, 0);
         }
         else
         {
             waterActive = true;
-            targetRotaionZ = new Quaternion(handle.transform.rotation.x, handle.transform.rotation.y, 90, 0);
+            targetRotaionZ = Quaternion.Euler(handle.transform.rotation.x, handle.transform.rotation.y, -180);
         }
         water.SetActive(waterActive);
     }
