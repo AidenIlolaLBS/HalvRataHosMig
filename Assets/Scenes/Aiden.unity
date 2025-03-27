@@ -1075,8 +1075,8 @@ MonoBehaviour:
   - {fileID: 0}
   fullMeal: 0
   Bread: 0
-  Seaweed: 0
-  ChoppedSeaweed: 1
+  Seaweed: 1
+  ChoppedSeaweed: 0
   ToastSkagish: 0
   DragonEgg: 0
   LizardHeart: 0
@@ -2782,8 +2782,8 @@ MonoBehaviour:
   - {fileID: 0}
   fullMeal: 0
   Bread: 0
-  Seaweed: 0
-  ChoppedSeaweed: 1
+  Seaweed: 1
+  ChoppedSeaweed: 0
   ToastSkagish: 0
   DragonEgg: 0
   LizardHeart: 0

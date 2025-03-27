@@ -113,7 +113,7 @@ public class Cauldron : MonoBehaviour
                             shouldDestroy = false;
                             break;
                         }
-                        if (!containingTags.Contains(item.TagName))
+                        if (!containingTags.Contains(item.TagName) && item.TagName != "Choppable")
                         {
                             containingTags.Add(item.TagName);
                             shouldDestroy = true;
