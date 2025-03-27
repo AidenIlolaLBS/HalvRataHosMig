@@ -7,6 +7,7 @@ public class ChopBlock : MonoBehaviour
 {
     public GameObject spawnLocation;
     List<GameObject> choppedPrefabs;
+    AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {

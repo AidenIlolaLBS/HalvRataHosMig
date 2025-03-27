@@ -58,6 +58,9 @@ public class AudioManager : MonoBehaviour
 
     private string[] availibleAudioTypes = new string[] { ".mp3", ".wav"};
 
+    public List<AudioSource> SFXPlayers;
+    public List<AudioSource> AmbiancePlayers;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -119,7 +122,7 @@ public class AudioManager : MonoBehaviour
         musicSource.Stop();
     }
 
-    public void StartSFX(string sfxType)
+    public void StartSFX(string sfxType, bool onlyOne = true, GameObject player = null)
     {
         System.Random rnd = new();
         List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/SFXAudio" + "/" + sfxType);
