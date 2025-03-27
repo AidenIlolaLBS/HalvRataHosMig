@@ -36,21 +36,23 @@ public class ChopBlock : MonoBehaviour
             }
             if (canChop)
             {
-                other.transform.rotation = new Quaternion();
-                float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y / 2 + other.gameObject.GetComponent<Renderer>().bounds.size.y / 2;
-                Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
-
                 foreach (var item in choppedPrefabs)
                 {
                     GameObject temp = Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
                     temp.GetComponent<InspectorItemTags>().Start();
-                    foreach (var tagInfo in temp.GetComponent<InGameItemTags>().Tags)
+
+                    for (int i = 0; i < temp.GetComponent<InGameItemTags>().Tags.Count; i++)
                     {
-                        if (tagInfo.TagName == ingredientTag)
+                        if (temp.GetComponent<InGameItemTags>().Tags[i].TagName == ingredientTag)
                         {
-                            GameObject gameObject = Instantiate(temp, spawnVector, new Quaternion());
+                            GameObject gameObject = Instantiate(temp, new(), new Quaternion());
+                            float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y / 2 + gameObject.GetComponent<Renderer>().bounds.size.y / 2;
+                            Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
+                            gameObject.transform.position = spawnVector;
                             Destroy(temp);
                             Destroy(other.gameObject);
+                            gameObject.GetComponent<InspectorItemTags>().Start();
+                            gameObject.GetComponent<InGameItemTags>().Tags.RemoveAt(i);
                             return;
                         }
                     }
