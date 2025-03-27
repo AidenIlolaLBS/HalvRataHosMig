@@ -51,6 +51,9 @@ public class PickUpScript : MonoBehaviour
                         case "Sink":
                             hit.transform.gameObject.GetComponent<Sink>().Interact();
                             break;
+                        case "CookBook":
+                            hit.transform.gameObject.GetComponent<CookBook>().Interact();
+                            break;
                         default:
                             break;
                     }
@@ -155,6 +158,9 @@ public class PickUpScript : MonoBehaviour
                         {
                             text.text = "Turn on water";
                         }
+                        break;
+                    case "CookBook":
+                        text.text = "Open cookbook";
                         break;
                     default:
                         

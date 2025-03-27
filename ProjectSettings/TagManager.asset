@@ -14,6 +14,7 @@ TagManager:
   - Sink
   - Water
   - Chop
+  - CookBook
   layers:
   - Default
   - TransparentFX

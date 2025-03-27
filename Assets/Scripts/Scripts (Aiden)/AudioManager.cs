@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
     bool shouldPlayMusic = true;
 
     [SerializeField]
-    AudioSource sfxSource;
+    AudioSource sfxSoloSource;
     [SerializeField, Range(0, 1)]
     double sfxVolume;
     public double SfxVolume
@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
     }
 
     [SerializeField]
-    AudioSource ambianceSource;
+    AudioSource ambianceSoloSource;
     [SerializeField, Range(0, 1)]
     double ambianceVolume;
     public double AmbianceVolume
@@ -58,16 +58,16 @@ public class AudioManager : MonoBehaviour
 
     private string[] availibleAudioTypes = new string[] { ".mp3", ".wav"};
 
-    public List<AudioSource> SFXPlayers;
-    public List<AudioSource> AmbiancePlayers;
+    public List<AudioSource> sfxMultiSource;
+    public List<AudioSource> ambianceMultiSource;
 
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         musicSource.loop = false;
-        sfxSource.loop = false;
+        sfxSoloSource.loop = false;
         dialogueSource.loop = false;
-        ambianceSource.loop = false;
+        ambianceSoloSource.loop = false;
         UpdateAllVolumeValues(masterVolume, musicVolume, sfxVolume, ambianceVolume, dialogueVolume);
     }
     private void Update()
@@ -98,9 +98,9 @@ public class AudioManager : MonoBehaviour
     private void ChangeVolume()
     {
         musicSource.volume = (float)musicVolume;
-        ambianceSource.volume = (float)ambianceVolume;
+        ambianceSoloSource.volume = (float)ambianceVolume;
         dialogueSource.volume = (float)dialogueVolume;
-        sfxSource.volume = (float)sfxVolume;
+        sfxSoloSource.volume = (float)sfxVolume;
     }
 
     public void StartMusic(string musicType)
@@ -129,13 +129,13 @@ public class AudioManager : MonoBehaviour
         int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
         StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
-            sfxSource.clip = clip;
-            sfxSource.Play();
+            sfxSoloSource.clip = clip;
+            sfxSoloSource.Play();
         }));
     }
     private void StopSFX()
     {
-        sfxSource.Stop();
+        sfxSoloSource.Stop();
     }
 
     public void StartDialogue(string clipPath)
@@ -167,13 +167,13 @@ public class AudioManager : MonoBehaviour
         int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
         StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
         {
-            ambianceSource.clip = clip;
-            ambianceSource.Play();
+            ambianceSoloSource.clip = clip;
+            ambianceSoloSource.Play();
         }));
     }
     public void StopAmbiance()
     {
-        ambianceSource.Stop();
+        ambianceSoloSource.Stop();
     }
 
     private List<string[]> GetAudioFiles(string path)
