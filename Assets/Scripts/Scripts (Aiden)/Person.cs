@@ -6,21 +6,32 @@ public class Person : MonoBehaviour
 {
     Tyckeromdigmätare tyckeromdigmätare;
     string _personName;
+    NodeContainer dialogue;
 
     public string PersonName
     {
         get { return _personName; }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public Person(int person)
     {
-        
+        switch (person)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            default:
+                break;
+        }
     }
 
     public void Talk()

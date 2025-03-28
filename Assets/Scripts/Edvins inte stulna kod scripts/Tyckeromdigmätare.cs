@@ -7,6 +7,11 @@ public class Tyckeromdigmätare : MonoBehaviour
     public LikeLevel likeLevel = LikeLevel.Neutral;
     public List<string> dislikedIngredients;
 
+    public Tyckeromdigmätare(List<string> dislikedIngredients)
+    {
+        this.dislikedIngredients = dislikedIngredients;
+    }
+
     public void ServeFood(List<TagInfo> ingredients)  // kollar efter vilka ingredienser som är i maten och matchar den med karaktären
     {
         foreach (var ingredient in ingredients)
