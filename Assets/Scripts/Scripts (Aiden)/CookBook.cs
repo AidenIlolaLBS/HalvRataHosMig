@@ -28,7 +28,7 @@ public class CookBook : MonoBehaviour
         if (active)
         {
             active = false;
-            player.GetComponent<PlayerMove>().enabled = true;
+            player.SetActive(true);
             playerCamera.GetComponent<Interact>().enabled = true;
             playerCamera.GetComponent<PickUpScript>().enabled = true;
             playerCamera.GetComponent<PlayerCam>().enabled = true;
@@ -42,7 +42,7 @@ public class CookBook : MonoBehaviour
         else
         {
             active = true;
-            player.GetComponent<PlayerMove>().enabled = false;
+            player.SetActive(false);
             playerCamera.GetComponent<Interact>().enabled = false;
             playerCamera.GetComponent<PickUpScript>().enabled = false;
             playerCamera.GetComponent<PlayerCam>().enabled = false;
