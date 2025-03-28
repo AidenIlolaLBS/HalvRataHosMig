@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
+    Tyckeromdigmätare tyckeromdigmätare;
+    string _personName;
+
+    public string PersonName
+    {
+        get { return _personName; }
+    }
     // Start is called before the first frame update
     void Start()
     {
