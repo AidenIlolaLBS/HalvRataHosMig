@@ -65,9 +65,9 @@ public class AudioManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         musicSource.loop = false;
-        sfxSoloSource.loop = false;
+        //sfxSoloSource.loop = false;
         dialogueSource.loop = false;
-        ambianceSoloSource.loop = false;
+        //ambianceSoloSource.loop = false;
         UpdateAllVolumeValues(masterVolume, musicVolume, sfxVolume, ambianceVolume, dialogueVolume);
     }
     private void Update()

@@ -57,4 +57,13 @@ public class CookBook : MonoBehaviour
         }
     }
 
+    public void ResetRecipes()
+    {
+        foreach (Transform item in cookbookUI.transform.GetChild(3).transform)
+        {
+            item.gameObject.SetActive(false);
+        }
+        cookbookUI.transform.GetChild(3).transform.GetChild(0).gameObject.SetActive(true);
+        cookbookUI.transform.GetChild(3).transform.GetChild(1).gameObject.SetActive(true);
+    }
 }
