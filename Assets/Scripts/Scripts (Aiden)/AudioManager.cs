@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,8 +7,27 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
+public enum SoundType
+{
+    MenuMusic,
+    GameMusic,
+    ButtonSound,
+    WalkingSound,
+    ChopSound,
+    CauldronSound,
+    DoorSound,    
+    FridgeSound,
+    PickUpSound,
+    DropSound,
+    ThrowSound,
+    DialogueSound,
+    Ambiance
+}
+
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private SoundList[] SoundList;
+
     public bool inGame = false;
 
     [SerializeField, Range(0, 1)]
@@ -18,8 +37,6 @@ public class AudioManager : MonoBehaviour
         get { return masterVolume; }
     }
 
-    [SerializeField]
-    AudioSource musicSource;
     [SerializeField, Range(0, 1)]
     double musicVolume;
     public double MusicVolume
@@ -27,62 +44,46 @@ public class AudioManager : MonoBehaviour
         get { return musicVolume; }
     }
     [SerializeField]
+    private AudioSource musicSource;
+    [SerializeField]
     bool shouldPlayMusic = true;
 
-    [SerializeField]
-    AudioSource sfxSoloSource;
     [SerializeField, Range(0, 1)]
     double sfxVolume;
     public double SfxVolume
     {
         get { return sfxVolume; }
     }
-
     [SerializeField]
-    AudioSource ambianceSoloSource;
+    private AudioSource sfxSource;
+
     [SerializeField, Range(0, 1)]
     double ambianceVolume;
     public double AmbianceVolume
     {
         get { return ambianceVolume; }
     }
-
     [SerializeField]
-    AudioSource dialogueSource;
+    private AudioSource ambianceSource;
+
     [SerializeField, Range(0, 1)]
     double dialogueVolume;
     public double DialogueVolume
     {
         get { return dialogueVolume; }
     }
-
-    private string[] availibleAudioTypes = new string[] { ".mp3", ".wav"};
-
-    public List<AudioSource> sfxMultiSource;
-    public List<AudioSource> ambianceMultiSource;
+    [SerializeField]
+    private AudioSource dialogueSource;
 
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        musicSource.loop = false;
-        //sfxSoloSource.loop = false;
-        dialogueSource.loop = false;
-        //ambianceSoloSource.loop = false;
         UpdateAllVolumeValues(masterVolume, musicVolume, sfxVolume, ambianceVolume, dialogueVolume);
     }
+
     private void Update()
     {
-        if (!musicSource.isPlaying && shouldPlayMusic)
-        {
-            if (inGame)
-            {
-                StartMusic("Game");
-            }
-            else
-            {
-                StartMusic("MainMenu");
-            }
-        }
+        
     }
 
     public void UpdateAllVolumeValues(double _masterVolume, double _musicVolume, double _sfxVolume, double _ambianceVolume, double _dialogueVolume)
@@ -92,15 +93,6 @@ public class AudioManager : MonoBehaviour
         sfxVolume = _masterVolume * _sfxVolume;
         ambianceVolume = _masterVolume * _ambianceVolume;
         dialogueVolume = _masterVolume * _dialogueVolume;
-        ChangeVolume();
-    }
-
-    private void ChangeVolume()
-    {
-        musicSource.volume = (float)musicVolume;
-        ambianceSoloSource.volume = (float)ambianceVolume;
-        dialogueSource.volume = (float)dialogueVolume;
-        sfxSoloSource.volume = (float)sfxVolume;
     }
 
     public void StartMusic(string musicType)
@@ -118,8 +110,8 @@ public class AudioManager : MonoBehaviour
     }
     public void StopMusic()
     {
-        shouldPlayMusic = false;
-        musicSource.Stop();
+        Destroy(musicSource);
+        musicSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void StartSFX(string sfxType, bool onlyOne = true, GameObject player = null)
@@ -132,10 +124,6 @@ public class AudioManager : MonoBehaviour
             sfxSoloSource.clip = clip;
             sfxSoloSource.Play();
         }));
-    }
-    private void StopSFX()
-    {
-        sfxSoloSource.Stop();
     }
 
     public void StartDialogue(string clipPath)
@@ -176,41 +164,22 @@ public class AudioManager : MonoBehaviour
         ambianceSoloSource.Stop();
     }
 
-    private List<string[]> GetAudioFiles(string path)
+#if UNITY_EDITOR
+    private void OnEnable()
     {
-        List<string[]> files = new();
-        foreach (var audioType in availibleAudioTypes)
+        string[] names = Enum.GetNames(typeof(SoundType));
+        Array.Resize(ref SoundList, names.Length);
+        for (int i = 0; i < SoundList.Length; i++)
         {
-            files.Add(Directory.GetFiles(path, "*" + audioType));
-        }
-        return files;
-    }
-
-    IEnumerator LoadAudioClip(string filePath, string audioType, System.Action<AudioClip> callback)
-    {
-        UnityWebRequest www = new();
-        switch (audioType)
-        {
-            case ".wav":
-                www = UnityWebRequestMultimedia.GetAudioClip(filePath, AudioType.WAV);
-                break;
-            case ".mp3":
-                www = UnityWebRequestMultimedia.GetAudioClip(filePath, AudioType.MPEG);
-                break;
-            default:
-                break;
-        }
-         
-        yield return www.SendWebRequest();
-
-        if (www.result == UnityWebRequest.Result.Success)
-        {
-            AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
-            callback?.Invoke(clip);
-        }
-        else
-        {
-            callback?.Invoke(null);
+            SoundList[i].name = names[i];
         }
     }
+#endif
+}
+
+[Serializable]
+public struct  SoundList
+{
+    [HideInInspector] public string name;
+    [SerializeField] private AudioClip[] sounds;
 }
