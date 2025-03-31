@@ -7373,19 +7373,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25198b8a33008ff41b8f2e4a9f152fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inGame: 1
+  SoundList:
+  - name: MenuMusic
+    sounds: []
+  - name: KitchenMusic
+    sounds: []
+  - name: EatingMusic
+    sounds: []
+  - name: ButtonSound
+    sounds: []
+  - name: WalkingSound
+    sounds: []
+  - name: ChopSound
+    sounds: []
+  - name: CauldronSound
+    sounds: []
+  - name: DoorSound
+    sounds: []
+  - name: FridgeSound
+    sounds: []
+  - name: PickUpSound
+    sounds: []
+  - name: DropSound
+    sounds: []
+  - name: ThrowSound
+    sounds: []
+  - name: DialogueSound
+    sounds: []
+  - name: Ambiance
+    sounds: []
+  - name: ClockSound
+    sounds: []
+  - name: PageSound
+    sounds: []
+  - name: CookieSound
+    sounds: []
+  - name: CutlerySound
+    sounds: []
+  - name: PotSound
+    sounds: []
+  - name: BellSound
+    sounds: []
+  - name: LikeSound
+    sounds: []
+  - name: DislikeSound
+    sounds: []
+  - name: SuccessSound
+    sounds: []
+  - name: HeartBeatSound
+    sounds: []
+  - name: TapSound
+    sounds: []
+  - name: FridgeDoorOpenSound
+    sounds: []
+  - name: FridgeDoorCloseSound
+    sounds: []
+  - name: FairySound
+    sounds: []
+  - name: SpiderSound
+    sounds: []
+  inGame: 0
+  partOfGame: 0
   masterVolume: 1
-  musicSource: {fileID: 1120194111}
   musicVolume: 1
+  musicSource: {fileID: 1120194111}
   shouldPlayMusic: 1
-  sfxSoloSource: {fileID: 0}
   sfxVolume: 1
-  ambianceSoloSource: {fileID: 0}
+  sfxSource: {fileID: 1120194110}
   ambianceVolume: 1
-  dialogueSource: {fileID: 1120194108}
+  ambianceSource: {fileID: 1120194109}
   dialogueVolume: 1
-  sfxMultiSource: []
-  ambianceMultiSource: []
+  dialogueSource: {fileID: 1120194108}
 --- !u!82 &1120194108
 AudioSource:
   m_ObjectHideFlags: 0

@@ -121,7 +121,7 @@ namespace Subtegral.DialogueSystem.Runtime
                 choices = nodeContainer.NodeLinks.Where(x => x.BaseNodeGUID == tempNarrativeDataguid);
             }
 
-            audioManager.StartDialogue(audioPath);
+            //audioManager.StartDialogue(audioPath);
             if (choices != null)
             {
                 DisplayDialogue(text, title, choices);
@@ -173,7 +173,7 @@ namespace Subtegral.DialogueSystem.Runtime
 
         void ButtonClick(string startGuid)
         {
-            audioManager.StartSFX("Button");
+            //audioManager.StartSFX("Button");
             audioManager.StopDialogue();
             ProceedToNarrative(startGuid);
         }

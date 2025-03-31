@@ -1,16 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public enum SoundType
 {
     MenuMusic,
-    GameMusic,
+    KitchenMusic,
+    EatingMusic,
     ButtonSound,
     WalkingSound,
     ChopSound,
@@ -21,14 +16,34 @@ public enum SoundType
     DropSound,
     ThrowSound,
     DialogueSound,
-    Ambiance
+    Ambiance,
+    ClockSound,
+    PageSound,
+    CookieSound,
+    CutlerySound,
+    PotSound,
+    BellSound,
+    LikeSound,
+    DislikeSound,
+    SuccessSound,
+    HeartBeatSound,
+    TapSound,
+    FridgeDoorOpenSound,
+    FridgeDoorCloseSound,
+    FairySound,
+    SpiderSound    
 }
 
+[RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] SoundList;
+    [HideInInspector] public bool inGame = false;
 
-    public bool inGame = false;
+    /// <summary>
+    /// 0: main menu / pause menu. 1: in kitchen. 2: eating food.
+    /// </summary>
+    public int partOfGame = 0;
 
     [SerializeField, Range(0, 1)]
     float masterVolume;
@@ -83,7 +98,26 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (inGame)
+        {
+            if (!musicSource.isPlaying && shouldPlayMusic)
+            {
+                switch (partOfGame)
+                {
+                    case 0:
+                        StartMusic(SoundType.MenuMusic);
+                        break;
+                    case 1:
+                        StartMusic(SoundType.KitchenMusic);
+                        break;
+                    case 2:
+                        StartMusic(SoundType.EatingMusic);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }      
     }
 
     public void UpdateAllVolumeValues(float _masterVolume, float _musicVolume, float _sfxVolume, float _ambianceVolume, float _dialogueVolume)
@@ -109,14 +143,15 @@ public class AudioManager : MonoBehaviour
         ambianceSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void StartMusic(string musicType)
+    public void StartMusic(SoundType soundType)
     {
         StopMusic();
         shouldPlayMusic = true;
         System.Random rnd = new();
 
-        AudioClip[] allClips = SoundList[(int)Enum.Parse(typeof(SoundType), musicType)].Sounds;
+        AudioClip[] allClips = SoundList[(int)soundType].Sounds;
         musicSource.clip = allClips[rnd.Next(0, allClips.Length)];
+        musicSource.volume = musicVolume;
         musicSource.Play();
     }
     public void StopMusic()
@@ -134,38 +169,37 @@ public class AudioManager : MonoBehaviour
         musicSource.Pause();
     }
 
-    public void StartSFX(string sfxType, GameObject player = null, GameObject audioObject = null)
+    public void StartSFX(SoundType soundType, GameObject player = null, GameObject audioObject = null)
     {
         System.Random rnd = new();
 
-        AudioClip[] allClips = SoundList[(int)Enum.Parse(typeof(SoundType), sfxType)].Sounds;
-        sfxSource.clip = ;
-        sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume);
-
-        List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/SFXAudio" + "/" + sfxType);
-        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
-        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
+        AudioClip[] allClips = SoundList[(int)soundType].Sounds;
+        float cubicDistance = 1;
+        if (player != null && audioObject != null)
         {
-            sfxSoloSource.clip = clip;
-            sfxSoloSource.Play();
-        }));
+            cubicDistance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
+        }
+        sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / cubicDistance);
     }
 
-    public void StartDialogue(string clipPath)
+    public void StartSFX(AudioClip audioClip, GameObject player = null, GameObject audioObject = null)
     {
-        if (clipPath == "")
+        float cubicDistance = 1;
+        if (player != null && audioObject != null)
         {
-            return;
+            cubicDistance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        StopDialogue();
+        sfxSource.PlayOneShot(audioClip, sfxVolume / cubicDistance);
+    }
+
+    public void StartDialogue(SoundType soundType)
+    {
         System.Random rnd = new();
-        List<string[]> audioFiles = GetAudioFiles(clipPath);
-        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
-        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
-        {
-            dialogueSource.clip = clip;
-            dialogueSource.Play();
-        }));
+
+        AudioClip[] allClips = SoundList[(int)soundType].Sounds;
+        dialogueSource.clip = allClips[rnd.Next(0, allClips.Length)];
+        dialogueSource.volume = dialogueVolume;
+        dialogueSource.Play();
     }
     public void StopDialogue()
     {
@@ -174,19 +208,16 @@ public class AudioManager : MonoBehaviour
 
     public void StartAmbiance()
     {
-        StopAmbiance();
         System.Random rnd = new();
-        List<string[]> audioFiles = GetAudioFiles(Application.streamingAssetsPath + "/Audio" + "/AmbianceAudio");
-        int typeOfAudio = rnd.Next(0, availibleAudioTypes.Length);
-        StartCoroutine(LoadAudioClip(audioFiles[typeOfAudio][rnd.Next(0, audioFiles[typeOfAudio].Length)], availibleAudioTypes[typeOfAudio], (clip) =>
-        {
-            ambianceSoloSource.clip = clip;
-            ambianceSoloSource.Play();
-        }));
+
+        AudioClip[] allClips = SoundList[(int)SoundType.Ambiance].Sounds;
+        ambianceSource.clip = allClips[rnd.Next(0, allClips.Length)];
+        ambianceSource.volume = ambianceVolume;
+        ambianceSource.Play();
     }
     public void StopAmbiance()
     {
-        ambianceSoloSource.Stop();
+        ambianceSource.Stop();
     }
 
 #if UNITY_EDITOR
