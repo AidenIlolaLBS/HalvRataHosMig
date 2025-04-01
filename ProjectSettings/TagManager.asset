@@ -13,6 +13,8 @@ TagManager:
   - ChopBlock
   - Sink
   - Water
+  - Chop
+  - CookBook
   layers:
   - Default
   - TransparentFX

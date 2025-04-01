@@ -1,41 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ChopBlock : MonoBehaviour
 {
     public GameObject spawnLocation;
-    GameObject ingredient = null;
+    List<GameObject> choppedPrefabs;
+    AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        choppedPrefabs = Resources.LoadAll<GameObject>("ChoppedPrefabs").ToList();
+        foreach (var item in choppedPrefabs)
+        {
+            Debug.Log(item.name);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnCollisionEnter(Collision other)
     {
-        if (ingredient == null)
+        bool canChop = false;
+        string ingredientTag = "";
+        if (other.gameObject.TryGetComponent(out InGameItemTags inGameItemTags))
         {
-            if (other.gameObject.TryGetComponent(out InGameItemTags inGameItemTags))
+            foreach (var item in inGameItemTags.Tags)
             {
-                foreach (var item in inGameItemTags.Tags)
+                if (item.TagName == "Choppable")
                 {
-                    if (item.TagName == "Choppable")
+                    canChop = true;
+                }
+                else
+                {
+                    ingredientTag = item.TagName;
+                }
+            }
+            if (canChop)
+            {
+                foreach (var item in choppedPrefabs)
+                {
+                    GameObject temp = Instantiate(item, new Vector3(0, 5, 0), Quaternion.identity);
+                    temp.GetComponent<InspectorItemTags>().Start();
+
+                    for (int i = 0; i < temp.GetComponent<InGameItemTags>().Tags.Count; i++)
                     {
-                        Debug.Log(other.gameObject.GetComponent<MeshRenderer>().bounds.size);
-                        Vector3 spawnVector = new(spawnLocation.transform.position.x, spawnLocation.transform.position.y + (other.gameObject.GetComponent<Collider>().bounds.size.y / 2), spawnLocation.transform.position.z);
-                        other.transform.position = spawnVector;
-                        other.gameObject.GetComponent<Rigidbody>().velocity = new Vector3();
-                        other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        other.transform.rotation = new Quaternion();
-                        ingredient = other.gameObject;
-                        return;
+                        if (temp.GetComponent<InGameItemTags>().Tags[i].TagName == ingredientTag)
+                        {
+                            GameObject gameObject = Instantiate(temp, new(), new Quaternion());
+                            float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y / 2 + gameObject.GetComponent<Renderer>().bounds.size.y / 2;
+                            Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
+                            gameObject.transform.position = spawnVector;
+                            Destroy(temp);
+                            Destroy(other.gameObject);
+                            gameObject.GetComponent<InspectorItemTags>().Start();
+                            gameObject.GetComponent<InGameItemTags>().Tags.RemoveAt(i);
+                            return;
+                        }
                     }
+                    Destroy(temp);
                 }
             }
         }
