@@ -100,7 +100,10 @@ public class PickUpScript : MonoBehaviour
                                 }
                                 else
                                 {
-                                    additionalText = inGameItemTags.Tags[0].TagName.ToLower();
+                                    if (inGameItemTags.Tags.Count > 0)
+                                    {
+                                        additionalText = inGameItemTags.Tags[0].TagName.ToLower();
+                                    }
                                 }                                
                             }
                             text.text = "Pick up " + additionalText;                            
@@ -124,15 +127,18 @@ public class PickUpScript : MonoBehaviour
                         {
                             if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
                             {
-                                if (test.Tags[0].TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                                foreach (var item in test.Tags)
                                 {
-                                    if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                    if (item.TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
                                     {
-                                        text.text = "Pick up meal";
-                                    }
-                                    else
-                                    {
-                                        text.text = "More ingredients needed";
+                                        if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                        {
+                                            text.text = "Pick up meal";
+                                        }
+                                        else
+                                        {
+                                            text.text = "More ingredients needed";
+                                        }
                                     }
                                 }
                             }
