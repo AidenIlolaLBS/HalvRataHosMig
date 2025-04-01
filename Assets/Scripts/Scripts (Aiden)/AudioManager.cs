@@ -160,9 +160,12 @@ public class AudioManager : MonoBehaviour
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)soundType].Sounds;
-        musicSource.clip = allClips[rnd.Next(0, allClips.Length)];
-        musicSource.volume = musicVolume;
-        musicSource.Play();
+        if (allClips.Length > 0)
+        {
+            musicSource.clip = allClips[rnd.Next(0, allClips.Length)];
+            musicSource.volume = musicVolume;
+            musicSource.Play();
+        }       
     }
     public void StopMusic()
     {
@@ -189,7 +192,10 @@ public class AudioManager : MonoBehaviour
         {
             distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / distance);
+        if (allClips.Length > 0)
+        {
+            sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / distance);
+        }
     }
 
     public void StartSFX(AudioClip audioClip, GameObject player = null, GameObject audioObject = null)
@@ -207,9 +213,12 @@ public class AudioManager : MonoBehaviour
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)soundType].Sounds;
-        dialogueSource.clip = allClips[rnd.Next(0, allClips.Length)];
-        dialogueSource.volume = dialogueVolume;
-        dialogueSource.Play();
+        if (allClips.Length > 0)
+        {
+            dialogueSource.clip = allClips[rnd.Next(0, allClips.Length)];
+            dialogueSource.volume = dialogueVolume;
+            dialogueSource.Play();
+        }
     }
     public void StopDialogue()
     {
@@ -221,9 +230,12 @@ public class AudioManager : MonoBehaviour
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)SoundType.Ambiance].Sounds;
-        ambianceSource.clip = allClips[rnd.Next(0, allClips.Length)];
-        ambianceSource.volume = ambianceVolume;
-        ambianceSource.Play();
+        if (allClips.Length > 0)
+        {
+            ambianceSource.clip = allClips[rnd.Next(0, allClips.Length)];
+            ambianceSource.volume = ambianceVolume;
+            ambianceSource.Play();
+        }
     }
     public void StopAmbiance()
     {
