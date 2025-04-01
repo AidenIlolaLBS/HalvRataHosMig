@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 public enum SoundType
@@ -38,7 +39,6 @@ public enum SoundType
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private SoundList[] SoundList;
-    [HideInInspector] public bool inGame = false;
 
     /// <summary>
     /// 0: main menu / pause menu. 1: in kitchen. 2: eating food.
@@ -90,16 +90,26 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource dialogueSource;
 
+    private bool startCodeRun = false;
+
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        UpdateAllVolumeValues(masterVolume, musicVolume, sfxVolume, ambianceVolume, dialogueVolume);
+        if (Application.isPlaying)
+        {
+            startCodeRun = true;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Update()
     {
-        if (inGame)
+        if (Application.isPlaying)
         {
+            if (!startCodeRun)
+            {
+                startCodeRun = true;
+                DontDestroyOnLoad(gameObject);
+            }
             if (!musicSource.isPlaying && shouldPlayMusic)
             {
                 switch (partOfGame)
@@ -174,22 +184,22 @@ public class AudioManager : MonoBehaviour
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)soundType].Sounds;
-        float cubicDistance = 1;
+        float distance = 1;
         if (player != null && audioObject != null)
         {
-            cubicDistance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
+            distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / cubicDistance);
+        sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / distance);
     }
 
     public void StartSFX(AudioClip audioClip, GameObject player = null, GameObject audioObject = null)
     {
-        float cubicDistance = 1;
+        float distance = 1;
         if (player != null && audioObject != null)
         {
-            cubicDistance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
+            distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        sfxSource.PlayOneShot(audioClip, sfxVolume / cubicDistance);
+        sfxSource.PlayOneShot(audioClip, sfxVolume / distance);
     }
 
     public void StartDialogue(SoundType soundType)
