@@ -10,9 +10,16 @@ public class CookBook : MonoBehaviour
     public GameObject camCookBook;
     public MoveCamera moveCamera;
 
+    AudioManager audioManager;
+
     bool active = false;
     Vector3 prevCamPos;
     Quaternion prevCamRot;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -66,5 +73,13 @@ public class CookBook : MonoBehaviour
         }
         cookbookUI.transform.GetChild(3).transform.GetChild(0).gameObject.SetActive(true);
         cookbookUI.transform.GetChild(3).transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    public void TurnPageAudio()
+    {
+        if (audioManager != null)
+        {
+            audioManager.StartSFX(SoundType.PageSound);
+        }
     }
 }

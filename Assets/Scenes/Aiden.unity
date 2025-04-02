@@ -368,6 +368,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &45547282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1012,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200635949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,6 +1458,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2349,6 +2385,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &328648796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,7 +2517,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 334794543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &334794543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3428,6 +3488,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &489128799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3548,7 +3620,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 510627954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &510627954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,6 +4642,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &630071453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4719,6 +4815,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5525,6 +5633,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &748946041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6136,6 +6256,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7287,6 +7419,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1106049266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7342,7 +7486,7 @@ GameObject:
   - component: {fileID: 1120194108}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7376,15 +7520,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoundList:
   - name: MenuMusic
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: e8939c18c59371e40b25845499f639ee, type: 3}
+    - {fileID: 8300000, guid: f0ed30c521204544c81bc438c70f81a8, type: 3}
   - name: KitchenMusic
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 6f835db58d58d1842b8af6cb63c2c7b3, type: 3}
+    - {fileID: 8300000, guid: 64d72fecd7e67584dac8415a6ed8323f, type: 3}
   - name: EatingMusic
     sounds: []
   - name: ButtonSound
     sounds: []
   - name: WalkingSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 1e30703094ac73748a4ba5c102e891e1, type: 3}
+    - {fileID: 8300000, guid: 76e19fb37ccaa764bb2a524273e03dc4, type: 3}
   - name: ChopSound
     sounds: []
   - name: CauldronSound
@@ -7404,35 +7554,53 @@ MonoBehaviour:
   - name: Ambiance
     sounds: []
   - name: ClockSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 37ff2f8116d1dc34c98a3a5330bee89d, type: 3}
   - name: PageSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 45afa4912560dba4cb02cabd3e23bb37, type: 3}
   - name: CookieSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 521cff7b2826e0b4381febe590b0400d, type: 3}
+    - {fileID: 8300000, guid: f39d90fa93b62a74297b4a7eaa17ed5d, type: 3}
   - name: CutlerySound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 965bc52f4c02aa541a1946edc9f17b3e, type: 3}
+    - {fileID: 8300000, guid: 9d45149ff8d4c76468858c01af0c1a21, type: 3}
   - name: PotSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: ee0e981121723d24cacb93ab443c72a4, type: 3}
+    - {fileID: 8300000, guid: 4c8261ed1f508f045b430af94b617a07, type: 3}
   - name: BellSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 2be3f3a3456d5cf49bd693d9ea95018c, type: 3}
   - name: LikeSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: c08d82076431a2343bc0104c76dc6f02, type: 3}
   - name: DislikeSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 830699b068fd2b543aad5fe31944954c, type: 3}
   - name: SuccessSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: a0a33abdedcf564448b12186e4b3ac93, type: 3}
   - name: HeartBeatSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 6074eccd3f5e0f04b9b690912ca8e76e, type: 3}
   - name: TapSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: ab0d65f4aab205144b50e669b1aca877, type: 3}
   - name: FridgeDoorOpenSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: f7b974d9dad7915428722c954fa57960, type: 3}
   - name: FridgeDoorCloseSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d7e1ea20aeec149478e114a2c295c68d, type: 3}
   - name: FairySound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 34b0cb32625207f45855272e18e62857, type: 3}
   - name: SpiderSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 7a2624a2bbacecf41854f6ceee5e0d0b, type: 3}
   partOfGame: 0
   masterVolume: 1
   musicVolume: 1
@@ -8414,6 +8582,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1240034734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8722,6 +8902,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9191,6 +9383,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1378862902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9575,6 +9779,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1429672114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9712,6 +9928,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10066,6 +10294,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1492352322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10406,6 +10646,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10856,6 +11108,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1612118235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11053,6 +11317,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11394,6 +11670,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12971,6 +13259,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 277147827}
+        m_TargetAssemblyTypeName: CookBook, Assembly-CSharp
+        m_MethodName: TurnPageAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
