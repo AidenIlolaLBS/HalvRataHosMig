@@ -6330,7 +6330,7 @@ GameObject:
   - component: {fileID: 2049400245}
   - component: {fileID: 2049400244}
   - component: {fileID: 2049400243}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PersonTemp (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
