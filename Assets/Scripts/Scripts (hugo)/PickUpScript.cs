@@ -27,7 +27,10 @@ public class PickUpScript : MonoBehaviour
     }
     void Update()
     {
-        text.text = "";
+        if (text != null)
+        {
+            text.text = "";
+        }
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
@@ -56,14 +59,13 @@ public class PickUpScript : MonoBehaviour
                             break;
                         default:
                             break;
-                    }
+                    }                
                 }
             }
             else
             {
                 if (canDrop == true)
                 {
-                    Debug.Log("drop");
                     GameObject cauldron = StopClipping();
                     if (cauldron == null)//prevents object from clipping through walls
                     {
@@ -81,97 +83,99 @@ public class PickUpScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
             {
-                switch (hit.transform.gameObject.tag)
+                if (text != null)
                 {
-                    case "canPickUp":
-                        string additionalText = "";
-                        if (heldObj == null)
-                        {
-                            if (hit.transform.TryGetComponent(out InGameItemTags inGameItemTags))
+                    switch (hit.transform.gameObject.tag)
+                    {
+                        case "canPickUp":
+                            string additionalText = "";
+                            if (heldObj == null)
                             {
-                                if (inGameItemTags.fullMeal)
+                                if (hit.transform.TryGetComponent(out InGameItemTags inGameItemTags))
                                 {
-                                    Debug.Log("test");
-                                    additionalText = inGameItemTags.fullMealName.ToLower();
-                                    if (additionalText == "random")
+                                    if (inGameItemTags.fullMeal)
                                     {
-                                        additionalText = "meal";
-                                    }
-                                }
-                                else
-                                {
-                                    if (inGameItemTags.Tags.Count > 0)
-                                    {
-                                        additionalText = inGameItemTags.Tags[0].TagName.ToLower();
-                                    }
-                                }                                
-                            }
-                            text.text = "Pick up " + additionalText;                            
-                        }
-                        break;
-                    case "Door":
-                        if (hit.transform.parent.GetComponent<Door>().Open)
-                        {
-                            text.text = "Close";
-                        }
-                        else
-                        {
-                            text.text = "Open";
-                        }
-                        break;
-                    case "Person":
-                        text.text = "Talk";
-                        break;
-                    case "Cauldron":
-                        if (heldObj != null)
-                        {
-                            if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
-                            {
-                                foreach (var item in test.Tags)
-                                {
-                                    if (item.TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
-                                    {
-                                        if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                        Debug.Log("test");
+                                        additionalText = inGameItemTags.fullMealName.ToLower();
+                                        if (additionalText == "random")
                                         {
-                                            text.text = "Pick up meal";
+                                            additionalText = "meal";
                                         }
-                                        else
+                                    }
+                                    else
+                                    {
+                                        if (inGameItemTags.Tags.Count > 0)
                                         {
-                                            text.text = "More ingredients needed";
+                                            additionalText = inGameItemTags.Tags[0].TagName.ToLower();
                                         }
                                     }
                                 }
+                                text.text = "Pick up " + additionalText;
                             }
-                        }
-                        else
-                        {
-                            if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                            break;
+                        case "Door":
+                            if (hit.transform.parent.GetComponent<Door>().Open)
                             {
-                                text.text = "Plate required";
+                                text.text = "Close";
                             }
                             else
                             {
-                                text.text = "More ingredients needed";
+                                text.text = "Open";
                             }
-                        }
-                        break;
-                    case "Sink":
-                        if (hit.transform.GetComponent<Sink>().GetWaterStatus())
-                        {
-                            text.text = "Turn off water";
-                        }
-                        else
-                        {
-                            text.text = "Turn on water";
-                        }
-                        break;
-                    case "CookBook":
-                        text.text = "Open cookbook";
-                        break;
-                    default:
-                        
-                        break;
-                }
+                            break;
+                        case "Person":
+                            text.text = "Talk";
+                            break;
+                        case "Cauldron":
+                            if (heldObj != null)
+                            {
+                                if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
+                                {
+                                    foreach (var item in test.Tags)
+                                    {
+                                        if (item.TagName == "Plate" && hit.transform.gameObject.tag == "Cauldron")
+                                        {
+                                            if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                            {
+                                                text.text = "Pick up meal";
+                                            }
+                                            else
+                                            {
+                                                text.text = "More ingredients needed";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
+                                {
+                                    text.text = "Plate required";
+                                }
+                                else
+                                {
+                                    text.text = "More ingredients needed";
+                                }
+                            }
+                            break;
+                        case "Sink":
+                            if (hit.transform.GetComponent<Sink>().GetWaterStatus())
+                            {
+                                text.text = "Turn off water";
+                            }
+                            else
+                            {
+                                text.text = "Turn on water";
+                            }
+                            break;
+                        case "CookBook":
+                            text.text = "Open cookbook";
+                            break;
+                        default:
+                            break;
+                    }
+                }               
             }
         }
         if (heldObj != null) //if player is holding object
