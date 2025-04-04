@@ -16,6 +16,7 @@ TagManager:
   - Chop
   - CookBook
   - GameManager
+  - Person
   layers:
   - Default
   - TransparentFX
