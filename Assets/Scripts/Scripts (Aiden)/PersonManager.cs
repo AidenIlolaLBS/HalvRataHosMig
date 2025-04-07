@@ -41,9 +41,9 @@ public class PersonManager : MonoBehaviour
     public void SpawnPersons()
     {
         List<GameObject> spawnPos = GameObject.FindGameObjectsWithTag("PeopleSpawnPos").ToList();
-        for (int i = 0; i < ; i++)
+        for (int i = 0; i < selectedPersons.Count; i++)
         {
-
+            Instantiate(selectedPersons[i], spawnPos[i].transform.position, spawnPos[i].transform.rotation);
         }
     }
 }
