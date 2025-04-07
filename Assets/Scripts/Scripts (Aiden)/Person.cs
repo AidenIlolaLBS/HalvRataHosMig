@@ -7,6 +7,7 @@ public class Person : MonoBehaviour
     Tyckeromdigmätare tyckeromdigmätare;
     string _personName;
     NodeContainer dialogue;
+    
 
     public string PersonName
     {

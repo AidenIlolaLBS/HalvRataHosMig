@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class TestFocus : MonoBehaviour
+public class Focus : MonoBehaviour
 {
     public Camera mainCam;
     bool activeDOF = false;

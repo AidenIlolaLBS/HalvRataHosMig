@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PersonManager : MonoBehaviour
 {
-    List<Person> allPersons = new() { };
-    List<Person> selectedPersons = new();
+    public List<GameObject> allPersons = new();
+    List<GameObject> selectedPersons = new();
     int maxSelectedPersons = 3;
 
     public void SelectPerson()
     {
         System.Random rnd = new();
-        List<Person> availiblePersons = new();
+        List<GameObject> availiblePersons = new();
         foreach (var item in allPersons)
         {
             availiblePersons.Add(item);
@@ -25,9 +26,24 @@ public class PersonManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemovePerson(Person person)
     {
-        
+        for (int i = 0; i < selectedPersons.Count; i++)
+        {
+            if (selectedPersons[i] == person)
+            {
+                selectedPersons.RemoveAt(i);
+                return;
+            }
+        }
+    }
+
+    public void SpawnPersons()
+    {
+        List<GameObject> spawnPos = GameObject.FindGameObjectsWithTag("PeopleSpawnPos").ToList();
+        for (int i = 0; i < ; i++)
+        {
+
+        }
     }
 }
