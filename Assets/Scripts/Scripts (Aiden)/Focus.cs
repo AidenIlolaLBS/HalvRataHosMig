@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Focus : MonoBehaviour
 {
-    public Camera mainCam;
+    public GameObject effects;
+
     bool activeDOF = false;
-    float startDOF;
 
     private void Awake()
     {
-        startDOF = mainCam.focusDistance;
+        effects.SetActive(activeDOF);
     }
 
     // Update is called once per frame
@@ -21,15 +21,13 @@ public class Focus : MonoBehaviour
         {
             if (activeDOF)
             {
-                mainCam.focusDistance = startDOF;
                 activeDOF = false;
-                Debug.Log(startDOF);
+                effects.SetActive(activeDOF);
             }
             else
             {
-                mainCam.focusDistance = 1;
                 activeDOF = true;
-                Debug.Log(startDOF);
+                effects.SetActive(activeDOF);
             }
         }
     }
