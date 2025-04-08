@@ -20,6 +20,7 @@ TagManager:
   - PersonSpawnPos
   - DoorDiningRoom
   - MealSpawn
+  - TicTacToe
   layers:
   - Default
   - TransparentFX
