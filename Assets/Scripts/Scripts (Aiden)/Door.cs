@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public bool switchScene = false;
     bool open = false;
     public bool Open
     {
         get { return open; }
     }
     public float doorAngle = 90;
+
+    AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
+    }
+
     public void InteractDoor()
     {
         if (open)
@@ -21,6 +30,13 @@ public class Door : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, transform.rotation.y - doorAngle, 0);
             open = true;
+        }
+
+        audioManager.StartSFX(SoundType.DoorSound);
+
+        if (switchScene)
+        {
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameSceneManager>().NextScene();
         }
     }
 }

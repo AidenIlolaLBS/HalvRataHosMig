@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UIElements;
+using Unity.Burst.CompilerServices;
 
 public class PickUpScript : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class PickUpScript : MonoBehaviour
                             break;
                         case "CookBook":
                             hit.transform.gameObject.GetComponent<CookBook>().Interact();
-                            break;
+                            break;                        
                         default:
                             break;
                     }                
@@ -64,6 +65,23 @@ public class PickUpScript : MonoBehaviour
             }
             else
             {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange))
+                {
+                    if (hit.transform.tag == "DoorDiningRoom")
+                    {
+                        if (heldObj.TryGetComponent(out InGameItemTags inGameItemTags))
+                        {
+                            if (inGameItemTags.fullMeal)
+                            {
+                                Debug.Log(heldObj.name);
+                                heldObj.transform.parent = null;
+                                GameObject.FindGameObjectWithTag("GameManager").GetComponent<MealManager>().currentMeal = heldObj;
+                                hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
+                            }
+                        }                        
+                    }                        
+                }
                 if (canDrop == true)
                 {
                     GameObject cauldron = StopClipping();
@@ -95,7 +113,6 @@ public class PickUpScript : MonoBehaviour
                                 {
                                     if (inGameItemTags.fullMeal)
                                     {
-                                        Debug.Log("test");
                                         additionalText = inGameItemTags.fullMealName.ToLower();
                                         if (additionalText == "random")
                                         {
@@ -129,7 +146,7 @@ public class PickUpScript : MonoBehaviour
                         case "Cauldron":
                             if (heldObj != null)
                             {
-                                if (heldObj.gameObject.TryGetComponent<InGameItemTags>(out InGameItemTags test))
+                                if (heldObj.gameObject.TryGetComponent(out InGameItemTags test))
                                 {
                                     foreach (var item in test.Tags)
                                     {
@@ -171,6 +188,20 @@ public class PickUpScript : MonoBehaviour
                             break;
                         case "CookBook":
                             text.text = "Open cookbook";
+                            break;
+                        case "DoorDiningRoom":
+                            if (heldObj != null)
+                            {
+                                if (heldObj.TryGetComponent(out InGameItemTags inGameItemTags))
+                                {
+                                    if (inGameItemTags.fullMeal)
+                                    {
+                                        text.text = "Go to dining room";
+                                        break;
+                                    }
+                                }                                                                
+                            }
+                            text.text = "You need a meal";
                             break;
                         default:
                             break;

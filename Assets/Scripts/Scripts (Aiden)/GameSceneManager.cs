@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneManager : MonoBehaviour
 {
-    int sceneIndex = 0;
+    int sceneIndex = 1;
     int gameLoop = 3;
     int currentGameLoop = 0;
+
+    bool recentlySwitchedDining = false;
 
     public void NextScene()
     {
@@ -19,11 +21,27 @@ public class GameSceneManager : MonoBehaviour
                 sceneIndex = 1;
             }
         }
+
         if (sceneIndex > SceneManager.sceneCountInBuildSettings - 1)
         {
             sceneIndex = 0;
             currentGameLoop = 0;
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneIndex));
+
+        SceneManager.LoadScene(sceneIndex);
+        if (sceneIndex == 2)
+        {
+            recentlySwitchedDining = true;
+        }
+    }
+
+    private void Update()
+    {
+        if (recentlySwitchedDining && SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            recentlySwitchedDining = false;
+            gameObject.GetComponent<PersonManager>().SpawnPersons();
+            gameObject.GetComponent<MealManager>().SpawnMeals();
+        }
     }
 }

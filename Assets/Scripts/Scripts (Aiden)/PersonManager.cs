@@ -6,7 +6,7 @@ using UnityEngine;
 public class PersonManager : MonoBehaviour
 {
     public List<GameObject> allPersons = new();
-    List<GameObject> selectedPersons = new();
+    public List<GameObject> selectedPersons = new();
     int maxSelectedPersons = 3;
 
     private void Start()
@@ -54,6 +54,15 @@ public class PersonManager : MonoBehaviour
     public void SpawnPersons()
     {
         List<GameObject> spawnPos = GameObject.FindGameObjectsWithTag("PersonSpawnPos").ToList();
+
+        foreach (var item in selectedPersons)
+        {
+            //item.GetComponent<Person>().tyckeromdigmätare.ServeFood(gameObject.GetComponent<MealManager>().currentMeal);
+        }
+
+        Debug.Log(selectedPersons.Count);
+        Debug.Log(spawnPos.Count);
+
         for (int i = 0; i < selectedPersons.Count; i++)
         {
             Instantiate(selectedPersons[i], spawnPos[i].transform.position, spawnPos[i].transform.rotation);
