@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: IntroJohan
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371254501114244
+  - rid: 5182371254501114245
+  - rid: 5182371254501114246
+  baseNodeData:
+  - rid: 5182371254501114247
+  - rid: 5182371254501114248
+  - rid: 5182371254501114249
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371254501114244
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 661d0042-c27c-49f6-83a5-0411d78351f1
+        PortName: Next
+        TargetNodeGUID: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+    - rid: 5182371254501114245
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+        PortName: Swedish
+        TargetNodeGUID: 00a4c275-8baa-493d-8e8b-fd50f3279222
+    - rid: 5182371254501114246
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 00a4c275-8baa-493d-8e8b-fd50f3279222
+        PortName: Output
+        TargetNodeGUID: 9675d3e5-75c0-4f67-bff2-b2c603c384cd
+    - rid: 5182371254501114247
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 9675d3e5-75c0-4f67-bff2-b2c603c384cd
+        Position: {x: 1002, y: 123}
+    - rid: 5182371254501114248
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: Johan Smutsig III
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371254501114249
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 00a4c275-8baa-493d-8e8b-fd50f3279222
+        Position: {x: 467, y: 200}
+        DialogueText: "Hall\xE5 hall\xE5! Namnet \xE4r Johan Smutsig III, jepp, s\xE5
+          heter jag. Smutsig, som i oren f\xF6rst\xE5r du. Ja Johan, det var min
+          farfars fars favorit sk\xE5despelare, riktigt rolig grabb den d\xE4r Johan
+          tyckte farfars far. S\xE5 sen dess s\xE5 \xE4r det tradition att d\xF6pa
+          den f\xF6rstf\xF6dde sonen i familjen till Johan, det \xE4r d\xE4rf\xF6r
+          jag heter Johan III, min farfar \xE4r Johan I och min \xE4ldsta farbror
+          \xE4r Johan II. Sedan \xE4r jag min fars f\xF6rstf\xF6dda men jag har 17
+          till syskon, livet var sv\xE5rt, vi var f\xF6r f\xE5, fick inte alltid
+          allting gjort, men s\xE5n \xE4r livet. Men ja, n\xE4r jag f\xE5r en son
+          kommer han ocks\xE5 heta Johan, han ska va Johan IV, Jakob ska inte f\xE5
+          en son f\xF6re mig, \xF6ver min d\xF6da kropp att mitt barn ska heta Johan
+          V. "

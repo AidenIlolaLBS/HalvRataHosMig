@@ -116,7 +116,7 @@ public class PickUpScript : MonoBehaviour
                                         additionalText = inGameItemTags.fullMealName.ToLower();
                                         if (additionalText == "random")
                                         {
-                                            additionalText = "meal";
+                                            additionalText = "maträtt";
                                         }
                                     }
                                     else
@@ -127,21 +127,21 @@ public class PickUpScript : MonoBehaviour
                                         }
                                     }
                                 }
-                                text.text = "Pick up " + additionalText;
+                                text.text = "Plocka upp " + additionalText;
                             }
                             break;
                         case "Door":
                             if (hit.transform.parent.GetComponent<Door>().Open)
                             {
-                                text.text = "Close";
+                                text.text = "Stäng";
                             }
                             else
                             {
-                                text.text = "Open";
+                                text.text = "Öppna";
                             }
                             break;
                         case "Person":
-                            text.text = "Talk";
+                            text.text = "Prata";
                             break;
                         case "Cauldron":
                             if (heldObj != null)
@@ -154,11 +154,11 @@ public class PickUpScript : MonoBehaviour
                                         {
                                             if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
                                             {
-                                                text.text = "Pick up meal";
+                                                text.text = "Plocka upp maträtt";
                                             }
                                             else
                                             {
-                                                text.text = "More ingredients needed";
+                                                text.text = "Mer ingredienser behövs";
                                             }
                                         }
                                     }
@@ -168,26 +168,26 @@ public class PickUpScript : MonoBehaviour
                             {
                                 if (hit.transform.gameObject.GetComponent<Cauldron>().CanGetMeal())
                                 {
-                                    text.text = "Plate required";
+                                    text.text = "Talrik behövs";
                                 }
                                 else
                                 {
-                                    text.text = "More ingredients needed";
+                                    text.text = "Mer ingredienser behövs";
                                 }
                             }
                             break;
                         case "Sink":
                             if (hit.transform.GetComponent<Sink>().GetWaterStatus())
                             {
-                                text.text = "Turn off water";
+                                text.text = "Stäng av vatten";
                             }
                             else
                             {
-                                text.text = "Turn on water";
+                                text.text = "Sätt på vatten";
                             }
                             break;
                         case "CookBook":
-                            text.text = "Open cookbook";
+                            text.text = "Öppna kokbok";
                             break;
                         case "DoorDiningRoom":
                             if (heldObj != null)
@@ -196,12 +196,15 @@ public class PickUpScript : MonoBehaviour
                                 {
                                     if (inGameItemTags.fullMeal)
                                     {
-                                        text.text = "Go to dining room";
+                                        text.text = "Gå till matsal";
                                         break;
                                     }
                                 }                                                                
                             }
-                            text.text = "You need a meal";
+                            text.text = "Maträtt behövs";
+                            break;
+                        case "FinishMeal":
+                            text.text = "Avsluta måltid";
                             break;
                         default:
                             break;

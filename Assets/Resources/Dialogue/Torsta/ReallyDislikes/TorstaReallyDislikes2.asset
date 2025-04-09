@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: TorstaReallyDislikes2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371254501113998
+  - rid: 5182371254501113999
+  - rid: 5182371254501114000
+  baseNodeData:
+  - rid: 5182371254501114001
+  - rid: 5182371254501114002
+  - rid: 5182371254501114003
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371254501113998
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 661d0042-c27c-49f6-83a5-0411d78351f1
+        PortName: Next
+        TargetNodeGUID: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+    - rid: 5182371254501113999
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+        PortName: Swedish
+        TargetNodeGUID: 00a4c275-8baa-493d-8e8b-fd50f3279222
+    - rid: 5182371254501114000
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 00a4c275-8baa-493d-8e8b-fd50f3279222
+        PortName: Output
+        TargetNodeGUID: 9675d3e5-75c0-4f67-bff2-b2c603c384cd
+    - rid: 5182371254501114001
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: fb7826b9-8c91-4646-a13c-02e3e4d57a57
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: Torsta
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371254501114002
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 00a4c275-8baa-493d-8e8b-fd50f3279222
+        Position: {x: 467, y: 200}
+        DialogueText: "Jag hatar att vara den som gungar b\xE5ten, men det h\xE4r
+          var \xE4nnu en r\xE4tt som inte riktigt flyter."
+    - rid: 5182371254501114003
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 9675d3e5-75c0-4f67-bff2-b2c603c384cd
+        Position: {x: 971, y: 200}

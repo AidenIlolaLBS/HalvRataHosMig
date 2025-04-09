@@ -89,6 +89,10 @@ public class Cauldron : MonoBehaviour
         {
             return "IceCream";
         }
+        else if (containingTags.Contains("Seaweed") && containingTags.Contains("ChoppedSeaweed")) //Sallad
+        {
+            return "Sallad";
+        }
         else
         {
             return "Random";

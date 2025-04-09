@@ -254,13 +254,22 @@ public class DialogueGraphView : GraphView
         return infoNode;
     }
 
-    public EndNode CreateEndNode(Vector2 position = new Vector2(), string nodeTitle = "End")
+    public EndNode CreateEndNode(Vector2 position = new Vector2(), string endNum = "0", string nodeTitle = "End")
     {
         var endNode = new EndNode
         {
             title = nodeTitle,
-            GUID = Guid.NewGuid().ToString()
+            GUID = Guid.NewGuid().ToString(),
+            endNum = endNum,
         };
+
+        var textField = new TextField(string.Empty);
+        textField.RegisterValueChangedCallback(evt =>
+        {
+            endNode.endNum = evt.newValue;
+        });
+        textField.SetValueWithoutNotify(endNode.endNum);
+        endNode.mainContainer.Add(textField);
 
         AddInputPort(endNode);
 

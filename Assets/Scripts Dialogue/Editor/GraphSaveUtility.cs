@@ -89,7 +89,8 @@ public class GraphSaveUtility
                 var data = new EndNodeData
                 {
                     Guid = endNode.GUID,
-                    Position = endNode.GetPosition().position
+                    Position = endNode.GetPosition().position,
+                    endNum = endNode.endNum
                 };
                 nodeContainer.baseNodeData.Add(data);
             }
@@ -185,7 +186,7 @@ public class GraphSaveUtility
             }
             else if (nodeData is EndNodeData endNodeData)
             {
-                tempNode = _targetGraphView.CreateEndNode(endNodeData.Position);
+                tempNode = _targetGraphView.CreateEndNode(endNodeData.Position, endNodeData.endNum);
             }
 
             if (tempNode != null)

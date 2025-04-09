@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: JohanTalkNeutral3
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371254501114798
+  - rid: 5182371254501114799
+  - rid: 5182371254501114800
+  - rid: 5182371254501114801
+  - rid: 5182371254501114802
+  - rid: 5182371254501114803
+  - rid: 5182371254501114804
+  - rid: 5182371254501114805
+  - rid: 5182371254501114806
+  baseNodeData:
+  - rid: 5182371254501114807
+  - rid: 5182371254501114808
+  - rid: 5182371254501114809
+  - rid: 5182371254501114810
+  - rid: 5182371254501114811
+  - rid: 5182371254501114812
+  - rid: 5182371254501114813
+  - rid: 5182371254501114814
+  - rid: 5182371254501114815
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371254501114798
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: faee64e7-0503-4fb0-b674-e29e5c772ae6
+        PortName: Next
+        TargetNodeGUID: 777a9294-528e-4941-85e9-5cba9afa2a61
+    - rid: 5182371254501114799
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 777a9294-528e-4941-85e9-5cba9afa2a61
+        PortName: Swedish
+        TargetNodeGUID: 391b821f-923d-4d17-94ac-2a69d52a2100
+    - rid: 5182371254501114800
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 391b821f-923d-4d17-94ac-2a69d52a2100
+        PortName: Output
+        TargetNodeGUID: 9639796a-4938-4329-8228-6b1efdf23df6
+    - rid: 5182371254501114801
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 9639796a-4938-4329-8228-6b1efdf23df6
+        PortName: "Vad \xE4r det finaste du vet i v\xE4rlden? "
+        TargetNodeGUID: b54aa6fc-22a0-463e-b4bf-e81bc078e4be
+    - rid: 5182371254501114802
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 9639796a-4938-4329-8228-6b1efdf23df6
+        PortName: "Har du n\xE5gonsin \xE4tit k\xF6tt?"
+        TargetNodeGUID: 9f523e51-1eb2-4c5f-9320-490c59420b31
+    - rid: 5182371254501114803
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: b54aa6fc-22a0-463e-b4bf-e81bc078e4be
+        PortName: Swedish
+        TargetNodeGUID: 0429233b-bb56-4018-af24-792c2d76a73d
+    - rid: 5182371254501114804
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 9f523e51-1eb2-4c5f-9320-490c59420b31
+        PortName: Swedish
+        TargetNodeGUID: c88b23a7-c556-403e-b466-195429ec04cc
+    - rid: 5182371254501114805
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 0429233b-bb56-4018-af24-792c2d76a73d
+        PortName: Output
+        TargetNodeGUID: 18a2dc14-9fac-4f5b-8e28-d47c109c1c78
+    - rid: 5182371254501114806
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: c88b23a7-c556-403e-b466-195429ec04cc
+        PortName: Output
+        TargetNodeGUID: 8209c4a6-33af-497f-83f8-70b969e1238b
+    - rid: 5182371254501114807
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 777a9294-528e-4941-85e9-5cba9afa2a61
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: 
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371254501114808
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 391b821f-923d-4d17-94ac-2a69d52a2100
+        Position: {x: 467, y: 200}
+        DialogueText: 
+    - rid: 5182371254501114809
+      type: {class: ChoiceNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 9639796a-4938-4329-8228-6b1efdf23df6
+        Position: {x: 603, y: 201}
+    - rid: 5182371254501114810
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 9f523e51-1eb2-4c5f-9320-490c59420b31
+        Position: {x: 863, y: 278}
+        nodeTitle: 
+        personName: Gullan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371254501114811
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 18a2dc14-9fac-4f5b-8e28-d47c109c1c78
+        Position: {x: 1695, y: -88}
+        endNum: 1
+    - rid: 5182371254501114812
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 8209c4a6-33af-497f-83f8-70b969e1238b
+        Position: {x: 1695, y: 47}
+        endNum: -1
+    - rid: 5182371254501114813
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 0429233b-bb56-4018-af24-792c2d76a73d
+        Position: {x: 1146, y: 143}
+        DialogueText: "\xC5h, allts\xE5\u2026 n\xE4r man h\xF6r en r\xE4v sk\xE4lla
+          l\xE5ngt borta i skogen, eller n\xE4r en ekorre hoppar fr\xE5n tr\xE4d
+          till tr\xE4d. S\xE5nt g\xF6r mig glad i sj\xE4len."
+    - rid: 5182371254501114814
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: b54aa6fc-22a0-463e-b4bf-e81bc078e4be
+        Position: {x: 863, y: 143}
+        nodeTitle: 
+        personName: Gullan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371254501114815
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: c88b23a7-c556-403e-b466-195429ec04cc
+        Position: {x: 1146, y: 278}
+        DialogueText: "Ja\u2026 n\xE4r jag var liten. Men jag visste inte b\xE4ttre
+          d\xE5. Det pl\xE5gar mig fortfarande, faktiskt."
