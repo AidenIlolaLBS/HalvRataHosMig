@@ -54,23 +54,9 @@ public class Person : MonoBehaviour
         else if (haveTalked == 0)
         {
             System.Random rnd = new System.Random();
-            switch (tyckeromdigmätare.likeLevel)
+            if (tyckeromdigmätare.prevLikeLevelChange > 0)
             {
-                case LikeLevel.ReallyDislikes:
-                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(reallyDislikeMealDialogue[rnd.Next(0, reallyDislikeMealDialogue.Count - 1)]);
-                    break;
-                case LikeLevel.Dislikes:
-                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(dislikeMealDialogue[rnd.Next(0, dislikeMealDialogue.Count - 1)]);
-                    break;
-                case LikeLevel.Neutral:
-                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(reallyDislikeMealDialogue[rnd.Next(0, reallyDislikeMealDialogue.Count - 1)]);
-                    break;
-                case LikeLevel.Likes:
-                    break;
-                case LikeLevel.ReallyLikes:
-                    break;
-                default:
-                    break;
+
             }
         }        
     }

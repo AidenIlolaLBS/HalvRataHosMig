@@ -38,6 +38,7 @@ public class InspectorItemTags : MonoBehaviour
     public bool HalfLemon = false;
     public bool Goblin = false;
     public bool Sallad = false;
+    public bool ChoppedBatwing = false;
     public InspectorItemTags()
     {
         AddTags();

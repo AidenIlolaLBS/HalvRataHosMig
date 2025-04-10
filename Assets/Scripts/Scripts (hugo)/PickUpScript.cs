@@ -113,19 +113,16 @@ public class PickUpScript : MonoBehaviour
                                 {
                                     if (inGameItemTags.fullMeal)
                                     {
-                                        additionalText = inGameItemTags.fullMealName.ToLower();
-                                        if (additionalText == "random")
-                                        {
-                                            additionalText = "maträtt";
-                                        }
+                                        additionalText = inGameItemTags.fullMealName;
                                     }
                                     else
                                     {
                                         if (inGameItemTags.Tags.Count > 0)
                                         {
-                                            additionalText = inGameItemTags.Tags[0].TagName.ToLower();
+                                            additionalText = inGameItemTags.Tags[0].TagName;
                                         }
                                     }
+                                    additionalText = ConvertToSwedish(additionalText);
                                 }
                                 text.text = "Plocka upp " + additionalText;
                             }
@@ -221,6 +218,100 @@ public class PickUpScript : MonoBehaviour
                 ThrowObject();
             }
         }
+    }
+
+    private string ConvertToSwedish(string additionalText)
+    {
+        InspectorItemTags tags = new InspectorItemTags();
+        string newText = "";
+        switch (additionalText)
+        {
+            case nameof(tags.Bread):
+                newText = "bröd";
+                break;
+            case nameof(tags.Seaweed):
+                newText = "sjögräs";
+                break;
+            case nameof(tags.ChoppedSeaweed):
+                newText = "hackad sjögräs";
+                break;
+            case nameof(tags.ToastSkagish):
+                newText = "toast skagish";
+                break;
+            case nameof(tags.DragonEgg):
+                newText = "drakägg";
+                break;
+            case nameof(tags.LizardHeart):
+                newText = "ödlehjärta";
+                break;
+            case nameof(tags.Eggsallad):
+                newText = "äggsallad";
+                break;
+            case nameof(tags.Fairy):
+                newText = "älva";
+                break;
+            case nameof(tags.Flour):
+                newText = "mjöl";
+                break;
+            case nameof(tags.Gratin):
+                newText = "gratäng";
+                break;
+            case nameof(tags.Water):
+                newText = "vatten";
+                break;
+            case nameof(tags.BatWing):
+                newText = "fladdermusvinge";
+                break;
+            case nameof(tags.Soup):
+                newText = "soppa";
+                break;
+            case nameof(tags.FlyAgaric):
+                newText = "flugsvamp";
+                break;
+            case nameof(tags.Spaghetti):
+                newText = "spaghetti";
+                break;
+            case nameof(tags.Pie):
+                newText = "paj";
+                break;
+            case nameof(tags.StinkFruit):
+                newText = "stinkfrukt";
+                break;
+            case nameof(tags.DeadBerry):
+                newText = "dödabär";
+                break;
+            case nameof(tags.IceCream):
+                newText = "glass";
+                break;
+            case nameof(tags.Random):
+                newText = "maträtt";
+                break;
+            case nameof(tags.Lime):
+                newText = "lime";
+                break;
+            case nameof(tags.Plate):
+                newText = "tallrik";
+                break;
+            case nameof(tags.Glass):
+                newText = "glas";
+                break;
+            case nameof(tags.HalfLemon):
+                newText = "halv citron";
+                break;
+            case nameof(tags.Goblin):
+                newText = "troll";
+                break;
+            case nameof(tags.Sallad):
+                newText = "sallad";
+                break;
+            case nameof(tags.ChoppedBatwing):
+                newText = "hackad fladdermusvinge";
+                break;
+            default:
+                newText = additionalText.ToLower();
+                break;                
+        }
+        return newText;
     }
 
     private void PickUpMeal(Cauldron cauldron)

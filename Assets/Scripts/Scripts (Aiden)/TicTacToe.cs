@@ -32,7 +32,7 @@ public class TicTacToe : MonoBehaviour
             {
                 if (colliders[i, j] == collider)
                 {
-                    MarkBoard();
+                    //MarkBoard();
                 }
             }
         }
