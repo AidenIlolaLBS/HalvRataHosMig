@@ -57,12 +57,13 @@ public class Person : MonoBehaviour
             switch (tyckeromdigmätare.likeLevel)
             {
                 case LikeLevel.ReallyDislikes:
-
                     GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(reallyDislikeMealDialogue[rnd.Next(0, reallyDislikeMealDialogue.Count - 1)]);
                     break;
                 case LikeLevel.Dislikes:
+                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(dislikeMealDialogue[rnd.Next(0, dislikeMealDialogue.Count - 1)]);
                     break;
                 case LikeLevel.Neutral:
+                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(reallyDislikeMealDialogue[rnd.Next(0, reallyDislikeMealDialogue.Count - 1)]);
                     break;
                 case LikeLevel.Likes:
                     break;
