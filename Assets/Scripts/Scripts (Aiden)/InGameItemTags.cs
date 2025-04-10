@@ -16,6 +16,8 @@ public class InGameItemTags : MonoBehaviour
         get { return _tags; }
     }
     
+    public List<string> names = new List<string>();
+
     public void AddTags(List<TagInfo> newTags)
     {
         foreach (var item in newTags)
@@ -23,6 +25,7 @@ public class InGameItemTags : MonoBehaviour
             if (item.Active)
             {
                 _tags.Add(item);
+                names.Add(item.TagName);
             }
         }
     }

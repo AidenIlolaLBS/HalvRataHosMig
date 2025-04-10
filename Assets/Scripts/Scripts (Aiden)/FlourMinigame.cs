@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FlourMinigame : MonoBehaviour
 {
     public Slider flourSlider;
-    float startTimerTime = 50;
+    float startTimerTime = 7;
     float timerTime;
     ParticleSystem flourParticles;
     bool activeParticles = false;
