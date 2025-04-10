@@ -30,6 +30,8 @@ namespace Subtegral.DialogueSystem.Runtime
         string audioPath; 
         private AudioManager audioManager;
 
+        GameObject person;
+
         private void Start()
         {
             audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
@@ -65,7 +67,24 @@ namespace Subtegral.DialogueSystem.Runtime
 
         public void ExternalStartNarrative()
         {
+            person = null;
             var narrativeData = nodeContainer.NodeLinks.First(); //Entrypoint node
+            //player.GetComponent<PlayerMovement>().enabled = false;
+            ProceedToNarrative(narrativeData.TargetNodeGUID);
+        }
+
+        public void ExternalStartNarrative(NodeContainer nodeContainer)
+        {
+            person = null;
+            var narrativeData = (this.nodeContainer = nodeContainer).NodeLinks.First(); //Entrypoint node
+            //player.GetComponent<PlayerMovement>().enabled = false;
+            ProceedToNarrative(narrativeData.TargetNodeGUID);
+        }
+
+        public void ExternalStartNarrative(NodeContainer nodeContainer, GameObject gameObject)
+        {
+            person = gameObject;
+            var narrativeData = (this.nodeContainer = nodeContainer).NodeLinks.First(); //Entrypoint node
             //player.GetComponent<PlayerMovement>().enabled = false;
             ProceedToNarrative(narrativeData.TargetNodeGUID);
         }
@@ -85,6 +104,18 @@ namespace Subtegral.DialogueSystem.Runtime
             nodeType = nodeContainer.baseNodeData.Find(x => x.Guid == tempNarrativeDataguid) as EndNodeData;
             if (nodeType != null)
             {
+                if (person != null)
+                {
+                    person.GetComponent<Person>().haveTalked++;
+                    if (int.Parse(((EndNodeData)nodeType).endNum) == 1)
+                    {
+                        person.GetComponent<Person>().tyckeromdigmätare.IncreaseLikeMeter();
+                    }
+                    else if (int.Parse(((EndNodeData)nodeType).endNum) == -1)
+                    {
+                        person.GetComponent<Person>().tyckeromdigmätare.DecreaseLikeMeter();
+                    }
+                }
                 return;
             }
 

@@ -9,6 +9,11 @@ public class GameSceneManager : MonoBehaviour
     int gameLoop = 3;
     int currentGameLoop = 0;
 
+    public int CurrentGameLoop
+    {
+        get { return currentGameLoop; }
+    }
+
     bool recentlySwitchedDining = false;
 
     public void NextScene()

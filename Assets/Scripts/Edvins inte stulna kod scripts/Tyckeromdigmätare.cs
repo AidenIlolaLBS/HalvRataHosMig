@@ -5,6 +5,7 @@ public enum LikeLevel { ReallyDislikes, Dislikes, Neutral, Likes, ReallyLikes } 
 public class Tyckeromdigmätare : MonoBehaviour
 {
     public LikeLevel likeLevel = LikeLevel.Neutral;
+    public LikeLevel prevlikeLevel = LikeLevel.Neutral;
     public List<string> dislikedIngredients;
 
     public Tyckeromdigmätare(InGameItemTags tags)
@@ -28,19 +29,21 @@ public class Tyckeromdigmätare : MonoBehaviour
         IncreaseLikeMeter();
     }
 
-    void IncreaseLikeMeter()  // gillar dig mer
+    public void IncreaseLikeMeter()  // gillar dig mer
     {
         if (likeLevel < LikeLevel.ReallyLikes)
         {
+            prevlikeLevel = likeLevel;
             likeLevel++;
         }
     }
 
-    void DecreaseLikeMeter()  // gillar dig mindre
+    public void DecreaseLikeMeter()  // gillar dig mindre
     {
+        prevlikeLevel = likeLevel;
         likeLevel--;
 
-        if (likeLevel == LikeLevel.ReallyDislikes)  // försvinner om karaktären hatar dig
+        if (likeLevel == LikeLevel.ReallyDislikes && prevlikeLevel == LikeLevel.ReallyDislikes)  // försvinner om karaktären hatar dig
         {
             Destroy(this);
         }

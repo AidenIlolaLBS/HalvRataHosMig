@@ -1,3 +1,4 @@
+using Subtegral.DialogueSystem.Runtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,9 +8,22 @@ public class Person : MonoBehaviour
 {
     public Tyckeromdigmätare tyckeromdigmätare;
     string _personName;
-    NodeContainer dialogue;
 
-    [SerializeField] private DialogueList[] DialogueList;
+    public NodeContainer IntroDialogue;
+    public List<NodeContainer> likeMealDialogue;
+    public List<NodeContainer> reallyLikeMealDialogue;
+    public List<NodeContainer> dislikeMealDialogue;
+    public List<NodeContainer> reallyDislikeMealDialogue;
+    public List<NodeContainer> likesDislikesMealDialogue;
+    public List<NodeContainer> dislikesLikesMealDialogue;
+    public List<NodeContainer> leavesPositiveMealDialogue;
+    public List<NodeContainer> leavesNegativeMealDialogue;
+
+    public NodeContainer[] mealDialogue1 = new NodeContainer[5];
+    public NodeContainer[] mealDialogue2 = new NodeContainer[5];
+    public NodeContainer[] mealDialogue3 = new NodeContainer[5];
+
+    public int haveTalked = 0;
 
     public string PersonName
     {
@@ -23,34 +37,45 @@ public class Person : MonoBehaviour
 
     public void Talk()
     {
+        if (haveTalked == 1)
+        {
+            switch (GameObject.FindGameObjectWithTag("GameManaager").GetComponent<GameSceneManager>().CurrentGameLoop)
+            {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (haveTalked == 0)
+        {
+            System.Random rnd = new System.Random();
+            switch (tyckeromdigmätare.likeLevel)
+            {
+                case LikeLevel.ReallyDislikes:
 
+                    GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>().ExternalStartNarrative(reallyDislikeMealDialogue[rnd.Next(0, reallyDislikeMealDialogue.Count - 1)]);
+                    break;
+                case LikeLevel.Dislikes:
+                    break;
+                case LikeLevel.Neutral:
+                    break;
+                case LikeLevel.Likes:
+                    break;
+                case LikeLevel.ReallyLikes:
+                    break;
+                default:
+                    break;
+            }
+        }        
     }
 
     private void Start()
     {
         tyckeromdigmätare = new(gameObject.GetComponent<InGameItemTags>());
-    }
-
-#if UNITY_EDITOR
-    private void OnEnable()
-    {
-        string[] names = Enum.GetNames(typeof(LikeLevel));
-        Array.Resize(ref DialogueList, names.Length);
-        for (int i = 0; i < DialogueList.Length; i++)
-        {
-            DialogueList[i].name = names[i];
-        }
-    }
-#endif
-}
-
-[Serializable]
-public struct DialogueList
-{
-    [HideInInspector] public string name;
-    [SerializeField] private NodeContainer[] dialogueOptions;
-    public NodeContainer[] DialogueOptions
-    {
-        get { return dialogueOptions; }
     }
 }
