@@ -21,6 +21,7 @@ TagManager:
   - DoorDiningRoom
   - MealSpawn
   - TicTacToe
+  - DialogueParser
   layers:
   - Default
   - TransparentFX
