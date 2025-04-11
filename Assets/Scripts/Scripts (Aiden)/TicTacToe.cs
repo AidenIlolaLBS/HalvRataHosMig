@@ -50,30 +50,57 @@ public class TicTacToe : MonoBehaviour
     /// <param name="y"></param>
     /// <param name="objekt">1: player, 2:goblin </param>
     public void MarkBoard(int x, int y, int objekt)
-    {
-        
+    {        
         markPlacements[x, y] = objekt;
         Destroy(colliders[x, y]);
-                
-        CheckForWinner();
-    }
 
+        if (CheckForWinner())
+        {
+
+        }
+        else if (CheckForDraw())
+        {
+
+        }
+    }
 
     bool CheckForWinner()
     {
         for (int i = 0; i < 3; i++)
         {
-            if (colliders[i, 0] != null && colliders[i, 1] != null && colliders[i, 2] != null
-                && colliders[i, 0].name == colliders[i, 1].name && colliders[i, 1].name == colliders[i, 2].name) return true; // Rader
-
-            if (colliders[0, i] != null && colliders[1, i] != null && colliders[2, i] != null
-                && colliders[0, i].name == colliders[1, i].name && colliders[1, i].name == colliders[2, i].name) return true; // Kolumner
+            if (markPlacements[i, 0] == markPlacements[i, 1] && markPlacements[i, 1] == markPlacements[i, 2])
+            {
+                return true;
+            }
+            if (markPlacements[0, i] == markPlacements[1, i] && markPlacements[1, i] == markPlacements[2, i])
+            {
+                return true;
+            }
         }
-        if (colliders[0, 0] != null && colliders[1, 1] != null && colliders[2, 2] != null
-            && colliders[0, 0].name == colliders[1, 1].name && colliders[1, 1].name == colliders[2, 2].name) return true; // Diagonal 1
+        if (markPlacements[0, 0] == markPlacements[1, 1] && markPlacements[1, 1] == markPlacements[2, 2])
+        {
+            return true;
+        }
+        if (markPlacements[0, 2] == markPlacements[1, 1] && markPlacements[1, 1] == markPlacements[2, 0])
+        {
+            return true;
+        }
 
-        if (colliders[0, 2] != null && colliders[1, 1] != null && colliders[2, 0] != null &&
-            colliders[0, 2].name == colliders[1, 1].name && colliders[1, 1].name == colliders[2, 0].name) return true; // Diagonal 2
         return false;
+    }
+
+    bool CheckForDraw()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                if (markPlacements[i,j] == 0)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
