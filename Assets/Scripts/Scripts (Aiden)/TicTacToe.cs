@@ -7,6 +7,9 @@ public class TicTacToe : MonoBehaviour
     public Collider mainCollider;
     public Collider[,] colliders = new Collider[3,3];
 
+    public GameObject[] gameObjects = new GameObject[3];
+
+
     /// <summary>
     /// 1: Player. 2: Goblin
     /// </summary>
