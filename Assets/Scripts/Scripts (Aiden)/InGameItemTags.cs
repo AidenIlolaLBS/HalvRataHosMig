@@ -29,5 +29,11 @@ public class InGameItemTags : MonoBehaviour
             }
         }
     }
+
+    public void RemoveTag(int  index)
+    {
+        _tags.RemoveAt(index);
+        names.RemoveAt(index);
+    }
 }
 

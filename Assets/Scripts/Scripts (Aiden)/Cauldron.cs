@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Cauldron : MonoBehaviour
 {
+    [SerializeField]
     private List<string> containingTags = new();
     //private List<string> meals = new(){ "ToastSkagish", "Eggsallad" , "Gratin", "Soup", "Spaghetti", "Pie", "IceCream", "Random"};
     private List<GameObject> prefabMeals = new();
@@ -112,10 +113,9 @@ public class Cauldron : MonoBehaviour
                 {
                     if (item.Active)
                     {
-                        if (item.TagName == "Plate")
+                        if (item.TagName == "Plate" || item.TagName == "Glass")
                         {
-                            shouldDestroy = false;
-                            break;
+                            continue;
                         }
                         if (!containingTags.Contains(item.TagName) && item.TagName != "Choppable")
                         {

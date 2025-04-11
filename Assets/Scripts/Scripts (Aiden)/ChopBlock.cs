@@ -45,14 +45,12 @@ public class ChopBlock : MonoBehaviour
                     {
                         if (temp.GetComponent<InGameItemTags>().Tags[i].TagName == ingredientTag)
                         {
-                            GameObject gameObject = Instantiate(temp, new(), new Quaternion());
-                            float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y / 2 + gameObject.GetComponent<Renderer>().bounds.size.y / 2;
+                            Destroy(temp.GetComponent<InspectorItemTags>());
+                            temp.GetComponent<InGameItemTags>().RemoveTag(i);
+                            float y = spawnLocation.transform.position.y + spawnLocation.gameObject.GetComponent<Renderer>().bounds.size.y / 2 + temp.GetComponent<Renderer>().bounds.size.y / 2;
                             Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
-                            gameObject.transform.position = spawnVector;
-                            Destroy(temp);
+                            temp.transform.position = spawnVector;
                             Destroy(other.gameObject);
-                            gameObject.GetComponent<InGameItemTags>().Tags.RemoveAt(i);
-                            Destroy(gameObject.GetComponent<InspectorItemTags>());
                             return;
                         }
                     }

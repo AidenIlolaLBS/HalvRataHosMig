@@ -398,24 +398,18 @@ public class PickUpScript : MonoBehaviour
         //have to use RaycastAll as object blocks raycast in center screen
         //RaycastAll returns array of all colliders hit within the cliprange
         RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), clipRange);
-        Debug.Log(hits.Length);
         //if the array length is greater than 0, it has hit an obstical
-        if (hits.Length > 0)
+        if (hits.Length > 0 && hits[0].transform.tag != "Water")
         {
             //change object position to camera position 
-            Debug.Log(hits[0].collider.gameObject.tag);
             if (hits[0].collider.tag == "Cauldron")
-            {
-               
+            {               
                 if (heldObj.gameObject.TryGetComponent(out InGameItemTags tags))
                 {
-                    Debug.Log("Component found");
                     foreach (var item in tags.Tags)
                     {
-                        Debug.Log("trying");
                         if (item.TagName == "Plate")
                         {
-                            Debug.Log("Plate");
                             return hits[0].collider.gameObject;
                         }
                     }

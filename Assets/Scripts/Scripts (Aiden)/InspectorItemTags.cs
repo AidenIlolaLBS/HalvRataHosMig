@@ -83,5 +83,7 @@ public class InspectorItemTags : MonoBehaviour
         tags.Add(new TagInfo(nameof(Glass), Glass));
         tags.Add(new TagInfo(nameof(HalfLemon), HalfLemon));
         tags.Add(new TagInfo(nameof(Goblin), Goblin));
+        tags.Add(new TagInfo(nameof(Sallad), Sallad));
+        tags.Add(new TagInfo(nameof(ChoppedBatwing), ChoppedBatwing));
     }
 }
