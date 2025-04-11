@@ -32,7 +32,7 @@ public class TicTacToe : MonoBehaviour
             {
                 if (colliders[i, j] == collider)
                 {
-                    //MarkBoard();
+                    MarkBoard(i,j, 1);
                 }
             }
         }
@@ -43,11 +43,17 @@ public class TicTacToe : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Object: 1:player, 2: goblin
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="objekt">1: player, 2:goblin </param>
     public void MarkBoard(int x, int y, int objekt)
     {
         
-                    markPlacements[x, y] = objekt;
-                    Destroy(colliders[x, y]);
+        markPlacements[x, y] = objekt;
+        Destroy(colliders[x, y]);
                 
         CheckForWinner();
     }

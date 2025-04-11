@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviour
 {
     int sceneIndex = 1;
-    int gameLoop = 3;
-    int currentGameLoop = 0;
+    int maxGameLoop = 3;
+    static int currentGameLoop = 0;
 
-    public int CurrentGameLoop
+    static public int CurrentGameLoop
     {
         get { return currentGameLoop; }
     }
@@ -19,7 +19,7 @@ public class GameSceneManager : MonoBehaviour
     public void NextScene()
     {
         sceneIndex++;
-        if (currentGameLoop < gameLoop - 1)
+        if (currentGameLoop < maxGameLoop - 1)
         {
             if (sceneIndex > 2)
             {
