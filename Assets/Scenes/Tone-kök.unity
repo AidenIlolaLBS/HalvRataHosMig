@@ -56502,10 +56502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frida
       objectReference: {fileID: 0}
-    - target: {fileID: 6026015497882150500, guid: 309811520d15007429c89a743dfbdef3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56615,10 +56611,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Olov
       objectReference: {fileID: 0}
-    - target: {fileID: 1307551471096335184, guid: 6f27bbfa535421f418078406d1a7b456, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56722,10 +56714,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Johan
       objectReference: {fileID: 0}
-    - target: {fileID: 267075211341911809, guid: e02c520f021db4841a69080125f77bc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2461953204770266475, guid: e02c520f021db4841a69080125f77bc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.049421
@@ -56790,10 +56778,6 @@ PrefabInstance:
     - target: {fileID: 1243341345721143893, guid: 35fbca9e2db6fbe4c9d4957fb9a9aa96, type: 3}
       propertyPath: m_Name
       value: Semlan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243341345721143893, guid: 35fbca9e2db6fbe4c9d4957fb9a9aa96, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2189609147788676122, guid: 35fbca9e2db6fbe4c9d4957fb9a9aa96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56895,10 +56879,6 @@ PrefabInstance:
     - target: {fileID: 4947256615103659350, guid: 5269b02446371324e9d30c15788dee4f, type: 3}
       propertyPath: m_Name
       value: Gullan
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947256615103659350, guid: 5269b02446371324e9d30c15788dee4f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8620317199650065287, guid: 5269b02446371324e9d30c15788dee4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57011,10 +56991,6 @@ PrefabInstance:
     - target: {fileID: 2173315061646327091, guid: 0c859fb420d9f6c4da84ba7c9c93c475, type: 3}
       propertyPath: m_Name
       value: Torsta
-      objectReference: {fileID: 0}
-    - target: {fileID: 2173315061646327091, guid: 0c859fb420d9f6c4da84ba7c9c93c475, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
