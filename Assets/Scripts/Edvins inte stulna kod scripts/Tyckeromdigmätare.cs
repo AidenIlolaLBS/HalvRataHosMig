@@ -5,7 +5,7 @@ using UnityEngine;
 public enum LikeLevel { ReallyDislikes, Dislikes, Neutral, Likes, ReallyLikes } // olika nivåerna karaktärerna kan gilla spelarn
 public class Tyckeromdigmätare : MonoBehaviour
 {
-    public LikeLevel likeLevel = LikeLevel.Neutral;
+    public LikeLevel likeLevel = LikeLevel.ReallyLikes;
     public LikeLevel prevLikeLevel = LikeLevel.Neutral;
     public int likeLevelChange = 0;
     public int prevLikeLevelChange = 0;

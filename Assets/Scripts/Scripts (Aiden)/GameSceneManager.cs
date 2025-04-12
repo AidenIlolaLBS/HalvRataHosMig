@@ -19,28 +19,32 @@ public class GameSceneManager : MonoBehaviour
     public void NextScene()
     {
         sceneIndex++;
-        if (currentGameLoop < maxGameLoop - 1)
+        if (sceneIndex > 2)
         {
-            if (sceneIndex > 2)
+            sceneIndex = 1;
+            currentGameLoop++;
+            if (currentGameLoop > maxGameLoop - 1)
             {
-                sceneIndex = 1;
-                currentGameLoop++;
-                gameObject.GetComponent<PersonManager>().DeactivatePeople();
-            }
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
-        }
-        else
-        {
-            List<GameObject> persons = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PersonManager>().selectedPersons;
-            if (persons.Count == 1)
-            {
-                if (persons[0].GetComponent<Person>().tyckeromdigmätare.likeLevel != LikeLevel.ReallyLikes)
+                sceneIndex = 2;
+                sceneIndex++;
+                List<GameObject> persons = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PersonManager>().selectedPersons;
+                if (persons.Count == 1)
+                {
+                    if (persons[0].GetComponent<Person>().tyckeromdigmätare.likeLevel != LikeLevel.ReallyLikes)
+                    {
+                        sceneIndex++;
+                    }
+                }
+                else
                 {
                     sceneIndex++;
                 }
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
+            gameObject.GetComponent<PersonManager>().DeactivatePeople();
         }
-
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;        
 
         if (sceneIndex > SceneManager.sceneCountInBuildSettings - 1)
         {
