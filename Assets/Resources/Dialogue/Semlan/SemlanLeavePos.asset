@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: SemlanLeavePos
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371315061621150
+  - rid: 5182371315061621151
+  - rid: 5182371315061621152
+  baseNodeData:
+  - rid: 5182371315061621153
+  - rid: 5182371315061621154
+  - rid: 5182371315061621155
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371315061621150
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: c789671d-5237-4c73-92cb-0909ef685908
+        PortName: Next
+        TargetNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+    - rid: 5182371315061621151
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        PortName: Swedish
+        TargetNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+    - rid: 5182371315061621152
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+        PortName: Output
+        TargetNodeGUID: 47aac0ee-7cdd-4902-a398-109f6780f7df
+    - rid: 5182371315061621153
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: Semlan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371315061621154
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: e2d23d69-55fd-418d-a442-010e1f6fb785
+        Position: {x: 467, y: 200}
+        DialogueText: "Oj, typ, kolla dinkan liksom. Det b\xF6rjar bli sent ass\xE5.
+          Jag borde, typ, sticka nu. Men, liksom, jag hade det \xE4nd\xE5 schysst
+          r\xE4tt schysst h\xE4r. Maten var r\xE4tt god \xE4nd\xE5. "
+    - rid: 5182371315061621155
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 47aac0ee-7cdd-4902-a398-109f6780f7df
+        Position: {x: 714, y: 87}
+        endNum: 0

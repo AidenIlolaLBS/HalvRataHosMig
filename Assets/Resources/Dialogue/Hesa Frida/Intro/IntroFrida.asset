@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: IntroFrida
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371314236129280
+  - rid: 5182371314236129281
+  - rid: 5182371314236129282
+  - rid: 5182371314236129283
+  - rid: 5182371314236129284
+  baseNodeData:
+  - rid: 5182371314236129285
+  - rid: 5182371314236129286
+  - rid: 5182371314236129287
+  - rid: 5182371314236129288
+  - rid: 5182371314236129289
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371314236129280
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: c789671d-5237-4c73-92cb-0909ef685908
+        PortName: Next
+        TargetNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+    - rid: 5182371314236129281
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        PortName: Swedish
+        TargetNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+    - rid: 5182371314236129282
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+        PortName: Output
+        TargetNodeGUID: ed47c1ba-3459-4ebe-bf9a-4cf13a5bd562
+    - rid: 5182371314236129283
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: ed47c1ba-3459-4ebe-bf9a-4cf13a5bd562
+        PortName: Output
+        TargetNodeGUID: 6b1caa88-6624-4819-a73f-57c5721dc2cc
+    - rid: 5182371314236129284
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 6b1caa88-6624-4819-a73f-57c5721dc2cc
+        PortName: Output
+        TargetNodeGUID: 47aac0ee-7cdd-4902-a398-109f6780f7df
+    - rid: 5182371314236129285
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: Hesa Frida
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371314236129286
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 47aac0ee-7cdd-4902-a398-109f6780f7df
+        Position: {x: 1151, y: 88}
+        endNum: 0
+    - rid: 5182371314236129287
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: e2d23d69-55fd-418d-a442-010e1f6fb785
+        Position: {x: 467, y: 200}
+        DialogueText: "Men TJENA d\xE4r! \xC4r du ny h\xE4r eller bara vilse? Spelar
+          ingen roll \u2013 jag s\xE5g dig f\xF6rst, s\xE5 nu \xE4r vi v\xE4nner.
+          Jag heter Hesa Frida, men du kan kalla mig ditt b\xE4sta beslut i dag."
+    - rid: 5182371314236129288
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: ed47c1ba-3459-4ebe-bf9a-4cf13a5bd562
+        Position: {x: 1353, y: 200}
+        DialogueText: "Folk s\xE4ger att jag pratar f\xF6r mycket, men det \xE4r
+          bara f\xF6r att jag har saker att s\xE4ga \u2013 till alla \u2013 om alla.
+          Och du? Du ser ut som n\xE5n som beh\xF6ver en guide, en v\xE4n, och kanske
+          lite skvaller? Klart du g\xF6r."
+    - rid: 5182371314236129289
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 6b1caa88-6624-4819-a73f-57c5721dc2cc
+        Position: {x: 2411, y: 200}
+        DialogueText: "Men bara s\xE5 du vet\u2026 jag h\xF6r allt. S\xE5 f\xF6rs\xF6k
+          inte ljuga. Jag \xE4r h\xF6gljudd, jag \xE4r \xE4rlig, och jag \xE4lskar
+          dramatik \u2013 s\xE5 l\xE4nge jag f\xE5r st\xE5 i centrum. Nu \u2013 ber\xE4tta
+          allt om dig. H\xF6gt, tack!"

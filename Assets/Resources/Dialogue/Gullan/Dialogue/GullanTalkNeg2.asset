@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: GullanTalkNeg2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371315061621264
+  - rid: 5182371315061621265
+  - rid: 5182371315061621266
+  - rid: 5182371315061621267
+  - rid: 5182371315061621268
+  - rid: 5182371315061621269
+  - rid: 5182371315061621270
+  - rid: 5182371315061621271
+  - rid: 5182371315061621272
+  baseNodeData:
+  - rid: 5182371315061621273
+  - rid: 5182371315061621274
+  - rid: 5182371315061621275
+  - rid: 5182371315061621276
+  - rid: 5182371315061621277
+  - rid: 5182371315061621278
+  - rid: 5182371315061621279
+  - rid: 5182371315061621280
+  - rid: 5182371315061621281
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371315061621264
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 45bf7df3-35da-4a8e-a06b-5b2911e78b4f
+        PortName: Next
+        TargetNodeGUID: 6662793d-1e25-442d-b114-4f05f5929e66
+    - rid: 5182371315061621265
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 6662793d-1e25-442d-b114-4f05f5929e66
+        PortName: Swedish
+        TargetNodeGUID: 509e99b7-f946-4398-8749-64a462a242da
+    - rid: 5182371315061621266
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 509e99b7-f946-4398-8749-64a462a242da
+        PortName: Output
+        TargetNodeGUID: 1eb3020a-e461-443d-8289-a511884943c1
+    - rid: 5182371315061621267
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 1eb3020a-e461-443d-8289-a511884943c1
+        PortName: 'Vad tycker du om Eriksons Chark? '
+        TargetNodeGUID: 3b844f34-0c88-4887-a19a-627999b3c39d
+    - rid: 5182371315061621268
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 1eb3020a-e461-443d-8289-a511884943c1
+        PortName: "Vad tycker du om personer inom milit\xE4ren? "
+        TargetNodeGUID: 8dae5009-35e6-422f-8fd0-ff33393facac
+    - rid: 5182371315061621269
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 3b844f34-0c88-4887-a19a-627999b3c39d
+        PortName: Swedish
+        TargetNodeGUID: f2a9a080-a34d-4919-82a8-e25dfc268123
+    - rid: 5182371315061621270
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 8dae5009-35e6-422f-8fd0-ff33393facac
+        PortName: Swedish
+        TargetNodeGUID: 7ff86b54-1f17-454a-9ea9-dc2fb99dfdab
+    - rid: 5182371315061621271
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: f2a9a080-a34d-4919-82a8-e25dfc268123
+        PortName: Output
+        TargetNodeGUID: d76af401-92c3-42f3-ae42-d590956b5297
+    - rid: 5182371315061621272
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 7ff86b54-1f17-454a-9ea9-dc2fb99dfdab
+        PortName: Output
+        TargetNodeGUID: c80336a0-ee81-43c5-9d92-06b170e23d79
+    - rid: 5182371315061621273
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 6662793d-1e25-442d-b114-4f05f5929e66
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: 
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371315061621274
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 509e99b7-f946-4398-8749-64a462a242da
+        Position: {x: 467, y: 200}
+        DialogueText: 
+    - rid: 5182371315061621275
+      type: {class: ChoiceNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 1eb3020a-e461-443d-8289-a511884943c1
+        Position: {x: 603, y: 200}
+    - rid: 5182371315061621276
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 3b844f34-0c88-4887-a19a-627999b3c39d
+        Position: {x: 866, y: 161}
+        nodeTitle: 
+        personName: Gullan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371315061621277
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 8dae5009-35e6-422f-8fd0-ff33393facac
+        Position: {x: 866, y: 277}
+        nodeTitle: 
+        personName: Gullan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371315061621278
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: d76af401-92c3-42f3-ae42-d590956b5297
+        Position: {x: 1485, y: 17}
+        endNum: -1
+    - rid: 5182371315061621279
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: c80336a0-ee81-43c5-9d92-06b170e23d79
+        Position: {x: 1383, y: 17}
+        endNum: 1
+    - rid: 5182371315061621280
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 7ff86b54-1f17-454a-9ea9-dc2fb99dfdab
+        Position: {x: 1149, y: 296}
+        DialogueText: "Folk i milit\xE4ren\u2026 det \xE4r sv\xE5rt. Jag f\xF6rst\xE5r
+          att vissa kanske m\xE5ste\u2026 men jag blir r\xE4dd. Det k\xE4nns fel,
+          bara."
+    - rid: 5182371315061621281
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: f2a9a080-a34d-4919-82a8-e25dfc268123
+        Position: {x: 1149, y: 161}
+        DialogueText: "Jag klarar inte av s\xE5na f\xF6retag. Eriksons Chark\u2026
+          det luktar d\xF6d d\xE4r inne. Jag m\xE5r illa bara av att g\xE5 f\xF6rbi."

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbe3a1af417d2d45a62b2ce7cce6021, type: 3}
+  m_Name: SemlanLikes
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - rid: 5182371314236129290
+  - rid: 5182371314236129291
+  - rid: 5182371314236129292
+  baseNodeData:
+  - rid: 5182371314236129293
+  - rid: 5182371314236129294
+  - rid: 5182371314236129295
+  references:
+    version: 2
+    RefIds:
+    - rid: 5182371314236129290
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: c789671d-5237-4c73-92cb-0909ef685908
+        PortName: Next
+        TargetNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+    - rid: 5182371314236129291
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        PortName: Swedish
+        TargetNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+    - rid: 5182371314236129292
+      type: {class: NodeLinkData, ns: , asm: Assembly-CSharp}
+      data:
+        BaseNodeGUID: e2d23d69-55fd-418d-a442-010e1f6fb785
+        PortName: Output
+        TargetNodeGUID: 47aac0ee-7cdd-4902-a398-109f6780f7df
+    - rid: 5182371314236129293
+      type: {class: InfoNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 6c648752-f6d4-4dc0-8ed4-09fabc10b6da
+        Position: {x: 184, y: 200}
+        nodeTitle: 
+        personName: Semlan
+        emotion: Deafult
+        soundPath: 
+        variables: []
+    - rid: 5182371314236129294
+      type: {class: DialogueNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: e2d23d69-55fd-418d-a442-010e1f6fb785
+        Position: {x: 467, y: 200}
+        DialogueText: "Yooo! Det \xE4r typ, min favorit liksom! Enda som skulle kunna
+          g\xF6ra detta b\xE4ttre \xE4r lite rullat gres om du fattar mig!"
+    - rid: 5182371314236129295
+      type: {class: EndNodeData, ns: , asm: Assembly-CSharp}
+      data:
+        Guid: 47aac0ee-7cdd-4902-a398-109f6780f7df
+        Position: {x: 1067, y: 200}
+        endNum: 0
