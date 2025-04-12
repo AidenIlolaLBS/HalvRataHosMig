@@ -23,6 +23,7 @@ TagManager:
   - TicTacToe
   - DialogueParser
   - CameraHolder
+  - FinishMeal
   layers:
   - Default
   - TransparentFX

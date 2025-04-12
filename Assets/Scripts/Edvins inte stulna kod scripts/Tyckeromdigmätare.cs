@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,40 +12,33 @@ public class Tyckeromdigmätare : MonoBehaviour
     public List<string> dislikedIngredients = new();
     public List<string> likedIngredients = new();
 
-    public Tyckeromdigmätare(InGameItemTags dislikedTags, InGameItemTags likedTags)
-    {
-        foreach (var item in dislikedTags.Tags)
-        {
-            if (item != null)
-            {
-                dislikedIngredients.Add(item.TagName);
-            }
-        }
-        foreach (var item in likedTags.Tags)
-        {
-            if (item != null)
-            {
-                likedIngredients.Add(item.TagName);
-            }
-        }
-    }
-
     public void ServeFood(GameObject meal)  // kollar efter vilka ingredienser som är i maten och matchar den med karaktären
     {
+        if (meal == null)
+        {
+            return;
+        }
+
         foreach (var ingredient in meal.GetComponent<InGameItemTags>().Tags)
         {
-            if (dislikedIngredients.Contains(ingredient.TagName))
+            for (int i = 0; i < dislikedIngredients.Count; i++)
             {
-                DecreaseLikeMeter();
-                return;
-            }
+                if (dislikedIngredients[i] == ingredient.TagName)
+                {
+                    DecreaseLikeMeter();
+                    return;
+                }
+            }            
         }
         foreach (var ingredient in meal.GetComponent<InGameItemTags>().Tags)
         {
-            if (likedIngredients.Contains(ingredient.TagName))
+            for (int i = 0; i < likedIngredients.Count; i++)
             {
-                IncreaseLikeMeter();
-                return;
+                if (likedIngredients[i] == ingredient.TagName)
+                {
+                    IncreaseLikeMeter();
+                    return;
+                }
             }
         }
     }
@@ -72,6 +66,7 @@ public class Tyckeromdigmätare : MonoBehaviour
         prevLikeLevelChange = likeLevelChange;
         prevLikeLevel = likeLevel;
         likeLevel--;
+
         if (food)
         {
             likeLevelChange = -1;
@@ -83,8 +78,26 @@ public class Tyckeromdigmätare : MonoBehaviour
 
         if (likeLevel == LikeLevel.ReallyDislikes && prevLikeLevel == LikeLevel.ReallyDislikes)  // försvinner om karaktären hatar dig
         {
-            Debug.Log("Objekt dör");
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<PersonManager>().RemovePerson(gameObject.GetComponent<Person>());
             Destroy(this);
+        }
+    }
+
+    public void Init(List<TagInfo> dislikedTags, List<TagInfo> likedTags)
+    {
+        foreach (var item in dislikedTags)
+        {
+            if (item.TagName != "")
+            {
+                dislikedIngredients.Add(item.TagName);
+            }
+        }
+        foreach (var item in likedTags)
+        {
+            if (item.TagName != "")
+            {
+                likedIngredients.Add(item.TagName);
+            }
         }
     }
 }

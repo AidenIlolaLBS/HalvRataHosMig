@@ -202,7 +202,7 @@ MonoBehaviour:
   fullMeal: 0
   Bread: 0
   Seaweed: 0
-  ChoppedSeaweed: 1
+  ChoppedSeaweed: 0
   ToastSkagish: 0
   DragonEgg: 0
   LizardHeart: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   Fairy: 0
   Flour: 0
   Gratin: 0
-  Water: 0
+  Water: 1
   BatWing: 0
   Soup: 0
   FlyAgaric: 0

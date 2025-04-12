@@ -85,14 +85,14 @@ MonoBehaviour:
   Flour: 0
   Gratin: 0
   Water: 0
-  BatWing: 1
+  BatWing: 0
   Soup: 0
   FlyAgaric: 0
   Spaghetti: 0
   Pie: 0
   StinkFruit: 0
   DeadBerry: 0
-  IceCream: 0
+  IceCream: 1
   Random: 0
   Plate: 0
   Lime: 0

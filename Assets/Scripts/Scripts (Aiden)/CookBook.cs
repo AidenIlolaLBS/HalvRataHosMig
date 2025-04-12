@@ -34,7 +34,6 @@ public class CookBook : MonoBehaviour
     {
         if (active)
         {
-            Debug.Log("closing the book");
             active = false;
             player.SetActive(true);
             playerCamera.GetComponent<Interact>().enabled = true;

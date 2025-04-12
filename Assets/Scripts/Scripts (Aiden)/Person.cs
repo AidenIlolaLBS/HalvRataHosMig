@@ -2,6 +2,7 @@ using Subtegral.DialogueSystem.Runtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -33,6 +34,8 @@ public class Person : MonoBehaviour
 
     public int haveTalked = 0;
 
+    bool haveStarted = false;
+
     public string PersonName
     {
         get { return _personName; }
@@ -45,37 +48,52 @@ public class Person : MonoBehaviour
 
     public void Start()
     {
-        allMealDialogues[0] = mealDialogue1;
-        allMealDialogues[1] = mealDialogue2;
-        allMealDialogues[2] = mealDialogue3;
+        if (!haveStarted)
+        {
+            allMealDialogues[0] = mealDialogue1;
+            allMealDialogues[1] = mealDialogue2;
+            allMealDialogues[2] = mealDialogue3;
 
-        Debug.Log(gameObject.name);
+            dislikedIngredients.GetComponent<InspectorItemTags>().Start();
+            likedIngredients.GetComponent<InspectorItemTags>().Start();
 
-        likedIngredients.GetComponent<InspectorItemTags>().Start();
-        dislikedIngredients.GetComponent<InspectorItemTags>().Start();
-
-        DestroyImmediate(likedIngredients.GetComponent<InspectorItemTags>(), true);
-        DestroyImmediate(dislikedIngredients.GetComponent<InspectorItemTags>(), true);
-
-        tyckeromdigmätare = new Tyckeromdigmätare(dislikedIngredients.GetComponent<InGameItemTags>(), likedIngredients.GetComponent<InGameItemTags>());
+            tyckeromdigmätare = gameObject.AddComponent<Tyckeromdigmätare>();
+            tyckeromdigmätare.Init(dislikedIngredients.GetComponent<InGameItemTags>().Tags, likedIngredients.GetComponent<InGameItemTags>().Tags);
+            haveStarted = true;
+        }
     }
 
     private void Update()
     {
-        int currentFeeling = (int)tyckeromdigmätare.likeLevel - 1;
-        if (currentFeeling < 0)
-        {
-            currentFeeling = 0;
-        }
         for (int i = 0; i < personStates.Count; i++)
         {
             personStates[i].SetActive(false);
         }
-        personStates[currentFeeling].SetActive(true);
+        switch (tyckeromdigmätare.likeLevel)
+        {
+            case LikeLevel.ReallyDislikes:
+                personStates[3].SetActive(true);
+                break;
+            case LikeLevel.Dislikes:
+                personStates[2].SetActive(true);
+                break;
+            case LikeLevel.Neutral:
+                personStates[1].SetActive(true);
+                break;
+            case LikeLevel.Likes:
+                personStates[0].SetActive(true);
+                break;
+            case LikeLevel.ReallyLikes:
+                personStates[0].SetActive(true);
+                break;
+            default:
+                break;
+        }   
     }
 
     public void Talk()
     {
+        Debug.Log(tyckeromdigmätare.likeLevel);
         DialogueParser dialogueParser = GameObject.FindGameObjectWithTag("DialogueParser").GetComponent<DialogueParser>();
         if (haveTalked == 1)
         {
@@ -100,6 +118,7 @@ public class Person : MonoBehaviour
                     break;
             }
             haveTalked++;
+            gameObject.tag = "Untagged";
         }
         else if (haveTalked == 0)
         {

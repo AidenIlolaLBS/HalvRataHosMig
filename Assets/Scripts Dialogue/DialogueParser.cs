@@ -24,8 +24,8 @@ namespace Subtegral.DialogueSystem.Runtime
         float timer = 0;
         private int charindex = 0;
         private float maxTime = 3;
-        private float timePerChar = 0.15f;
-        bool allTextLaoded = false;
+        private float timePerChar = 0.05f;
+        bool allTextLoaded = false;
 
         public GameObject playerCam;
         public MoveCamera moveCamera;
@@ -44,12 +44,11 @@ namespace Subtegral.DialogueSystem.Runtime
 
         private void Update()
         {           
-            if (!allTextLaoded)
+            if (!allTextLoaded)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                 {
-                    Debug.Log(timer);
                     timer += timePerChar;
                     if (charindex < text.Count())
                     {
@@ -59,7 +58,7 @@ namespace Subtegral.DialogueSystem.Runtime
                     }
                     else
                     {
-                        allTextLaoded = true;
+                        allTextLoaded = true;
                         charindex = 0;
                         currentDisplayText = "";
                         timer = 0;
@@ -106,7 +105,7 @@ namespace Subtegral.DialogueSystem.Runtime
 
         private void ProceedToNarrative(string startNarrativeDataGUID)
         {
-            allTextLaoded = false;
+            allTextLoaded = false;
             if (dialogueBox.ToArray().Length > 0)
             {
                 RemoveDialogueBox();
@@ -122,6 +121,7 @@ namespace Subtegral.DialogueSystem.Runtime
                 if (person != null)
                 {
                     person.GetComponent<Person>().haveTalked++;
+                    Debug.Log(((EndNodeData)nodeType).endNum);
                     if (int.Parse(((EndNodeData)nodeType).endNum) == 1)
                     {
                         person.GetComponent<Person>().tyckeromdigmätare.IncreaseLikeMeter();
@@ -227,8 +227,26 @@ namespace Subtegral.DialogueSystem.Runtime
         {
             //audioManager.StartSFX("Button");
             audioManager.StopDialogue();
-            ProceedToNarrative(startGuid);
+            if (allTextLoaded)
+            {
+                ProceedToNarrative(startGuid);
+            }
+            else
+            {
+                DoneText();
+            }
         }
+
+        void DoneText()
+        {
+            dialogueText.text = text;
+            currentDisplayText = "";
+            charindex = 0;
+            timer = 0;
+            text = "";
+            allTextLoaded = true;
+        }
+
         void RemoveDialogueBox()
         {
             Destroy(dialogueBox[0]);

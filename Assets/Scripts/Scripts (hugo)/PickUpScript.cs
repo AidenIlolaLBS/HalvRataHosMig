@@ -57,7 +57,10 @@ public class PickUpScript : MonoBehaviour
                             break;
                         case "CookBook":
                             hit.transform.gameObject.GetComponent<CookBook>().Interact();
-                            break;                        
+                            break;
+                        case "FinishMeal":
+                            GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameSceneManager>().NextScene();
+                            break;
                         default:
                             break;
                     }                

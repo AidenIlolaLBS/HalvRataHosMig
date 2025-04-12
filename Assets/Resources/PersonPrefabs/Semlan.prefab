@@ -208,7 +208,7 @@ MonoBehaviour:
   Pie: 0
   StinkFruit: 0
   DeadBerry: 0
-  IceCream: 0
+  IceCream: 1
   Random: 0
   Plate: 0
   Lime: 0
@@ -310,13 +310,13 @@ MonoBehaviour:
   Pie: 0
   StinkFruit: 0
   DeadBerry: 1
-  IceCream: 1
+  IceCream: 0
   Random: 0
   Plate: 0
   Lime: 0
   Choppable: 0
   Glass: 0
-  HalfLemon: 0
+  HalfLemon: 1
   Goblin: 0
   Sallad: 0
   ChoppedBatwing: 0
