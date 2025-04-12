@@ -33,7 +33,7 @@ public class MealManager : MonoBehaviour
             RigidbodyConstraints.FreezeRotationX |
             RigidbodyConstraints.FreezeRotationY |
             RigidbodyConstraints.FreezeRotationZ;
-
+        currentMeal.tag = "Untagged";
         foreach (var item in spawnLocations)
         {
             Debug.Log("Spawning meal");

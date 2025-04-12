@@ -13,6 +13,8 @@ public class Person : MonoBehaviour
     public GameObject likedIngredients;
     public GameObject dislikedIngredients;
 
+    public List<GameObject> personStates = new List<GameObject>();
+
     public NodeContainer IntroDialogue;
     public List<NodeContainer> likeMealDialogue;
     public List<NodeContainer> reallyLikeMealDialogue;
@@ -47,13 +49,29 @@ public class Person : MonoBehaviour
         allMealDialogues[1] = mealDialogue2;
         allMealDialogues[2] = mealDialogue3;
 
+        Debug.Log(gameObject.name);
+
         likedIngredients.GetComponent<InspectorItemTags>().Start();
         dislikedIngredients.GetComponent<InspectorItemTags>().Start();
 
-        Destroy(likedIngredients.GetComponent<InspectorItemTags>());
-        Destroy(dislikedIngredients.GetComponent<InspectorItemTags>());
+        DestroyImmediate(likedIngredients.GetComponent<InspectorItemTags>(), true);
+        DestroyImmediate(dislikedIngredients.GetComponent<InspectorItemTags>(), true);
 
-        tyckeromdigmätare = new(dislikedIngredients.GetComponent<InGameItemTags>());
+        tyckeromdigmätare = new Tyckeromdigmätare(dislikedIngredients.GetComponent<InGameItemTags>(), likedIngredients.GetComponent<InGameItemTags>());
+    }
+
+    private void Update()
+    {
+        int currentFeeling = (int)tyckeromdigmätare.likeLevel - 1;
+        if (currentFeeling < 0)
+        {
+            currentFeeling = 0;
+        }
+        for (int i = 0; i < personStates.Count; i++)
+        {
+            personStates[i].SetActive(false);
+        }
+        personStates[currentFeeling].SetActive(true);
     }
 
     public void Talk()
@@ -95,6 +113,10 @@ public class Person : MonoBehaviour
                 dialogueParser.ExternalStartNarrative(likesDislikesMealDialogue[rnd.Next(0, likesDislikesMealDialogue.Count)]);
             }
             else if (tyckeromdigmätare.prevLikeLevelChange == 0 && tyckeromdigmätare.likeLevelChange > 0) // Likes
+            {
+                dialogueParser.ExternalStartNarrative(likeMealDialogue[rnd.Next(0, likeMealDialogue.Count)]);
+            }
+            else if (tyckeromdigmätare.prevLikeLevelChange == 0 && tyckeromdigmätare.likeLevelChange == 0) // Neutral / Likes
             {
                 dialogueParser.ExternalStartNarrative(likeMealDialogue[rnd.Next(0, likeMealDialogue.Count)]);
             }

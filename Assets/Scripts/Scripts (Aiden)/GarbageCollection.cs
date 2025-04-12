@@ -22,18 +22,21 @@ public class GarbageCollection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < playableArea[0].transform.position.x ||
+        if (playableArea[0] != null)
+        {
+            if (transform.position.x < playableArea[0].transform.position.x ||
             transform.position.y > playableArea[0].transform.position.y ||
             transform.position.z > playableArea[0].transform.position.z)
-        {
-            SetPos();
-        }
-        else if (transform.position.x > playableArea[1].transform.position.x ||
-            transform.position.y < playableArea[1].transform.position.y ||
-            transform.position.z < playableArea[1].transform.position.z)
-        {
-            SetPos();
-        }
+            {
+                SetPos();
+            }
+            else if (transform.position.x > playableArea[1].transform.position.x ||
+                transform.position.y < playableArea[1].transform.position.y ||
+                transform.position.z < playableArea[1].transform.position.z)
+            {
+                SetPos();
+            }
+        }        
     }
 
     void SetPos()

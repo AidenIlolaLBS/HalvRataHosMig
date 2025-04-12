@@ -34,7 +34,7 @@ public class PersonManager : MonoBehaviour
         for (int i = 0; i < maxSelectedPersons; i++)
         {
             int selectedIndex = rnd.Next(0, availiblePersons.Count);
-            selectedPersons.Add(availiblePersons[selectedIndex]);
+            selectedPersons.Add(Instantiate(availiblePersons[selectedIndex]));
             availiblePersons.RemoveAt(selectedIndex);
         }
     }
@@ -57,11 +57,9 @@ public class PersonManager : MonoBehaviour
 
         foreach (var item in selectedPersons)
         {
-            //item.GetComponent<Person>().tyckeromdigmätare.ServeFood(gameObject.GetComponent<MealManager>().currentMeal);
+            item.GetComponent<Person>().Start();
+            item.GetComponent<Person>().tyckeromdigmätare.ServeFood(gameObject.GetComponent<MealManager>().currentMeal);
         }
-
-        Debug.Log(selectedPersons.Count);
-        Debug.Log(spawnPos.Count);
 
         for (int i = 0; i < selectedPersons.Count; i++)
         {

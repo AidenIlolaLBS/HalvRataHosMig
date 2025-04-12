@@ -22,6 +22,7 @@ TagManager:
   - MealSpawn
   - TicTacToe
   - DialogueParser
+  - CameraHolder
   layers:
   - Default
   - TransparentFX

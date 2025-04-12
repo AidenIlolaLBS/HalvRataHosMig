@@ -27,6 +27,9 @@ namespace Subtegral.DialogueSystem.Runtime
         private float timePerChar = 0.15f;
         bool allTextLaoded = false;
 
+        public GameObject playerCam;
+        public MoveCamera moveCamera;
+
         string audioPath; 
         private AudioManager audioManager;
 
@@ -36,7 +39,7 @@ namespace Subtegral.DialogueSystem.Runtime
         {
             audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
 
-            ExternalStartNarrative();
+            //ExternalStartNarrative();
         }
 
         private void Update()
@@ -78,6 +81,12 @@ namespace Subtegral.DialogueSystem.Runtime
             person = null;
             var narrativeData = (this.nodeContainer = nodeContainer).NodeLinks.First(); //Entrypoint node
             //player.GetComponent<PlayerMovement>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            moveCamera.enabled = false;
+            playerCam.GetComponent<Interact>().enabled = false;
+            playerCam.GetComponent<PickUpScript>().enabled = false;
+            playerCam.GetComponent<PlayerCam>().enabled = false;
             ProceedToNarrative(narrativeData.TargetNodeGUID);
         }
 
@@ -86,6 +95,12 @@ namespace Subtegral.DialogueSystem.Runtime
             person = gameObject;
             var narrativeData = (this.nodeContainer = nodeContainer).NodeLinks.First(); //Entrypoint node
             //player.GetComponent<PlayerMovement>().enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            moveCamera.enabled = false;
+            playerCam.GetComponent<Interact>().enabled = false;
+            playerCam.GetComponent<PickUpScript>().enabled = false;
+            playerCam.GetComponent<PlayerCam>().enabled = false;
             ProceedToNarrative(narrativeData.TargetNodeGUID);
         }
 
@@ -116,6 +131,12 @@ namespace Subtegral.DialogueSystem.Runtime
                         person.GetComponent<Person>().tyckeromdigmätare.DecreaseLikeMeter();
                     }
                 }
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                moveCamera.enabled = true;
+                playerCam.GetComponent<Interact>().enabled = true;
+                playerCam.GetComponent<PickUpScript>().enabled = true;
+                playerCam.GetComponent<PlayerCam>().enabled = true;
                 return;
             }
 

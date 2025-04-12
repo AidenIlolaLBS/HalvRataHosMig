@@ -8,13 +8,24 @@ public class Tyckeromdigmätare : MonoBehaviour
     public LikeLevel prevLikeLevel = LikeLevel.Neutral;
     public int likeLevelChange = 0;
     public int prevLikeLevelChange = 0;
-    public List<string> dislikedIngredients;
+    public List<string> dislikedIngredients = new();
+    public List<string> likedIngredients = new();
 
-    public Tyckeromdigmätare(InGameItemTags tags)
+    public Tyckeromdigmätare(InGameItemTags dislikedTags, InGameItemTags likedTags)
     {
-        foreach (var item in tags.Tags)
+        foreach (var item in dislikedTags.Tags)
         {
-            dislikedIngredients.Add(item.TagName);
+            if (item != null)
+            {
+                dislikedIngredients.Add(item.TagName);
+            }
+        }
+        foreach (var item in likedTags.Tags)
+        {
+            if (item != null)
+            {
+                likedIngredients.Add(item.TagName);
+            }
         }
     }
 
@@ -28,7 +39,14 @@ public class Tyckeromdigmätare : MonoBehaviour
                 return;
             }
         }
-        IncreaseLikeMeter();
+        foreach (var ingredient in meal.GetComponent<InGameItemTags>().Tags)
+        {
+            if (likedIngredients.Contains(ingredient.TagName))
+            {
+                IncreaseLikeMeter();
+                return;
+            }
+        }
     }
 
     public void IncreaseLikeMeter(bool food = false)  // gillar dig mer
@@ -65,6 +83,7 @@ public class Tyckeromdigmätare : MonoBehaviour
 
         if (likeLevel == LikeLevel.ReallyDislikes && prevLikeLevel == LikeLevel.ReallyDislikes)  // försvinner om karaktären hatar dig
         {
+            Debug.Log("Objekt dör");
             Destroy(this);
         }
     }

@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: c0265dca4b441a34c9af3504c399d68a
   - enabled: 1
     path: "Assets/Scenes/Tone-k\xF6k.unity"
     guid: 0cd9be369f71d2a4a983ee81797d928c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Tone-Matsal.unity
     guid: 0977ece512001994e898b5b26e6b78b4
   - enabled: 0
