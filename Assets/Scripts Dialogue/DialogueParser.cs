@@ -62,6 +62,7 @@ namespace Subtegral.DialogueSystem.Runtime
                         charindex = 0;
                         currentDisplayText = "";
                         timer = 0;
+                        audioManager.StopDialogue();
                     }
                 }
             }
@@ -245,6 +246,7 @@ namespace Subtegral.DialogueSystem.Runtime
             timer = 0;
             text = "";
             allTextLoaded = true;
+            audioManager.StopDialogue();
         }
 
         void RemoveDialogueBox()

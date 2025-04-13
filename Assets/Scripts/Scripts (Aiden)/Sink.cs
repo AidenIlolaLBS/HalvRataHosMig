@@ -30,13 +30,14 @@ public class Sink : MonoBehaviour
         {
             waterActive = false;
             time = 0;
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StopSFX();
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StopWater();
             //targetRotaionZ = Quaternion.Euler(handle.transform.rotation.x, handle.transform.rotation.y, 0);
         }
         else
         {
             waterActive = true;
-            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.TapSound, false, true, GameObject.FindGameObjectWithTag("Player"), gameObject);
+            Debug.Log("Playing water sound");
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartWater(GameObject.FindGameObjectWithTag("Player"), gameObject);
             //targetRotaionZ = Quaternion.Euler(handle.transform.rotation.x, handle.transform.rotation.y, -180);
         }
         water.SetActive(waterActive);

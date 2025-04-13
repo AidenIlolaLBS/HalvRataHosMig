@@ -12,7 +12,8 @@ public enum SoundType
     WalkingSound,
     ChopSound,
     CauldronSound,
-    DoorSound,    
+    OpenDoorSound,    
+    CloseDoorSound,    
     FridgeSound,
     PickUpSound,
     DropSound,
@@ -76,6 +77,8 @@ public class AudioManager : MonoBehaviour
     }
     [SerializeField]
     private AudioSource sfxSource;
+    [SerializeField]
+    private AudioSource waterSource;
 
     [SerializeField, Range(0, 1)]
     float ambianceVolume;
@@ -116,7 +119,7 @@ public class AudioManager : MonoBehaviour
     }
 
     int musicPlaying = 0;
-    GameObject sfxAudioObject;
+    GameObject waterAudioObject;
     GameObject player;
 
     private void Update()
@@ -156,10 +159,10 @@ public class AudioManager : MonoBehaviour
                 }
             }
 
-            if (sfxSource.isPlaying && player != null && sfxAudioObject != null)
+            if (waterSource.isPlaying && player != null && waterAudioObject != null)
             {
-                float distance = (float)(Math.Pow(player.transform.position.x - sfxAudioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - sfxAudioObject.transform.position.z, 2));
-                sfxSource.volume = sfxVolume / distance;
+                float distance = (float)(Math.Pow(player.transform.position.x - waterAudioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - waterAudioObject.transform.position.z, 2));
+                waterSource.volume = sfxVolume / distance;
             }
         }      
     }
@@ -222,41 +225,51 @@ public class AudioManager : MonoBehaviour
         musicSource.Pause();
     }
 
-    public float StartSFX(SoundType soundType, bool oneShot = true, bool loop = false, GameObject player = null, GameObject audioObject = null)
+    public float StartSFX(SoundType soundType, bool oneShot = true, bool loop = false)
     {
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)soundType].Sounds;
-        float distance = 1;
 
         int clipIndex = rnd.Next(0, allClips.Length);
-        
-        Debug.Log(clipIndex);
-
-        if (player != null && audioObject != null)
-        {
-            sfxAudioObject = audioObject;
-            this.player = player;
-            distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
-        }
 
         if (oneShot)
         {
-            sfxSource.PlayOneShot(allClips[clipIndex], sfxVolume / distance);
+            sfxSource.PlayOneShot(allClips[clipIndex], sfxVolume);
         }
         else
         {
             sfxSource.clip = allClips[clipIndex];
-            sfxSource.volume = sfxVolume / distance;
+            Debug.Log(sfxVolume);
+            sfxSource.volume = sfxVolume;
             sfxSource.loop = loop;
+            sfxSource.Play();
         }
 
         return 0;
     }
 
+    public void StartWater(GameObject player, GameObject audioObject)
+    {
+        float distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
+        AudioClip[] allClips = SoundList[(int)SoundType.TapSound].Sounds;
+        waterSource.clip = allClips[0];
+        waterSource.volume = sfxVolume / distance;
+        waterSource.loop = true;
+        waterSource.Play();
+
+        this.player = player;
+        waterAudioObject = audioObject;
+    }
+
+    public void StopWater()
+    {
+        waterAudioObject = null;
+        waterSource.Stop();
+    }
+
     public void StartSFX(AudioClip audioClip, bool oneShot = true, GameObject player = null, GameObject audioObject = null)
     {
-
         float distance = 1;
         if (player != null && audioObject != null)
         {
@@ -282,8 +295,16 @@ public class AudioManager : MonoBehaviour
         {
             dialogueSource.clip = allClips[rnd.Next(0, allClips.Length)];
             dialogueSource.volume = dialogueVolume;
+            dialogueSource.loop = true;
             dialogueSource.Play();
         }
+    }
+    public void StartDialogue(AudioClip audioClip)
+    {
+        dialogueSource.clip = audioClip;
+        dialogueSource.volume = dialogueVolume;
+        dialogueSource.loop = true;
+        dialogueSource.Play();
     }
     public void StopDialogue()
     {

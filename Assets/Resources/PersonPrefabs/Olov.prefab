@@ -52,6 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "tyckeromdigm\xE4tare": {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: a737fe1f2fce0c44eb04152cee833df1, type: 3}
+  - {fileID: 8300000, guid: 62469886801432548a1240225fae323a, type: 3}
+  - {fileID: 8300000, guid: a230a2c4fba7b48489512aa7407003eb, type: 3}
+  - {fileID: 8300000, guid: 3266305183b2b014c8e9e037bb805d83, type: 3}
   likedIngredients: {fileID: 3258287947456655667}
   dislikedIngredients: {fileID: 3559054375566398380}
   personStates:

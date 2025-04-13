@@ -28,11 +28,11 @@ public class Door : MonoBehaviour
             open = false;
             if (fridge)
             {
-                _ = audioManager.StartSFX(SoundType.FridgeDoorCloseSound);
+                audioManager.StartSFX(SoundType.FridgeDoorCloseSound);
             }
             else
             {
-                _ = audioManager.StartSFX(SoundType.DoorSound);
+                audioManager.StartSFX(SoundType.CloseDoorSound);
             }
         }
         else
@@ -41,17 +41,18 @@ public class Door : MonoBehaviour
             open = true;
             if (fridge)
             {
-                _ = audioManager.StartSFX(SoundType.FridgeDoorOpenSound);
+                audioManager.StartSFX(SoundType.FridgeDoorOpenSound);
             }
             else
             {
-                _ = audioManager.StartSFX(SoundType.DoorSound);
+                audioManager.StartSFX(SoundType.OpenDoorSound);
             }
         }
 
         if (switchScene)
         {
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameSceneManager>().NextScene();
+            audioManager.StartSFX(SoundType.CloseDoorSound);
         }
     }
 }

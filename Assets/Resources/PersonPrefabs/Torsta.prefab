@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2173315061646327091}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.25, y: -0.14, z: 11.64}
   m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_ConstrainProportionsScale: 0
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 3404228005470067408}
   - {fileID: 6523207884529188737}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7258458960509556406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "tyckeromdigm\xE4tare": {fileID: 0}
+  audioClips:
+  - {fileID: 8300000, guid: cbbfd748d07288049a8b9b402af371cd, type: 3}
+  - {fileID: 8300000, guid: c3d05829471b17041993d982e231bbff, type: 3}
+  - {fileID: 8300000, guid: 1d7279c54318bd943a3ddfbd8c5c6011, type: 3}
+  - {fileID: 8300000, guid: 7c783e4439e7bf8499c4274e9a92c88c, type: 3}
   likedIngredients: {fileID: 8473990140072151006}
   dislikedIngredients: {fileID: 2445675120059103780}
   personStates:

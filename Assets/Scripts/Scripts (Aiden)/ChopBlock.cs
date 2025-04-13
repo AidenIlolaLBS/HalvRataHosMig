@@ -51,6 +51,7 @@ public class ChopBlock : MonoBehaviour
                             Vector3 spawnVector = new(spawnLocation.transform.position.x, y, spawnLocation.transform.position.z);
                             temp.transform.position = spawnVector;
                             Destroy(other.gameObject);
+                            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.ChopSound);
                             return;
                         }
                     }

@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 moveDirection;
 
-    public float timeStepInterval = 0.75f;
+    private float timeStepInterval = 2f;
     float time = 0;
 
     Rigidbody rb;
@@ -64,10 +64,9 @@ public class PlayerMove : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
         if (verticalInput != 0 || horizontalInput != 0)
         {
-            time = Time.deltaTime;
+            time += Time.deltaTime;
             if (time > timeStepInterval)
             {
                 time = 0;

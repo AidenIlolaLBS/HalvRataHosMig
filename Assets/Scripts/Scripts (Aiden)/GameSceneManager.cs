@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviour
 {
     int sceneIndex = 1;
-    int maxGameLoop = 3;
+    int maxGameLoop = 2;
     static int currentGameLoop = 0;
 
     static public int CurrentGameLoop
@@ -26,7 +26,7 @@ public class GameSceneManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
             if (currentGameLoop > maxGameLoop - 1)
             {
-                sceneIndex = 2;
+                sceneIndex = 3;
                 sceneIndex++;
                 List<GameObject> persons = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PersonManager>().selectedPersons;
                 if (persons.Count == 1)
@@ -53,7 +53,7 @@ public class GameSceneManager : MonoBehaviour
 
         if (sceneIndex > SceneManager.sceneCountInBuildSettings - 1)
         {
-            sceneIndex = 0;
+            sceneIndex = 1;
             currentGameLoop = 0;
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
         }
@@ -67,9 +67,10 @@ public class GameSceneManager : MonoBehaviour
 
     public void ToMainMenu()
     {
-        sceneIndex = 0;
+        sceneIndex = 1;
         currentGameLoop = 0;
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
+        SceneManager.LoadScene(sceneIndex);
     }
 
     private void Update()

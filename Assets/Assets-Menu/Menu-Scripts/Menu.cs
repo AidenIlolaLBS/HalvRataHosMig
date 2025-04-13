@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
         audioManager.partOfGame++;
         audioManager.StartSFX(SoundType.BellSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<PersonManager>().SelectPersons();
     }
 
     // Quit game

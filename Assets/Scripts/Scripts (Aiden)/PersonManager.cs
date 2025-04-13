@@ -36,6 +36,7 @@ public class PersonManager : MonoBehaviour
 
     public void SelectPersons()
     {
+        selectedPersons.Clear();
         System.Random rnd = new();
         List<GameObject> availiblePersons = new();
         foreach (var item in allPersons)

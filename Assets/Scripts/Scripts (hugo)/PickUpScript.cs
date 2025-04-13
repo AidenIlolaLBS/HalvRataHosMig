@@ -45,6 +45,7 @@ public class PickUpScript : MonoBehaviour
                     {
                         case "canPickUp":
                             PickUpObject(hit.transform.gameObject);
+                            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.PickUpSound);
                             break;
                         case "Door":
                             hit.transform.parent.gameObject.GetComponent<Door>().InteractDoor();
@@ -91,6 +92,7 @@ public class PickUpScript : MonoBehaviour
                     if (cauldron == null)//prevents object from clipping through walls
                     {
                         DropObject();
+                        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.DropSound);
                     }
                     else
                     {
@@ -219,6 +221,7 @@ public class PickUpScript : MonoBehaviour
             {
                 StopClipping();
                 ThrowObject();
+                GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.ThrowSound);
             }
         }
     }
