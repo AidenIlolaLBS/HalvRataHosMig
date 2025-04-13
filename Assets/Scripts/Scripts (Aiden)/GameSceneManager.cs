@@ -23,6 +23,7 @@ public class GameSceneManager : MonoBehaviour
         {
             sceneIndex = 1;
             currentGameLoop++;
+            GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
             if (currentGameLoop > maxGameLoop - 1)
             {
                 sceneIndex = 2;
@@ -33,6 +34,11 @@ public class GameSceneManager : MonoBehaviour
                     if (persons[0].GetComponent<Person>().tyckeromdigmätare.likeLevel != LikeLevel.ReallyLikes)
                     {
                         sceneIndex++;
+                        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.LoseSound);
+                    }
+                    else
+                    {
+                        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.WinSound);
                     }
                 }
                 else
@@ -44,7 +50,6 @@ public class GameSceneManager : MonoBehaviour
             }
             gameObject.GetComponent<PersonManager>().DeactivatePeople();
         }
-        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;        
 
         if (sceneIndex > SceneManager.sceneCountInBuildSettings - 1)
         {
@@ -58,6 +63,13 @@ public class GameSceneManager : MonoBehaviour
         {
             recentlySwitchedDining = true;
         }
+    }
+
+    public void ToMainMenu()
+    {
+        sceneIndex = 0;
+        currentGameLoop = 0;
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().partOfGame = sceneIndex;
     }
 
     private void Update()

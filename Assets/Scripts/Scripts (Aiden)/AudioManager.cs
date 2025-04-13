@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -32,7 +33,9 @@ public enum SoundType
     FridgeDoorOpenSound,
     FridgeDoorCloseSound,
     FairySound,
-    SpiderSound    
+    SpiderSound,
+    WinSound,
+    LoseSound
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]
@@ -54,6 +57,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField, Range(0, 1)]
     float musicVolume;
+    public float musicSliderValue;
     public float MusicVolume
     {
         get { return musicVolume; }
@@ -65,6 +69,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField, Range(0, 1)]
     float sfxVolume;
+    public float sfxSliderValue;
     public float SfxVolume
     {
         get { return sfxVolume; }
@@ -74,6 +79,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField, Range(0, 1)]
     float ambianceVolume;
+    public float ambianceSliderValue;
     public float AmbianceVolume
     {
         get { return ambianceVolume; }
@@ -83,6 +89,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField, Range(0, 1)]
     float dialogueVolume;
+    public float dialogueSliderValue;
     public float DialogueVolume
     {
         get { return dialogueVolume; }
@@ -96,10 +103,21 @@ public class AudioManager : MonoBehaviour
     {
         if (Application.isPlaying)
         {
+            musicSliderValue = musicVolume;
+            ambianceSliderValue = ambianceVolume;
+            sfxSliderValue = sfxVolume;
+            dialogueSliderValue = dialogueVolume;
+
+            player = GameObject.FindGameObjectWithTag("Player");
+
             startCodeRun = true;
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    int musicPlaying = 0;
+    GameObject sfxAudioObject;
+    GameObject player;
 
     private void Update()
     {
@@ -107,25 +125,41 @@ public class AudioManager : MonoBehaviour
         {
             if (!startCodeRun)
             {
+                musicSliderValue = musicVolume;
+                ambianceSliderValue = ambianceVolume;
+                sfxSliderValue = sfxVolume;
+                dialogueSliderValue = dialogueVolume;
+
+                player = GameObject.FindGameObjectWithTag("Player");
+
                 startCodeRun = true;
                 DontDestroyOnLoad(gameObject);
             }
-            if (!musicSource.isPlaying && shouldPlayMusic)
+            if (!musicSource.isPlaying && shouldPlayMusic || musicPlaying != partOfGame)
             {
                 switch (partOfGame)
                 {
                     case 0:
                         StartMusic(SoundType.MenuMusic);
+                        musicPlaying = 0;
                         break;
                     case 1:
                         StartMusic(SoundType.KitchenMusic);
+                        musicPlaying = 1;
                         break;
                     case 2:
                         StartMusic(SoundType.EatingMusic);
+                        musicPlaying = 2;
                         break;
                     default:
                         break;
                 }
+            }
+
+            if (sfxSource.isPlaying && player != null && sfxAudioObject != null)
+            {
+                float distance = (float)(Math.Pow(player.transform.position.x - sfxAudioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - sfxAudioObject.transform.position.z, 2));
+                sfxSource.volume = sfxVolume / distance;
             }
         }      
     }
@@ -151,6 +185,12 @@ public class AudioManager : MonoBehaviour
         sfxSource = gameObject.AddComponent<AudioSource>();
         dialogueSource = gameObject.AddComponent<AudioSource>();
         ambianceSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    public void StopSFX()
+    {
+        Destroy(sfxSource);
+        sfxSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void StartMusic(SoundType soundType)
@@ -182,30 +222,51 @@ public class AudioManager : MonoBehaviour
         musicSource.Pause();
     }
 
-    public void StartSFX(SoundType soundType, GameObject player = null, GameObject audioObject = null)
+    public float StartSFX(SoundType soundType, bool oneShot = true, bool loop = false, GameObject player = null, GameObject audioObject = null)
     {
         System.Random rnd = new();
 
         AudioClip[] allClips = SoundList[(int)soundType].Sounds;
         float distance = 1;
+
+        int clipIndex = rnd.Next(0, allClips.Length);
+
         if (player != null && audioObject != null)
         {
             distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        if (allClips.Length > 0)
+
+        if (oneShot)
         {
-            sfxSource.PlayOneShot(allClips[rnd.Next(0, allClips.Length)], sfxVolume / distance);
+            sfxSource.PlayOneShot(allClips[clipIndex], sfxVolume / distance);
         }
+        else
+        {
+            sfxSource.clip = allClips[clipIndex];
+            sfxSource.volume = sfxVolume / distance;
+            sfxSource.loop = loop;
+        }
+
+        return allClips[clipIndex].length;
     }
 
-    public void StartSFX(AudioClip audioClip, GameObject player = null, GameObject audioObject = null)
+    public void StartSFX(AudioClip audioClip, bool oneShot = true, GameObject player = null, GameObject audioObject = null)
     {
+
         float distance = 1;
         if (player != null && audioObject != null)
         {
             distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
-        sfxSource.PlayOneShot(audioClip, sfxVolume / distance);
+        if (oneShot)
+        {
+            sfxSource.PlayOneShot(audioClip, sfxVolume / distance);
+        }
+        else
+        {
+            sfxSource.clip = audioClip;
+            sfxSource.volume = sfxVolume / distance;
+        }
     }
 
     public void StartDialogue(SoundType soundType)

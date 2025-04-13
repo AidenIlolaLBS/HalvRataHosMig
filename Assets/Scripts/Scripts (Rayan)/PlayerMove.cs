@@ -21,6 +21,9 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 moveDirection;
 
+    public float timeStepInterval = 0.75f;
+    float time = 0;
+
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -61,6 +64,16 @@ public class PlayerMove : MonoBehaviour
     {
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+        if (verticalInput != 0 || horizontalInput != 0)
+        {
+            time = Time.deltaTime;
+            if (time > timeStepInterval)
+            {
+                time = 0;
+                GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>().StartSFX(SoundType.WalkingSound);
+            }
+        }
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }

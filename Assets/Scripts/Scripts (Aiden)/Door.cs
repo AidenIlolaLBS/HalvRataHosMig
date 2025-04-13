@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public bool fridge = false;
     public bool switchScene = false;
     bool open = false;
     public bool Open
@@ -25,11 +26,27 @@ public class Door : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
             open = false;
+            if (fridge)
+            {
+                audioManager.StartSFX(SoundType.FridgeDoorCloseSound);
+            }
+            else
+            {
+                audioManager.StartSFX(SoundType.DoorSound);
+            }
         }
         else
         {
             transform.rotation = Quaternion.Euler(0, transform.rotation.y - doorAngle, 0);
             open = true;
+            if (fridge)
+            {
+                audioManager.StartSFX(SoundType.FridgeDoorOpenSound);
+            }
+            else
+            {
+                audioManager.StartSFX(SoundType.DoorSound);
+            }
         }
 
         audioManager.StartSFX(SoundType.DoorSound);

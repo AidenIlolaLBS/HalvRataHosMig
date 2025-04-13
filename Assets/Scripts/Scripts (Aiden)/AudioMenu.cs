@@ -34,15 +34,15 @@ public class AudioMenu : MonoBehaviour
     public void UpdateSoundVolume()
     {
         audioManager.UpdateAllVolumeValues(masterSlider.value, musicSlider.value, sfxSlider.value, ambianceSlider.value, dialogueSlider.value);
-        DisplayCurrentVolume();
+        //DisplayCurrentVolume();
     }
 
     public void DisplayCurrentVolume()
     {
         masterSlider.value = (float)audioManager.MasterVolume;
-        musicSlider.value = (float)(audioManager.MusicVolume / audioManager.MasterVolume);
-        sfxSlider.value = (float)(audioManager.SfxVolume / audioManager.MasterVolume);
-        ambianceSlider.value = (float)(audioManager.AmbianceVolume / audioManager.MasterVolume);
-        dialogueSlider.value = (float)(audioManager.DialogueVolume / audioManager.MasterVolume);
+        musicSlider.value = audioManager.musicSliderValue;
+        sfxSlider.value = audioManager.sfxSliderValue;
+        ambianceSlider.value = audioManager.ambianceSliderValue;
+        dialogueSlider.value = audioManager.dialogueSliderValue;
     }
 }
