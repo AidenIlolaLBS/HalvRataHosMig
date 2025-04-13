@@ -3459,19 +3459,24 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 1e30703094ac73748a4ba5c102e891e1, type: 3}
     - {fileID: 8300000, guid: 76e19fb37ccaa764bb2a524273e03dc4, type: 3}
   - name: ChopSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: ddd805e9a90964c4187a3f0cbc3cc677, type: 3}
   - name: CauldronSound
     sounds: []
   - name: DoorSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: f1e0f6e1d73159e479cc43e1f8116624, type: 3}
   - name: FridgeSound
     sounds: []
   - name: PickUpSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 87d489ae1dfe9af40a5c74a6d1449f80, type: 3}
   - name: DropSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 87d489ae1dfe9af40a5c74a6d1449f80, type: 3}
   - name: ThrowSound
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 87d489ae1dfe9af40a5c74a6d1449f80, type: 3}
   - name: DialogueSound
     sounds: []
   - name: Ambiance
@@ -3524,16 +3529,26 @@ MonoBehaviour:
   - name: SpiderSound
     sounds:
     - {fileID: 8300000, guid: 7a2624a2bbacecf41854f6ceee5e0d0b, type: 3}
+  - name: WinSound
+    sounds:
+    - {fileID: 8300000, guid: 3d4205552e9018642b67085214bad586, type: 3}
+  - name: LoseSound
+    sounds:
+    - {fileID: 8300000, guid: 54982c7bf48c6cf4f9ce11d32cd1c7df, type: 3}
   partOfGame: 0
   masterVolume: 1
   musicVolume: 1
+  musicSliderValue: 0
   musicSource: {fileID: 749087274}
   shouldPlayMusic: 1
   sfxVolume: 1
+  sfxSliderValue: 0
   sfxSource: {fileID: 749087273}
   ambianceVolume: 1
+  ambianceSliderValue: 0
   ambianceSource: {fileID: 749087272}
   dialogueVolume: 1
+  dialogueSliderValue: 0
   dialogueSource: {fileID: 749087271}
 --- !u!114 &749087277
 MonoBehaviour:

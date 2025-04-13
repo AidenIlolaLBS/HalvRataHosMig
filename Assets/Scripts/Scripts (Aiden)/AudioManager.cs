@@ -230,9 +230,13 @@ public class AudioManager : MonoBehaviour
         float distance = 1;
 
         int clipIndex = rnd.Next(0, allClips.Length);
+        
+        Debug.Log(clipIndex);
 
         if (player != null && audioObject != null)
         {
+            sfxAudioObject = audioObject;
+            this.player = player;
             distance = (float)(Math.Pow(player.transform.position.x - audioObject.transform.position.x, 2) + Math.Pow(player.transform.position.z - audioObject.transform.position.z, 2));
         }
 
@@ -247,7 +251,7 @@ public class AudioManager : MonoBehaviour
             sfxSource.loop = loop;
         }
 
-        return allClips[clipIndex].length;
+        return 0;
     }
 
     public void StartSFX(AudioClip audioClip, bool oneShot = true, GameObject player = null, GameObject audioObject = null)

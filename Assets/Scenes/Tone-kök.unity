@@ -27579,7 +27579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90af05de4a54103499385eb40eb681b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fridge: 0
+  fridge: 1
   switchScene: 0
   doorAngle: 90
 --- !u!4 &1020895738
@@ -48823,7 +48823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90af05de4a54103499385eb40eb681b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fridge: 0
+  fridge: 1
   switchScene: 0
   doorAngle: 90
 --- !u!4 &1882508103
